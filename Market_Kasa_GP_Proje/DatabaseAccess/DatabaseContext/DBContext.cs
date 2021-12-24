@@ -45,7 +45,7 @@ namespace Market_Kasa_GP_Proje.DatabaseAccess.DatabaseContext
         }
 
         public SqlCommand CreateCommand(string commandText,
-                                CommandType commandType = CommandType.StoredProcedure)
+                                        CommandType commandType = CommandType.StoredProcedure)
         {
             SqlCommand cmd = new SqlCommand();
 
