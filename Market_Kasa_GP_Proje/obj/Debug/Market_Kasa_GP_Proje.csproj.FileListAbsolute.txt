@@ -1,0 +1,12 @@
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\MarketDB.mdf
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\MarketDB_log.ldf
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\Market_Kasa_GP_Proje.exe.config
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\Market_Kasa_GP_Proje.exe
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\Market_Kasa_GP_Proje.pdb
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.csproj.AssemblyReference.cache
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Form1.resources
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Properties.Resources.resources
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.csproj.GenerateResource.cache
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.csproj.CoreCompileInputs.cache
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.exe
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.pdb
