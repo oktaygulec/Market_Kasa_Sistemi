@@ -11,12 +11,10 @@ namespace Market_Kasa_GP_Proje.Models
     {
         private Fis _fis { get; set; }
         private Urun _urun { get; set; }
-        private Durum _durum { get; set; }
         public int Id { get; set; }
         public int IslemAdet { get; set; }
         public int FisId { get; set; }
         public int UrunBarkod { get; set; }
-        public int DurumId { get; set; }
         public Fis Fis {
             get { return _fis; }
             set
@@ -33,21 +31,13 @@ namespace Market_Kasa_GP_Proje.Models
                 UrunBarkod = _urun.Id;
             }
         }
-        public Durum Durum {
-            get { return _durum; }
-            set
-            {
-                _durum = value;
-                DurumId = _durum.Id;
-            }
-        }
+        
         public List<SqlParameter> GetInsertParameters()
         {
             return new List<SqlParameter> { 
                 new SqlParameter("IslemAdet", this.IslemAdet),
                 new SqlParameter("FisId", this.FisId),
                 new SqlParameter("UrunBarkod", this.UrunBarkod),
-                new SqlParameter("DurumId", this.DurumId),
             };
         }
 
@@ -64,7 +54,6 @@ namespace Market_Kasa_GP_Proje.Models
             this.IslemAdet = Convert.ToInt32(reader["IslemAdet"]);
             this.Fis.ReadItem(reader);
             this.Urun.ReadItem(reader);
-            this.Durum.ReadItem(reader);
         }
     }
 }
