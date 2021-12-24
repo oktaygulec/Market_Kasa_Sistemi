@@ -69,10 +69,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Durum.cs" />
-    <Compile Include="Models\IModel.cs" />
-    <Compile Include="Models\Model.cs" />
-    <Compile Include="Models\Vergi.cs" />
+    <Compile Include="Models\BaseModels\Durum.cs" />
+    <Compile Include="Models\BaseModels\IModel.cs" />
+    <Compile Include="Models\BaseModels\Kategori.cs" />
+    <Compile Include="Models\BaseModels\OdemeTip.cs" />
+    <Compile Include="Models\BaseModels\PersonelTip.cs" />
+    <Compile Include="Models\BaseModels\Vergi.cs" />
+    <Compile Include="Models\Fis.cs" />
+    <Compile Include="Models\Islem.cs" />
+    <Compile Include="Models\Kullanici.cs" />
+    <Compile Include="Models\Personel.cs" />
+    <Compile Include="Models\Urun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
