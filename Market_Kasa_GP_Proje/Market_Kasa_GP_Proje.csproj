@@ -69,7 +69,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseModels\Durum.cs" />
     <Compile Include="Models\BaseModels\IModel.cs" />
     <Compile Include="Models\BaseModels\Kategori.cs" />
     <Compile Include="Models\BaseModels\OdemeTip.cs" />
