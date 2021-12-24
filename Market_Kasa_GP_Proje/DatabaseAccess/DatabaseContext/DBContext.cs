@@ -11,19 +11,19 @@ namespace Market_Kasa_GP_Proje.DatabaseAccess.DatabaseContext
 {
     public class DBContext
     {
-        public SqlConnection connection { get; private set; }
+        public SqlConnection Connection { get; private set; }
 
         public DBContext()
         {
-            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MarketDB.mdf;Integrated Security=True");
+            Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MarketDB.mdf;Integrated Security=True");
         }
 
         public void OpenConnection()
         {
             try
             {
-                if (connection.State == ConnectionState.Closed)
-                    connection.Open();
+                if (Connection.State == ConnectionState.Closed)
+                    Connection.Open();
             }
             catch (Exception e)
             {
@@ -35,8 +35,8 @@ namespace Market_Kasa_GP_Proje.DatabaseAccess.DatabaseContext
         {
             try
             {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                if (Connection.State == ConnectionState.Open)
+                    Connection.Close();
             }
             catch (Exception e)
             {
@@ -47,7 +47,7 @@ namespace Market_Kasa_GP_Proje.DatabaseAccess.DatabaseContext
         public SqlCommand CreateCommand(string commandText,
                                         CommandType commandType = CommandType.StoredProcedure)
         {
-            SqlCommand cmd = new SqlCommand();
+            SqlCommand cmd = Connection.CreateCommand();
 
             cmd.CommandText = commandText;
             cmd.CommandType = commandType;
