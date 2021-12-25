@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market_Kasa_GP_Proje
+namespace Market_Kasa_GP_Proje.Views
 {
-    public partial class Form1 : Form
+    public partial class Yonetici_Ayarlari : Form
     {
-        public Form1()
+        public Yonetici_Ayarlari()
         {
             InitializeComponent();
+        }
+
+        private void Yonetici_Ayarlari_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
