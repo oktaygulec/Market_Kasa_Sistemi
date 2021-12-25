@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -63,12 +63,6 @@
   <ItemGroup>
     <Compile Include="DatabaseAccess\DatabaseContext\DBContext.cs" />
     <Compile Include="DatabaseAccess\Repositories\Abstracts\ARepository.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\BaseModels\IModel.cs" />
     <Compile Include="Models\BaseModels\Kategori.cs" />
     <Compile Include="Models\BaseModels\OdemeTip.cs" />
@@ -81,9 +75,30 @@
     <Compile Include="Models\Urun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Views\Ana_Menu_Kasiyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ana_Menu_Kasiyer.Designer.cs">
+      <DependentUpon>Ana_Menu_Kasiyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ana_Menu_Yonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ana_Menu_Yonetici.Designer.cs">
+      <DependentUpon>Ana_Menu_Yonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Yonetici_Ayarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Yonetici_Ayarlari.Designer.cs">
+      <DependentUpon>Yonetici_Ayarlari.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,6 +108,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Ana_Menu_Kasiyer.resx">
+      <DependentUpon>Ana_Menu_Kasiyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ana_Menu_Yonetici.resx">
+      <DependentUpon>Ana_Menu_Yonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Yonetici_Ayarlari.resx">
+      <DependentUpon>Yonetici_Ayarlari.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
