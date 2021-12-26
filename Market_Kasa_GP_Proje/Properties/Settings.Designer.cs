@@ -23,15 +23,21 @@ namespace Market_Kasa_GP_Proje.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Placeholder {
+        [global::System.Configuration.DefaultSettingValueAttribute("Kullanıcı Adı")]
+        public string PlaceholderAd {
             get {
-                return ((string)(this["Placeholder"]));
+                return ((string)(this["PlaceholderAd"]));
             }
-            set {
-                this["Placeholder"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Şifre")]
+        public string PlaceholderSifre {
+            get {
+                return ((string)(this["PlaceholderSifre"]));
             }
         }
     }

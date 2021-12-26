@@ -93,6 +93,18 @@
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Kayit_Ol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Kayit_Ol.Designer.cs">
+      <DependentUpon>Kayit_Ol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Urun_Satisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Urun_Satisi.Designer.cs">
+      <DependentUpon>Urun_Satisi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Yonetici_Ayarlari.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Kayit_Ol.resx">
+      <DependentUpon>Kayit_Ol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Urun_Satisi.resx">
+      <DependentUpon>Urun_Satisi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Yonetici_Ayarlari.resx">
       <DependentUpon>Yonetici_Ayarlari.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Market_Kasa_GP_Proje.Views
 {
-    partial class Ana_Menu_Yonetici
+    partial class Ana_Menu_Yonetici_View
     {
         /// <summary>
         /// Required designer variable.
@@ -164,7 +164,7 @@
             // 
             // kullaniciDegistirButton
             // 
-            this.kullaniciDegistirButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(99)))));
+            this.kullaniciDegistirButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(148)))), ((int)(((byte)(161)))));
             this.kullaniciDegistirButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kullaniciDegistirButton.FlatAppearance.BorderSize = 0;
             this.kullaniciDegistirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -175,10 +175,10 @@
             this.kullaniciDegistirButton.Name = "kullaniciDegistirButton";
             this.kullaniciDegistirButton.Size = new System.Drawing.Size(215, 123);
             this.kullaniciDegistirButton.TabIndex = 16;
-            this.kullaniciDegistirButton.Text = "YÖNETİCİ AYARLARI";
+            this.kullaniciDegistirButton.Text = "KULLANICI DEĞİŞTİR";
             this.kullaniciDegistirButton.UseVisualStyleBackColor = false;
             // 
-            // Ana_Menu_Yonetici
+            // Ana_Menu_Yonetici_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,7 +193,7 @@
             this.Controls.Add(this.iadeButton);
             this.Controls.Add(this.satisButton);
             this.Controls.Add(this.headTitle);
-            this.Name = "Ana_Menu_Yonetici";
+            this.Name = "Ana_Menu_Yonetici_View";
             this.Text = "Ana Menü";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ana_Menu_Yonetici_FormClosed);
             this.ResumeLayout(false);

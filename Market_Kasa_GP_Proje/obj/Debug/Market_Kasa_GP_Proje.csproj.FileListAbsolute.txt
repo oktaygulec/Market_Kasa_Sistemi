@@ -22,7 +22,9 @@ C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_
 C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\Market_Kasa_GP_Proje.exe.config
 C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\Market_Kasa_GP_Proje.exe
 C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\bin\Debug\Market_Kasa_GP_Proje.pdb
-C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Views.Ana_Menu.resources
 C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Views.Ana_Menu_Yonetici.resources
 C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Views.Yonetici_Ayarlari.resources
 C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Main_Form.resources
+C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Views.Ana_Menu_Kasiyer.resources
+C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Views.Kayit_Ol.resources
+C:\Users\hyuna\Desktop\MarketSistemiProje\GorselProgramlamaProje\Market_Kasa_GP_Proje\obj\Debug\Market_Kasa_GP_Proje.Views.Urun_Satisi.resources

@@ -1,6 +1,6 @@
 ﻿namespace Market_Kasa_GP_Proje.Views
 {
-    partial class Ana_Menu_Kasiyer
+    partial class Ana_Menu_Kasiyer_View
     {
         /// <summary>
         /// Required designer variable.
