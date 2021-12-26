@@ -16,7 +16,7 @@ namespace Market_Kasa_GP_Proje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Form());
+            Application.Run(new Main_View());
         }
     }
 }

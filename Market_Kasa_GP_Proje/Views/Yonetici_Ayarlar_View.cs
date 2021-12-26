@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Market_Kasa_GP_Proje.Views
 {
-    public partial class Yonetici_Ayarlari : Form
+    public partial class Yonetici_Ayarlar_View : Form
     {
-        public Yonetici_Ayarlari()
+        public Yonetici_Ayarlar_View()
         {
             InitializeComponent();
         }

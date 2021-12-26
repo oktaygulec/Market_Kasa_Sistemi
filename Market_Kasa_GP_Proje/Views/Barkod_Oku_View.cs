@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Market_Kasa_GP_Proje.Views
 {
-    public partial class Ana_Menu_Yonetici : Form
+    public partial class Barkod_Oku_View : Form
     {
-        public Ana_Menu_Yonetici()
+        public Barkod_Oku_View()
         {
             InitializeComponent();
-        }
-
-        private void Ana_Menu_Yonetici_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

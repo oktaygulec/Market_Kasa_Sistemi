@@ -1,6 +1,6 @@
 ﻿namespace Market_Kasa_GP_Proje.Views
 {
-    partial class Yonetici_Ayarlari
+    partial class Yonetici_Ayarlar_View
     {
         /// <summary>
         /// Required designer variable.
@@ -141,10 +141,10 @@
             this.anaMenuyeDonButton.Name = "anaMenuyeDonButton";
             this.anaMenuyeDonButton.Size = new System.Drawing.Size(215, 123);
             this.anaMenuyeDonButton.TabIndex = 15;
-            this.anaMenuyeDonButton.Text = "ANA MENUYE DON";
+            this.anaMenuyeDonButton.Text = "ANA MENÜYE DÖN";
             this.anaMenuyeDonButton.UseVisualStyleBackColor = false;
             // 
-            // Yonetici_Ayarlari
+            // Yonetici_Ayarlar_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.kategorilerButton);
             this.Controls.Add(this.urunlerButton);
             this.Controls.Add(this.personellerButton);
-            this.Name = "Yonetici_Ayarlari";
+            this.Name = "Yonetici_Ayarlar_View";
             this.Text = "Yönetici Ayarları";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Yonetici_Ayarlari_FormClosed);
             this.ResumeLayout(false);

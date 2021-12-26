@@ -1,6 +1,6 @@
 ﻿namespace Market_Kasa_GP_Proje
 {
-    partial class Main_Form
+    partial class Main_View
     {
         /// <summary>
         /// Required designer variable.
@@ -49,19 +49,19 @@
             // kullaniciAdiTxt
             // 
             this.kullaniciAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciAdiTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.kullaniciAdiTxt.ForeColor = System.Drawing.Color.DarkGray;
             this.kullaniciAdiTxt.Location = new System.Drawing.Point(185, 136);
             this.kullaniciAdiTxt.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.kullaniciAdiTxt.Name = "kullaniciAdiTxt";
             this.kullaniciAdiTxt.Size = new System.Drawing.Size(428, 30);
             this.kullaniciAdiTxt.TabIndex = 1;
             this.kullaniciAdiTxt.Text = "Kullanıcı Adı";
-            this.kullaniciAdiTxt.Enter += new System.EventHandler(this.kullanici_Placeholder);
+            this.kullaniciAdiTxt.MouseHover += new System.EventHandler(this.kullanici_Placeholder);
             // 
             // kullaniciSifreTxt
             // 
             this.kullaniciSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciSifreTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.kullaniciSifreTxt.ForeColor = System.Drawing.Color.DarkGray;
             this.kullaniciSifreTxt.Location = new System.Drawing.Point(185, 207);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
             this.kullaniciSifreTxt.PasswordChar = '●';

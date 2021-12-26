@@ -2,8 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Market_Kasa_GP_Proje.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Placeholder" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="PlaceholderAd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Kullanıcı Adı</Value>
+    </Setting>
+    <Setting Name="PlaceholderSifre" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Şifre</Value>
     </Setting>
   </Settings>
 </SettingsFile>

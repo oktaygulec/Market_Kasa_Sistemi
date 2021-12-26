@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Market_Kasa_GP_Proje.Views
 {
-    public partial class Ana_Menu_Kasiyer : Form
+    public partial class Ana_Menu_Kasiyer_View : Form
     {
-        public Ana_Menu_Kasiyer()
+        public Ana_Menu_Kasiyer_View()
         {
             InitializeComponent();
         }
