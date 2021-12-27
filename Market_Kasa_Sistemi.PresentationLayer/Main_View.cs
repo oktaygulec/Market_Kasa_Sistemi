@@ -1,5 +1,4 @@
-﻿using Market_Kasa_Sistemi.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,10 +39,6 @@ namespace Market_Kasa_Sistemi
                 }
             }
         }
-        private void kullaniciGirisPaneli_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void formKapat(object sender, FormClosedEventArgs e)
         {
@@ -51,6 +46,11 @@ namespace Market_Kasa_Sistemi
         }
 
         private void girisYap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_View_Load(object sender, EventArgs e)
         {
 
         }
