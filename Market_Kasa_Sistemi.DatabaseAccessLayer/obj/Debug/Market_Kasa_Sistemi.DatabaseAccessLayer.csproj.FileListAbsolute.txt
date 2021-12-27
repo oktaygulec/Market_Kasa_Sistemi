@@ -1,0 +1,9 @@
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\bin\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.dll
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\bin\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.pdb
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\obj\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\obj\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\obj\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.csproj.CopyComplete
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\obj\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.dll
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.DatabaseAccessLayer\obj\Debug\Market_Kasa_Sistemi.DatabaseAccessLayer.pdb
