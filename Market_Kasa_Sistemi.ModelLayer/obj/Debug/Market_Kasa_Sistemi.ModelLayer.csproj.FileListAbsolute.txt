@@ -4,3 +4,9 @@ C:\Users\Miyajinco\Desktop\Development\CSharp\YedekProje\GorselProgramlamaProje\
 C:\Users\Miyajinco\Desktop\Development\CSharp\YedekProje\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.CoreCompileInputs.cache
 C:\Users\Miyajinco\Desktop\Development\CSharp\YedekProje\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.dll
 C:\Users\Miyajinco\Desktop\Development\CSharp\YedekProje\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
+C:\Users\hyuna\Desktop\Solutions\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\hyuna\Desktop\Solutions\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
+C:\Users\hyuna\Desktop\Solutions\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.AssemblyReference.cache
+C:\Users\hyuna\Desktop\Solutions\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\hyuna\Desktop\Solutions\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\hyuna\Desktop\Solutions\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
