@@ -171,15 +171,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MarketDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MarketDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>MarketDB.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Market_Kasa_Sistemi.DatabaseAccessLayer\Market_Kasa_Sistemi.DatabaseAccessLayer.csproj">
       <Project>{8aa0db13-62a2-4030-82e0-eca2115289d4}</Project>
       <Name>Market_Kasa_Sistemi.DatabaseAccessLayer</Name>
@@ -188,6 +179,15 @@
       <Project>{d19e8fa7-a78c-40f4-af07-142ecc2b8b5b}</Project>
       <Name>Market_Kasa_Sistemi.ModelLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MarketDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MarketDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MarketDB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
