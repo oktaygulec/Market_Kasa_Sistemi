@@ -16,12 +16,14 @@ namespace Market_Kasa_Sistemi.Models
         public string PersonelSoyad { get; set; }
         public DateTime PersonelBaslangicTarih { get; set; }
         public int PersonelTipId { get; set; }
+        public string PersonelTipAd { get; set; }
         public PersonelTip PersonelTip {
             get { return _personelTip; }
             set
             {
                 _personelTip = value;
                 PersonelTipId = _personelTip.Id;
+                PersonelTipAd = _personelTip.PersonelTipAd;
             }
         }
 
@@ -53,12 +55,9 @@ namespace Market_Kasa_Sistemi.Models
             this.PersonelAd = reader["PersonelAd"].ToString();
             this.PersonelSoyad = reader["PersonelSoyad"].ToString();
             this.PersonelBaslangicTarih = Convert.ToDateTime(reader["PersonelBaslangicTarih"]);
+
+            this.PersonelTip = new PersonelTip();
             this.PersonelTip.ReadItem(reader);
-
-            //PersonelTip pTip = new PersonelTip();
-            //pTip.ReadItem(reader);
-
-            //this.PersonelTip = pTip;
         }
     }
 }

@@ -16,13 +16,16 @@ namespace Market_Kasa_Sistemi.Models
         public decimal UrunFiyat { get; set; }
         public int UrunStokAdet { get; set; }
         public int KategoriId { get; set; }
+        public string KategoriAd { get; set; }
         public int VergiId { get; set; }
+        public int VergiMiktar { get; set; }
         public Kategori Kategori {
             get { return _kategori; }
             set
             {
                 _kategori = value;
                 KategoriId = _kategori.Id;
+                KategoriAd = _kategori.KategoriAd;
             }
         }
         public Vergi Vergi {
@@ -31,6 +34,7 @@ namespace Market_Kasa_Sistemi.Models
             {
                 _vergi = value;
                 VergiId = _vergi.Id;
+                VergiMiktar = _vergi.VergiMiktar;
             }
         }
 
@@ -63,7 +67,11 @@ namespace Market_Kasa_Sistemi.Models
             this.UrunAd = reader["UrunAd"].ToString();
             this.UrunFiyat = Convert.ToDecimal(reader["UrunFiyat"]);
             this.UrunStokAdet = Convert.ToInt32(reader["UrunStokAdet"]);
+
+            this.Kategori = new Kategori();
             this.Kategori.ReadItem(reader);
+
+            this.Vergi = new Vergi();
             this.Vergi.ReadItem(reader);
         }
     }
