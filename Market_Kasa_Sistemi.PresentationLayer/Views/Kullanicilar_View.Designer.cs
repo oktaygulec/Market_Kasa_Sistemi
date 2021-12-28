@@ -30,7 +30,7 @@
         {
             this.kullaniciEkleButton = new System.Windows.Forms.Button();
             this.cikisButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kullanicilarDGW = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.personelIdTxt = new System.Windows.Forms.TextBox();
             this.kullaniciSilButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kullanicilarDGW)).BeginInit();
             this.SuspendLayout();
             // 
             // kullaniciEkleButton
@@ -72,7 +72,7 @@
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cikisButton.Location = new System.Drawing.Point(952, 488);
+            this.cikisButton.Location = new System.Drawing.Point(971, 488);
             this.cikisButton.Margin = new System.Windows.Forms.Padding(0);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(215, 123);
@@ -80,31 +80,31 @@
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // kullanicilarDGW
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 56);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(875, 555);
-            this.dataGridView1.TabIndex = 17;
+            this.kullanicilarDGW.AllowUserToAddRows = false;
+            this.kullanicilarDGW.AllowUserToDeleteRows = false;
+            this.kullanicilarDGW.AllowUserToResizeColumns = false;
+            this.kullanicilarDGW.AllowUserToResizeRows = false;
+            this.kullanicilarDGW.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.kullanicilarDGW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kullanicilarDGW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.kullanicilarDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.kullanicilarDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.kullanicilarDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kullanicilarDGW.ColumnHeadersVisible = false;
+            this.kullanicilarDGW.Location = new System.Drawing.Point(13, 56);
+            this.kullanicilarDGW.MultiSelect = false;
+            this.kullanicilarDGW.Name = "kullanicilarDGW";
+            this.kullanicilarDGW.ReadOnly = true;
+            this.kullanicilarDGW.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.kullanicilarDGW.RowHeadersVisible = false;
+            this.kullanicilarDGW.RowHeadersWidth = 51;
+            this.kullanicilarDGW.RowTemplate.Height = 24;
+            this.kullanicilarDGW.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.kullanicilarDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.kullanicilarDGW.Size = new System.Drawing.Size(875, 555);
+            this.kullanicilarDGW.TabIndex = 17;
             // 
             // label1
             // 
@@ -247,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 623);
+            this.ClientSize = new System.Drawing.Size(1196, 623);
             this.Controls.Add(this.kullaniciSilButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.personelIdTxt);
@@ -261,13 +261,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.kullanicilarDGW);
             this.Controls.Add(this.kullaniciEkleButton);
             this.Controls.Add(this.cikisButton);
             this.Controls.Add(this.menuLine);
             this.Name = "Kullanicilar_View";
             this.Text = "Kullanıcılar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kullanicilarDGW)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +277,7 @@
 
         private System.Windows.Forms.Button kullaniciEkleButton;
         private System.Windows.Forms.Button cikisButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView kullanicilarDGW;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

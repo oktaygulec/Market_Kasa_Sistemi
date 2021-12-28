@@ -50,8 +50,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.toplamTutar = new System.Windows.Forms.Label();
             this.paraBirimi = new System.Windows.Forms.Label();
-            this.satisGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.satisGridView)).BeginInit();
+            this.satisDGW = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.satisDGW)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -284,39 +284,39 @@
             this.paraBirimi.TabIndex = 31;
             this.paraBirimi.Text = "TL";
             // 
-            // satisGridView
+            // satisDGW
             // 
-            this.satisGridView.AllowUserToAddRows = false;
-            this.satisGridView.AllowUserToDeleteRows = false;
-            this.satisGridView.AllowUserToResizeColumns = false;
-            this.satisGridView.AllowUserToResizeRows = false;
-            this.satisGridView.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.satisGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.satisGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.satisGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.satisGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.satisGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.satisGridView.ColumnHeadersVisible = false;
-            this.satisGridView.Location = new System.Drawing.Point(40, 133);
-            this.satisGridView.MultiSelect = false;
-            this.satisGridView.Name = "satisGridView";
-            this.satisGridView.ReadOnly = true;
-            this.satisGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.satisGridView.RowHeadersVisible = false;
-            this.satisGridView.RowHeadersWidth = 51;
-            this.satisGridView.RowTemplate.Height = 24;
-            this.satisGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.satisGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.satisGridView.Size = new System.Drawing.Size(1201, 459);
-            this.satisGridView.TabIndex = 32;
+            this.satisDGW.AllowUserToAddRows = false;
+            this.satisDGW.AllowUserToDeleteRows = false;
+            this.satisDGW.AllowUserToResizeColumns = false;
+            this.satisDGW.AllowUserToResizeRows = false;
+            this.satisDGW.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.satisDGW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.satisDGW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.satisDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.satisDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.satisDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.satisDGW.ColumnHeadersVisible = false;
+            this.satisDGW.Location = new System.Drawing.Point(40, 133);
+            this.satisDGW.MultiSelect = false;
+            this.satisDGW.Name = "satisDGW";
+            this.satisDGW.ReadOnly = true;
+            this.satisDGW.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.satisDGW.RowHeadersVisible = false;
+            this.satisDGW.RowHeadersWidth = 51;
+            this.satisDGW.RowTemplate.Height = 24;
+            this.satisDGW.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.satisDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.satisDGW.Size = new System.Drawing.Size(1201, 459);
+            this.satisDGW.TabIndex = 32;
             // 
-            // Urun_Satisi
+            // Urun_Satis_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1660, 725);
-            this.Controls.Add(this.satisGridView);
+            this.Controls.Add(this.satisDGW);
             this.Controls.Add(this.paraBirimi);
             this.Controls.Add(this.toplamTutar);
             this.Controls.Add(this.label11);
@@ -340,9 +340,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Urun_Satisi";
+            this.Name = "Urun_Satis_View";
             this.Text = "Ürün Satışı";
-            ((System.ComponentModel.ISupportInitialize)(this.satisGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.satisDGW)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,6 +372,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label toplamTutar;
         private System.Windows.Forms.Label paraBirimi;
-        private System.Windows.Forms.DataGridView satisGridView;
+        private System.Windows.Forms.DataGridView satisDGW;
     }
 }
