@@ -45,6 +45,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.personelIdTxt = new System.Windows.Forms.TextBox();
             this.kullaniciSilButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarDGW)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.kullaniciEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciEkleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciEkleButton.Location = new System.Drawing.Point(909, 244);
+            this.kullaniciEkleButton.Location = new System.Drawing.Point(909, 325);
             this.kullaniciEkleButton.Margin = new System.Windows.Forms.Padding(0);
             this.kullaniciEkleButton.Name = "kullaniciEkleButton";
             this.kullaniciEkleButton.Size = new System.Drawing.Size(277, 38);
@@ -72,7 +73,7 @@
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cikisButton.Location = new System.Drawing.Point(971, 488);
+            this.cikisButton.Location = new System.Drawing.Point(971, 570);
             this.cikisButton.Margin = new System.Windows.Forms.Padding(0);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(215, 123);
@@ -93,7 +94,7 @@
             this.kullanicilarDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.kullanicilarDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kullanicilarDGW.ColumnHeadersVisible = false;
-            this.kullanicilarDGW.Location = new System.Drawing.Point(13, 56);
+            this.kullanicilarDGW.Location = new System.Drawing.Point(12, 138);
             this.kullanicilarDGW.MultiSelect = false;
             this.kullanicilarDGW.Name = "kullanicilarDGW";
             this.kullanicilarDGW.ReadOnly = true;
@@ -110,7 +111,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(12, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 25);
             this.label1.TabIndex = 18;
@@ -120,7 +121,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(146, 18);
+            this.label2.Location = new System.Drawing.Point(146, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 25);
             this.label2.TabIndex = 19;
@@ -130,7 +131,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(442, 18);
+            this.label3.Location = new System.Drawing.Point(442, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 25);
             this.label3.TabIndex = 20;
@@ -140,7 +141,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(671, 18);
+            this.label4.Location = new System.Drawing.Point(671, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 25);
             this.label4.TabIndex = 21;
@@ -150,7 +151,7 @@
             // 
             this.menuLine.AutoSize = true;
             this.menuLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menuLine.Location = new System.Drawing.Point(10, 32);
+            this.menuLine.Location = new System.Drawing.Point(10, 113);
             this.menuLine.Name = "menuLine";
             this.menuLine.Size = new System.Drawing.Size(882, 16);
             this.menuLine.TabIndex = 22;
@@ -160,7 +161,7 @@
             // kullaniciAdiTxt
             // 
             this.kullaniciAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciAdiTxt.Location = new System.Drawing.Point(909, 78);
+            this.kullaniciAdiTxt.Location = new System.Drawing.Point(909, 159);
             this.kullaniciAdiTxt.Name = "kullaniciAdiTxt";
             this.kullaniciAdiTxt.Size = new System.Drawing.Size(277, 32);
             this.kullaniciAdiTxt.TabIndex = 25;
@@ -169,7 +170,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(904, 17);
+            this.label6.Location = new System.Drawing.Point(904, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 25);
             this.label6.TabIndex = 23;
@@ -178,7 +179,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(906, 31);
+            this.label7.Location = new System.Drawing.Point(906, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(280, 16);
             this.label7.TabIndex = 24;
@@ -187,7 +188,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(909, 56);
+            this.label5.Location = new System.Drawing.Point(909, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 16);
             this.label5.TabIndex = 26;
@@ -196,7 +197,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(909, 115);
+            this.label8.Location = new System.Drawing.Point(909, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 16);
             this.label8.TabIndex = 28;
@@ -205,7 +206,7 @@
             // kullaniciSifreTxt
             // 
             this.kullaniciSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciSifreTxt.Location = new System.Drawing.Point(909, 137);
+            this.kullaniciSifreTxt.Location = new System.Drawing.Point(909, 218);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
             this.kullaniciSifreTxt.Size = new System.Drawing.Size(277, 32);
             this.kullaniciSifreTxt.TabIndex = 27;
@@ -213,7 +214,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(909, 178);
+            this.label9.Location = new System.Drawing.Point(909, 259);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 30;
@@ -222,7 +223,7 @@
             // personelIdTxt
             // 
             this.personelIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.personelIdTxt.Location = new System.Drawing.Point(909, 200);
+            this.personelIdTxt.Location = new System.Drawing.Point(909, 281);
             this.personelIdTxt.Name = "personelIdTxt";
             this.personelIdTxt.Size = new System.Drawing.Size(277, 32);
             this.personelIdTxt.TabIndex = 29;
@@ -235,7 +236,7 @@
             this.kullaniciSilButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciSilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciSilButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciSilButton.Location = new System.Drawing.Point(909, 296);
+            this.kullaniciSilButton.Location = new System.Drawing.Point(909, 377);
             this.kullaniciSilButton.Margin = new System.Windows.Forms.Padding(0);
             this.kullaniciSilButton.Name = "kullaniciSilButton";
             this.kullaniciSilButton.Size = new System.Drawing.Size(277, 38);
@@ -243,11 +244,24 @@
             this.kullaniciSilButton.Text = "KULLANICI SİL";
             this.kullaniciSilButton.UseVisualStyleBackColor = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(472, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(260, 46);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "KULLANICILAR";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Kullanicilar_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 623);
+            this.ClientSize = new System.Drawing.Size(1196, 705);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.kullaniciSilButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.personelIdTxt);
@@ -292,5 +306,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox personelIdTxt;
         private System.Windows.Forms.Button kullaniciSilButton;
+        private System.Windows.Forms.Label label10;
     }
 }

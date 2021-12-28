@@ -39,13 +39,14 @@
             this.cikisButton = new System.Windows.Forms.Button();
             this.menuLine = new System.Windows.Forms.Label();
             this.yetkiSilButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.yetkilerDGW)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(363, 50);
+            this.label5.Location = new System.Drawing.Point(363, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 16);
             this.label5.TabIndex = 43;
@@ -54,7 +55,7 @@
             // yetkiAdiTxt
             // 
             this.yetkiAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yetkiAdiTxt.Location = new System.Drawing.Point(363, 72);
+            this.yetkiAdiTxt.Location = new System.Drawing.Point(363, 149);
             this.yetkiAdiTxt.Name = "yetkiAdiTxt";
             this.yetkiAdiTxt.Size = new System.Drawing.Size(277, 32);
             this.yetkiAdiTxt.TabIndex = 42;
@@ -63,7 +64,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(358, 11);
+            this.label6.Location = new System.Drawing.Point(358, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 25);
             this.label6.TabIndex = 40;
@@ -72,7 +73,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(360, 25);
+            this.label7.Location = new System.Drawing.Point(360, 102);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(280, 16);
             this.label7.TabIndex = 41;
@@ -82,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(183, 12);
+            this.label2.Location = new System.Drawing.Point(183, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 36;
@@ -92,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(28, 12);
+            this.label1.Location = new System.Drawing.Point(28, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 25);
             this.label1.TabIndex = 35;
@@ -111,7 +112,7 @@
             this.yetkilerDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.yetkilerDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.yetkilerDGW.ColumnHeadersVisible = false;
-            this.yetkilerDGW.Location = new System.Drawing.Point(12, 50);
+            this.yetkilerDGW.Location = new System.Drawing.Point(12, 128);
             this.yetkilerDGW.MultiSelect = false;
             this.yetkilerDGW.Name = "yetkilerDGW";
             this.yetkilerDGW.ReadOnly = true;
@@ -132,7 +133,7 @@
             this.yetkiEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yetkiEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yetkiEkleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.yetkiEkleButton.Location = new System.Drawing.Point(363, 130);
+            this.yetkiEkleButton.Location = new System.Drawing.Point(363, 207);
             this.yetkiEkleButton.Margin = new System.Windows.Forms.Padding(0);
             this.yetkiEkleButton.Name = "yetkiEkleButton";
             this.yetkiEkleButton.Size = new System.Drawing.Size(277, 38);
@@ -148,7 +149,7 @@
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cikisButton.Location = new System.Drawing.Point(425, 505);
+            this.cikisButton.Location = new System.Drawing.Point(425, 582);
             this.cikisButton.Margin = new System.Windows.Forms.Padding(0);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(215, 123);
@@ -160,7 +161,7 @@
             // 
             this.menuLine.AutoSize = true;
             this.menuLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menuLine.Location = new System.Drawing.Point(9, 26);
+            this.menuLine.Location = new System.Drawing.Point(9, 103);
             this.menuLine.Name = "menuLine";
             this.menuLine.Size = new System.Drawing.Size(308, 16);
             this.menuLine.TabIndex = 39;
@@ -174,7 +175,7 @@
             this.yetkiSilButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yetkiSilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yetkiSilButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.yetkiSilButton.Location = new System.Drawing.Point(363, 182);
+            this.yetkiSilButton.Location = new System.Drawing.Point(363, 259);
             this.yetkiSilButton.Margin = new System.Windows.Forms.Padding(0);
             this.yetkiSilButton.Name = "yetkiSilButton";
             this.yetkiSilButton.Size = new System.Drawing.Size(277, 38);
@@ -182,11 +183,24 @@
             this.yetkiSilButton.Text = "YETKİ SİL";
             this.yetkiSilButton.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(245, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 46);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "YETKİLER";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Yetkiler_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 640);
+            this.ClientSize = new System.Drawing.Size(652, 718);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.yetkiSilButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.yetkiAdiTxt);
@@ -219,5 +233,6 @@
         private System.Windows.Forms.Button cikisButton;
         private System.Windows.Forms.Label menuLine;
         private System.Windows.Forms.Button yetkiSilButton;
+        private System.Windows.Forms.Label label3;
     }
 }

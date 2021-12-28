@@ -39,6 +39,7 @@
             this.kategoriEkleButton = new System.Windows.Forms.Button();
             this.cikisButton = new System.Windows.Forms.Button();
             this.menuLine = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kategorilerDGW)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.kategoriSilButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kategoriSilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kategoriSilButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kategoriSilButton.Location = new System.Drawing.Point(363, 193);
+            this.kategoriSilButton.Location = new System.Drawing.Point(363, 290);
             this.kategoriSilButton.Margin = new System.Windows.Forms.Padding(0);
             this.kategoriSilButton.Name = "kategoriSilButton";
             this.kategoriSilButton.Size = new System.Drawing.Size(277, 38);
@@ -61,7 +62,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(363, 61);
+            this.label5.Location = new System.Drawing.Point(363, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 16);
             this.label5.TabIndex = 58;
@@ -70,7 +71,7 @@
             // kategoriAdiTxt
             // 
             this.kategoriAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kategoriAdiTxt.Location = new System.Drawing.Point(363, 83);
+            this.kategoriAdiTxt.Location = new System.Drawing.Point(363, 180);
             this.kategoriAdiTxt.Name = "kategoriAdiTxt";
             this.kategoriAdiTxt.Size = new System.Drawing.Size(277, 32);
             this.kategoriAdiTxt.TabIndex = 57;
@@ -79,7 +80,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(358, 22);
+            this.label6.Location = new System.Drawing.Point(358, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 25);
             this.label6.TabIndex = 55;
@@ -88,7 +89,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(360, 36);
+            this.label7.Location = new System.Drawing.Point(360, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(280, 16);
             this.label7.TabIndex = 56;
@@ -98,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(183, 23);
+            this.label2.Location = new System.Drawing.Point(183, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 53;
@@ -108,7 +109,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(28, 23);
+            this.label1.Location = new System.Drawing.Point(28, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 25);
             this.label1.TabIndex = 52;
@@ -127,7 +128,7 @@
             this.kategorilerDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.kategorilerDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kategorilerDGW.ColumnHeadersVisible = false;
-            this.kategorilerDGW.Location = new System.Drawing.Point(12, 61);
+            this.kategorilerDGW.Location = new System.Drawing.Point(12, 159);
             this.kategorilerDGW.MultiSelect = false;
             this.kategorilerDGW.Name = "kategorilerDGW";
             this.kategorilerDGW.ReadOnly = true;
@@ -148,7 +149,7 @@
             this.kategoriEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kategoriEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kategoriEkleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kategoriEkleButton.Location = new System.Drawing.Point(363, 141);
+            this.kategoriEkleButton.Location = new System.Drawing.Point(363, 238);
             this.kategoriEkleButton.Margin = new System.Windows.Forms.Padding(0);
             this.kategoriEkleButton.Name = "kategoriEkleButton";
             this.kategoriEkleButton.Size = new System.Drawing.Size(277, 38);
@@ -164,7 +165,7 @@
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cikisButton.Location = new System.Drawing.Point(425, 516);
+            this.cikisButton.Location = new System.Drawing.Point(425, 613);
             this.cikisButton.Margin = new System.Windows.Forms.Padding(0);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(215, 123);
@@ -176,17 +177,30 @@
             // 
             this.menuLine.AutoSize = true;
             this.menuLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menuLine.Location = new System.Drawing.Point(9, 37);
+            this.menuLine.Location = new System.Drawing.Point(9, 134);
             this.menuLine.Name = "menuLine";
             this.menuLine.Size = new System.Drawing.Size(308, 16);
             this.menuLine.TabIndex = 54;
             this.menuLine.Text = "___________________________________________";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(213, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(242, 46);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "KATEGORİLER";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Kategoriler_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 656);
+            this.ClientSize = new System.Drawing.Size(653, 749);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.kategoriSilButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.kategoriAdiTxt);
@@ -219,5 +233,6 @@
         private System.Windows.Forms.Button kategoriEkleButton;
         private System.Windows.Forms.Button cikisButton;
         private System.Windows.Forms.Label menuLine;
+        private System.Windows.Forms.Label label3;
     }
 }
