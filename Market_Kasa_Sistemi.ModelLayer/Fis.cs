@@ -33,6 +33,11 @@ namespace Market_Kasa_Sistemi.Models
             }
         }
 
+        public SqlParameter GetIdParameter()
+        {
+            return new SqlParameter("FisId", this.Id);
+        }
+
         public List<SqlParameter> GetInsertParameters()
         {
             return new List<SqlParameter> { 
@@ -45,7 +50,7 @@ namespace Market_Kasa_Sistemi.Models
         public List<SqlParameter> GetUpdateParameters()
         {
             List<SqlParameter> parameters = GetInsertParameters();
-            parameters.Add(new SqlParameter("FisId", this.Id));
+            parameters.Add(GetIdParameter());
             return parameters;
         }
 

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Market_Kasa_Sistemi.Models
 {
-    public class Islem : IModel
+    public class Satis : IModel
     {
         private Fis _fis { get; set; }
         private Urun _urun { get; set; }
         public int Id { get; set; }
-        public int IslemAdet { get; set; }
+        public int SatisAdet { get; set; }
         public int FisId { get; set; }
         public int UrunBarkod { get; set; }
         public Fis Fis {
@@ -31,11 +31,16 @@ namespace Market_Kasa_Sistemi.Models
                 UrunBarkod = _urun.Id;
             }
         }
-        
+
+        public SqlParameter GetIdParameter()
+        {
+            return new SqlParameter("SatisId", this.Id);
+        }
+
         public List<SqlParameter> GetInsertParameters()
         {
             return new List<SqlParameter> { 
-                new SqlParameter("IslemAdet", this.IslemAdet),
+                new SqlParameter("SatisAdet", this.SatisAdet),
                 new SqlParameter("FisId", this.FisId),
                 new SqlParameter("UrunBarkod", this.UrunBarkod),
             };
@@ -44,14 +49,14 @@ namespace Market_Kasa_Sistemi.Models
         public List<SqlParameter> GetUpdateParameters()
         {
             List<SqlParameter> parameters = GetInsertParameters();
-            parameters.Add(new SqlParameter("IslemId", this.Id));
+            parameters.Add(GetIdParameter());
             return parameters;
         }
 
         public void ReadItem(SqlDataReader reader)
         {
-            this.Id = Convert.ToInt32(reader["IslemId"]);
-            this.IslemAdet = Convert.ToInt32(reader["IslemAdet"]);
+            this.Id = Convert.ToInt32(reader["SatisId"]);
+            this.SatisAdet = Convert.ToInt32(reader["SatisAdet"]);
             this.Fis.ReadItem(reader);
             this.Urun.ReadItem(reader);
         }

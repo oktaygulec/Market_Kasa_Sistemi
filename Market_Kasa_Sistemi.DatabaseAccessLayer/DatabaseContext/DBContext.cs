@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Market_Kasa_Sistemi.DatabaseAccess.DatabaseContext
+namespace Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext
 {
     public class DBContext
     {

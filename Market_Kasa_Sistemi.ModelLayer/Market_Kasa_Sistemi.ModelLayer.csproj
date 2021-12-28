@@ -47,7 +47,7 @@
     <Compile Include="BaseModels\PersonelTip.cs" />
     <Compile Include="BaseModels\Vergi.cs" />
     <Compile Include="Fis.cs" />
-    <Compile Include="Islem.cs" />
+    <Compile Include="Satis.cs" />
     <Compile Include="Kullanici.cs" />
     <Compile Include="Personel.cs" />
     <Compile Include="Urun.cs" />
