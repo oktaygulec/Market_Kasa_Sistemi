@@ -15,12 +15,20 @@ namespace Market_Kasa_Sistemi.Models
         public string KullaniciAd { get; set; }
         public string KullaniciSifre { get; set; }
         public int PersonelId { get; set; }
+        public string PersonelAd { get; set; }
+        public string PersonelSoyad { get; set; }
+        public DateTime PersonelBaslangicTarih { get; set; }
+        public PersonelTip PersonelTip { get; set; }
         public Personel Personel {
             get { return _personel; }
             set
             {
                 _personel = value;
                 PersonelId = _personel.Id;
+                PersonelAd = _personel.PersonelAd;
+                PersonelSoyad = _personel.PersonelSoyad;
+                PersonelBaslangicTarih = _personel.PersonelBaslangicTarih;
+                PersonelTip = _personel.PersonelTip;
             }
         }
 
@@ -50,6 +58,8 @@ namespace Market_Kasa_Sistemi.Models
             this.Id = Convert.ToInt32(reader["KullaniciId"]);
             this.KullaniciAd = reader["KullaniciAd"].ToString();
             this.KullaniciSifre = reader["KullaniciSifre"].ToString();
+
+            this.Personel = new Personel();
             this.Personel.ReadItem(reader);
         }
     }
