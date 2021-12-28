@@ -15,5 +15,6 @@ namespace Market_Kasa_Sistemi.Models
 
         List<SqlParameter> GetInsertParameters();
         List<SqlParameter> GetUpdateParameters();
+        SqlParameter GetIdParameter();
     }
 }
