@@ -93,6 +93,12 @@
     <Compile Include="Views\Kayit_Ol_View.Designer.cs">
       <DependentUpon>Kayit_Ol_View.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Kullanicilar_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Kullanicilar_View.Designer.cs">
+      <DependentUpon>Kullanicilar_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Urun_Iade_View.cs">
       <SubType>Form</SubType>
     </Compile>
