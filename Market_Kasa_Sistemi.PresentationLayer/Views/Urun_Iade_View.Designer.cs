@@ -46,8 +46,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.toplamTutar = new System.Windows.Forms.Label();
             this.paraBirimi = new System.Windows.Forms.Label();
-            this.iadeGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.iadeGridView)).BeginInit();
+            this.iadeDGW = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.iadeDGW)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -239,39 +239,39 @@
             this.paraBirimi.TabIndex = 31;
             this.paraBirimi.Text = "TL";
             // 
-            // iadeGridView
+            // iadeDGW
             // 
-            this.iadeGridView.AllowUserToAddRows = false;
-            this.iadeGridView.AllowUserToDeleteRows = false;
-            this.iadeGridView.AllowUserToResizeColumns = false;
-            this.iadeGridView.AllowUserToResizeRows = false;
-            this.iadeGridView.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.iadeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.iadeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.iadeGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.iadeGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.iadeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.iadeGridView.ColumnHeadersVisible = false;
-            this.iadeGridView.Location = new System.Drawing.Point(40, 133);
-            this.iadeGridView.MultiSelect = false;
-            this.iadeGridView.Name = "iadeGridView";
-            this.iadeGridView.ReadOnly = true;
-            this.iadeGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.iadeGridView.RowHeadersVisible = false;
-            this.iadeGridView.RowHeadersWidth = 51;
-            this.iadeGridView.RowTemplate.Height = 24;
-            this.iadeGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.iadeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.iadeGridView.Size = new System.Drawing.Size(1201, 459);
-            this.iadeGridView.TabIndex = 0;
+            this.iadeDGW.AllowUserToAddRows = false;
+            this.iadeDGW.AllowUserToDeleteRows = false;
+            this.iadeDGW.AllowUserToResizeColumns = false;
+            this.iadeDGW.AllowUserToResizeRows = false;
+            this.iadeDGW.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.iadeDGW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.iadeDGW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.iadeDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.iadeDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.iadeDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.iadeDGW.ColumnHeadersVisible = false;
+            this.iadeDGW.Location = new System.Drawing.Point(40, 133);
+            this.iadeDGW.MultiSelect = false;
+            this.iadeDGW.Name = "iadeDGW";
+            this.iadeDGW.ReadOnly = true;
+            this.iadeDGW.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.iadeDGW.RowHeadersVisible = false;
+            this.iadeDGW.RowHeadersWidth = 51;
+            this.iadeDGW.RowTemplate.Height = 24;
+            this.iadeDGW.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.iadeDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.iadeDGW.Size = new System.Drawing.Size(1201, 459);
+            this.iadeDGW.TabIndex = 0;
             // 
-            // Urun_Iade
+            // Urun_Iade_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1660, 725);
-            this.Controls.Add(this.iadeGridView);
+            this.Controls.Add(this.iadeDGW);
             this.Controls.Add(this.paraBirimi);
             this.Controls.Add(this.toplamTutar);
             this.Controls.Add(this.label11);
@@ -291,9 +291,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Urun_Iade";
+            this.Name = "Urun_Iade_View";
             this.Text = "Ürün İade";
-            ((System.ComponentModel.ISupportInitialize)(this.iadeGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iadeDGW)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +319,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label toplamTutar;
         private System.Windows.Forms.Label paraBirimi;
-        private System.Windows.Forms.DataGridView iadeGridView;
+        private System.Windows.Forms.DataGridView iadeDGW;
     }
 }
