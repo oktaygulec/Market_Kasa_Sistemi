@@ -53,6 +53,14 @@ namespace Market_Kasa_Sistemi.Models
             return parameters;
         }
 
+        public List<SqlParameter> GetLoginParameters()
+        {
+            return new List<SqlParameter> {
+                new SqlParameter("KullaniciAd", this.KullaniciAd),
+                new SqlParameter("KullaniciSifre", this.KullaniciSifre),
+            };
+        }
+
         public void ReadItem(SqlDataReader reader)
         {
             this.Id = Convert.ToInt32(reader["KullaniciId"]);
