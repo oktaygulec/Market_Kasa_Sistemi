@@ -56,6 +56,16 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext
         }
 
         public SqlCommand CreateCommand(string commandText,
+                                        SqlParameter parameter,
+                                        CommandType commandType = CommandType.StoredProcedure)
+        {
+            SqlCommand cmd = CreateCommand(commandText, commandType);
+            cmd.Parameters.Add(parameter);
+
+            return cmd;
+        }
+
+        public SqlCommand CreateCommand(string commandText,
                                         List<SqlParameter> parameters,
                                         CommandType commandType = CommandType.StoredProcedure)
         {
