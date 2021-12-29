@@ -18,8 +18,8 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
         }
 
         public abstract object Add(T item);
-        public abstract T GetItem(object value);
-        public abstract int Remove(object value);
+        public abstract T GetItem(T item);
+        public abstract int Remove(T item);
         public abstract List<T> ToList();
         public abstract int Update(T item);
     }
