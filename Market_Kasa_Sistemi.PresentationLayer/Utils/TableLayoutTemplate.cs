@@ -88,13 +88,10 @@ namespace Market_Kasa_Sistemi.Utils
         {
             Label title = new Label
             {
-                Name = "lblTitle",
-                Anchor = AnchorStyles.None,
-                AutoSize = true,
                 Text = titleText.ToUpper(),
                 ForeColor = Color.MediumBlue
             };
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, formSize, TextType.Title);
+        ResponsiveControl responsiveTitle = new ResponsiveControl(title, formSize, TextType.Title);
 
             float[] rowStyles = { 100f / rows, 100f / rows, 100f / rows };
             float[] colStyles = { 100f / cols, 100f / cols, 100f / cols };
