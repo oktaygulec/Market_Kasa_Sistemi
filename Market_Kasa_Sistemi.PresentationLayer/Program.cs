@@ -18,16 +18,28 @@ namespace Market_Kasa_Sistemi
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Main_View giris = new Main_View();
-            //if (giris.ShowDialog() == DialogResult.OK)
-            //{
-            //    if (Kullanici.Personel.PersonelTip.PersonelTipAd == "Yönetici")
-            //        Application.Run(new Ana_Menu_Yonetici_View());
-            //    else
-            //        Application.Run(new Ana_Menu_Kasiyer_View());
-            //}
-
-            Application.Run(new Ana_Menu_Yonetici_View());
+            Main_View giris = new Main_View();
+            if (giris.ShowDialog() == DialogResult.OK)
+            {
+                if (Kullanici.Personel.PersonelTip.PersonelTipAd == "Yönetici")
+                {
+                    Application.Run(new Ana_Menu_Yonetici_View()
+                    {
+                        TopMost = true,
+                        FormBorderStyle = FormBorderStyle.None,
+                        WindowState = FormWindowState.Maximized
+                    });
+                }
+                else
+                {
+                    Application.Run(new Ana_Menu_Kasiyer_View()
+                    {
+                        TopMost = true,
+                        FormBorderStyle = FormBorderStyle.None,
+                        WindowState = FormWindowState.Maximized
+                    });
+                }
+            }
         }
     }
 }
