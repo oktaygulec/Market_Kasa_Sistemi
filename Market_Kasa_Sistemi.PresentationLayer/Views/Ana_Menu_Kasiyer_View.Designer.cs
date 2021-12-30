@@ -158,7 +158,6 @@
             this.Controls.Add(this.satisButton);
             this.Name = "Ana_Menu_Kasiyer";
             this.Text = "Ana Menü";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ana_Menu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

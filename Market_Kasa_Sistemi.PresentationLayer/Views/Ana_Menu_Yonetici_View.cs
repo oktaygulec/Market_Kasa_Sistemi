@@ -17,9 +17,29 @@ namespace Market_Kasa_Sistemi.Views
             InitializeComponent();
         }
 
-        private void Ana_Menu_Yonetici_FormClosed(object sender, FormClosedEventArgs e)
+        private void Ana_Menu_Yonetici_View_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            ChangeFontSizes(this);
+        }
+
+        private void ChangeFontSizes(Form form)
+        {
+            Button[] buttons = {
+                satisButton,
+                iadeButton,
+                barkodOkuButton,
+                zRaporuButton,
+                stokBilgisiButton,
+                yoneticiAyarlariButton,
+                kullaniciDegistirButton,
+                programKapatButton
+            };
+            ResponsiveFontSize.MakeResponsive(lblTitle, form, ResponsiveFontSize.TextType.Title);
+            ResponsiveFontSize.MakeResponsive(buttons, form, ResponsiveFontSize.TextType.Text);
         }
     }
 }
