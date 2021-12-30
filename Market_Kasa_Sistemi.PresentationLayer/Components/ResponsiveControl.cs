@@ -20,6 +20,9 @@ namespace Market_Kasa_Sistemi.Components
             {
                 case TextType.Title:
                     this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, TextType.Title);
+                    this.Control.Name = "lblTitle";
+                    this.Control.Anchor = AnchorStyles.None;
+                    this.Control.AutoSize = true;
                     break;
                 case TextType.ButtonText:
                     this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, TextType.ButtonText);
