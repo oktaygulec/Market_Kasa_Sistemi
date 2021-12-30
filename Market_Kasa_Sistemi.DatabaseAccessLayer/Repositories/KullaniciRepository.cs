@@ -20,7 +20,12 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
 
         public override Kullanici GetItem(object value)
         {
-            using (SqlCommand cmd = context.CreateCommand("SPKullaniciGetById", new SqlParameter("@KullaniciId", value)))
+            using (
+                SqlCommand cmd =
+                value.GetType() == typeof(int)
+                ? context.CreateCommand("SPKullaniciGetById", new SqlParameter("@KullaniciId", value))
+                : context.CreateCommand("SPKullaniciGetByAd", new SqlParameter("@KullaniciAd", value))
+                )
             {
                 return context.GetItem<Kullanici>(cmd);
             }
