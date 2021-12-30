@@ -6,23 +6,11 @@ namespace Market_Kasa_Sistemi.Models
 {
     public class Personel : IModel
     {
-        private PersonelTip _personelTip { get; set; }
-
         public int Id { get; set; }
         public string PersonelAd { get; set; }
         public string PersonelSoyad { get; set; }
         public DateTime PersonelBaslangicTarih { get; set; }
-        public int PersonelTipId { get; set; }
-        public string PersonelTipAd { get; set; }
-        public PersonelTip PersonelTip {
-            get { return _personelTip; }
-            set
-            {
-                _personelTip = value;
-                PersonelTipId = _personelTip.Id;
-                PersonelTipAd = _personelTip.PersonelTipAd;
-            }
-        }
+        public PersonelTip PersonelTip { get; set; }
 
         public SqlParameter GetIdParameter()
         {
@@ -35,7 +23,7 @@ namespace Market_Kasa_Sistemi.Models
                 new SqlParameter("PersonelAd", this.PersonelAd),
                 new SqlParameter("PersonelSoyad", this.PersonelSoyad),
                 new SqlParameter("PersonelBaslangicTarih", this.PersonelBaslangicTarih),
-                new SqlParameter("PersonelTipId", this.PersonelTipId),
+                new SqlParameter("PersonelTipId", this.PersonelTip.Id),
             };
         }
 

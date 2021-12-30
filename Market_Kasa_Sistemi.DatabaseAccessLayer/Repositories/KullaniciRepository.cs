@@ -55,10 +55,12 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             }
         }
 
-        public bool Login(Kullanici item)
+        public bool Login(string kullaniciAd, string kullaniciSifre)
         {
-            using (SqlCommand cmd = context.CreateCommand("SPKullaniciLogin", item.GetLoginParameters()))
+            using (SqlCommand cmd = context.CreateCommand("SPKullaniciLogin"))
             {
+                cmd.Parameters.AddWithValue("KullaniciAd", kullaniciAd);
+                cmd.Parameters.AddWithValue("KullaniciSifre", kullaniciSifre);
                 return Convert.ToBoolean(context.ExecuteScalar(cmd));
             }
         }
