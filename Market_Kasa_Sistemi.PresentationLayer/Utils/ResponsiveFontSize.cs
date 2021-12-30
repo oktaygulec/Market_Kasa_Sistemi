@@ -1,0 +1,64 @@
+﻿using Market_Kasa_Sistemi.Enums;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Market_Kasa_Sistemi.Utils
+{
+    public static class ResponsiveFontSize
+    {
+        private static float NewFontSize(Size size)
+        {
+            float wRatio = size.Width / 10;
+            float hRatio = size.Height / 10;
+            float ratio = Math.Min(hRatio, wRatio);
+            return ratio * 0.4f;
+        }
+
+        private static Font ResponsiveFont(Size formSize, TextType textType)
+        {
+            float fontSize;
+
+            switch (textType)
+            {
+                case TextType.Title:
+                    fontSize = NewFontSize(formSize);
+                    break;
+                case TextType.ButtonText:
+                    fontSize = NewFontSize(formSize) * 0.9f;
+                    break;
+                case TextType.Text:
+                    fontSize = NewFontSize(formSize) * 0.8f;
+                    break;
+                default:
+                    fontSize = 16f;
+                    break;
+            }
+
+            Font font = new Font("Consolas", fontSize, FontStyle.Bold);
+
+            return font;
+        }
+
+        public static void MakeResponsive(Control[] controls, Size formSize, TextType textType)
+        {
+            foreach (Control item in controls)
+            {
+                if (item != null)
+                {
+                    item.Font = ResponsiveFont(formSize, textType);
+                }
+            }
+        }
+
+        public static Control MakeResponsive(Control control, Size formSize, TextType textType)
+        {
+            control.Font = ResponsiveFont(formSize, textType);
+            return control;
+        }
+    }
+}
