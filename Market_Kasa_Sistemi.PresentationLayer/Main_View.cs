@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Market_Kasa_Sistemi.DatabaseAccessLayer;
+using Market_Kasa_Sistemi.Models;
+using Market_Kasa_Sistemi.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,19 +43,26 @@ namespace Market_Kasa_Sistemi
             }
         }
 
-        private void formKapat(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void girisYap_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Main_View_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void girisYapButton_Click(object sender, EventArgs e)
+        {
+            using(UnitOfWork uow = new UnitOfWork())
+            {
+                if(uow.KullaniciRepository.Login(kullaniciAdiTxt.Text, kullaniciSifreTxt.Text))
+                {
+                    Program.Kullanici = uow.KullaniciRepository.GetItem(kullaniciAdiTxt.Text);
+                    lblWrong.Text = "";
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    lblWrong.Text = "Kullanıcı adınız veya şifreniz yanlış.";
+                }
+            }
         }
     }
 }

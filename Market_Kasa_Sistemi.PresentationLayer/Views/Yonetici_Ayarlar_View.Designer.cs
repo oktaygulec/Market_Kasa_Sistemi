@@ -158,7 +158,6 @@
             this.Controls.Add(this.personellerButton);
             this.Name = "Yonetici_Ayarlar_View";
             this.Text = "Yönetici Ayarları";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Yonetici_Ayarlari_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

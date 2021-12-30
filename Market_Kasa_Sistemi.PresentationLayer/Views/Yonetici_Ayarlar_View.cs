@@ -16,10 +16,5 @@ namespace Market_Kasa_Sistemi.Views
         {
             InitializeComponent();
         }
-
-        private void Yonetici_Ayarlari_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

@@ -31,8 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.kullaniciAdiTxt = new System.Windows.Forms.TextBox();
             this.kullaniciSifreTxt = new System.Windows.Forms.TextBox();
-            this.girisYap = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.girisYapButton = new System.Windows.Forms.Button();
+            this.kayitOlButton = new System.Windows.Forms.Button();
+            this.lblWrong = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +65,7 @@
             this.kullaniciSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciSifreTxt.ForeColor = System.Drawing.Color.DarkGray;
             this.kullaniciSifreTxt.Location = new System.Drawing.Point(139, 168);
-            this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
             this.kullaniciSifreTxt.PasswordChar = '●';
             this.kullaniciSifreTxt.Size = new System.Drawing.Size(322, 26);
@@ -72,35 +73,44 @@
             this.kullaniciSifreTxt.Text = "Şifre";
             this.kullaniciSifreTxt.Enter += new System.EventHandler(this.kullanici_Placeholder);
             // 
-            // girisYap
+            // girisYapButton
             // 
-            this.girisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(220)))), ((int)(((byte)(125)))));
-            this.girisYap.FlatAppearance.BorderSize = 0;
-            this.girisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.girisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.girisYap.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.girisYap.Location = new System.Drawing.Point(139, 237);
-            this.girisYap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.girisYap.Name = "girisYap";
-            this.girisYap.Size = new System.Drawing.Size(116, 65);
-            this.girisYap.TabIndex = 3;
-            this.girisYap.Text = "GİRİŞ YAP";
-            this.girisYap.UseVisualStyleBackColor = false;
-            this.girisYap.Click += new System.EventHandler(this.girisYap_Click);
+            this.girisYapButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(220)))), ((int)(((byte)(125)))));
+            this.girisYapButton.FlatAppearance.BorderSize = 0;
+            this.girisYapButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.girisYapButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.girisYapButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.girisYapButton.Location = new System.Drawing.Point(139, 237);
+            this.girisYapButton.Margin = new System.Windows.Forms.Padding(2);
+            this.girisYapButton.Name = "girisYapButton";
+            this.girisYapButton.Size = new System.Drawing.Size(116, 65);
+            this.girisYapButton.TabIndex = 3;
+            this.girisYapButton.Text = "GİRİŞ YAP";
+            this.girisYapButton.UseVisualStyleBackColor = false;
+            this.girisYapButton.Click += new System.EventHandler(this.girisYapButton_Click);
             // 
-            // button2
+            // kayitOlButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(344, 237);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 65);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "KAYIT OL";
-            this.button2.UseVisualStyleBackColor = false;
+            this.kayitOlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.kayitOlButton.FlatAppearance.BorderSize = 0;
+            this.kayitOlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kayitOlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kayitOlButton.Location = new System.Drawing.Point(344, 237);
+            this.kayitOlButton.Margin = new System.Windows.Forms.Padding(2);
+            this.kayitOlButton.Name = "kayitOlButton";
+            this.kayitOlButton.Size = new System.Drawing.Size(116, 65);
+            this.kayitOlButton.TabIndex = 4;
+            this.kayitOlButton.Text = "KAYIT OL";
+            this.kayitOlButton.UseVisualStyleBackColor = false;
+            // 
+            // lblWrong
+            // 
+            this.lblWrong.AutoSize = true;
+            this.lblWrong.ForeColor = System.Drawing.Color.Red;
+            this.lblWrong.Location = new System.Drawing.Point(136, 205);
+            this.lblWrong.Name = "lblWrong";
+            this.lblWrong.Size = new System.Drawing.Size(0, 13);
+            this.lblWrong.TabIndex = 5;
             // 
             // Main_View
             // 
@@ -108,19 +118,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.girisYap);
+            this.Controls.Add(this.lblWrong);
+            this.Controls.Add(this.kayitOlButton);
+            this.Controls.Add(this.girisYapButton);
             this.Controls.Add(this.kullaniciSifreTxt);
             this.Controls.Add(this.kullaniciAdiTxt);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Giriş Paneli";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formKapat);
             this.Load += new System.EventHandler(this.Main_View_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,7 +142,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox kullaniciAdiTxt;
         private System.Windows.Forms.TextBox kullaniciSifreTxt;
-        private System.Windows.Forms.Button girisYap;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button girisYapButton;
+        private System.Windows.Forms.Button kayitOlButton;
+        private System.Windows.Forms.Label lblWrong;
     }
 }
