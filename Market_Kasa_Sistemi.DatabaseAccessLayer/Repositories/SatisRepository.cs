@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
 {
-    public class SatisRepository : ARepository<Satis>
+    public class SatisRepository : ARepository<Satis>, IDisposable
     {
         public SatisRepository(DBContext context) : base(context) { }
 
@@ -64,6 +64,12 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             {
                 return context.ExecuteNonQuery(cmd);
             }
+        }
+
+        public void Dispose()
+        {
+            context?.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext;
 using Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories;
+using System;
 
 namespace Market_Kasa_Sistemi.DatabaseAccessLayer
 {
-    public class UnitOfWork
+    public class UnitOfWork : IDisposable
     {
         private DBContext context;
 
@@ -102,6 +103,21 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer
         public UnitOfWork()
         {
             context = new DBContext();
+        }
+
+        public void Dispose()
+        {
+            context?.Dispose();
+            _fisRepository?.Dispose();
+            _kategoriRepository?.Dispose();
+            _kullaniciRepository?.Dispose();
+            _odemeTipRepository?.Dispose();
+            _personelRepository?.Dispose();
+            _personelTipRepository?.Dispose();
+            _satisRepository?.Dispose();
+            _urunRepository?.Dispose();
+            _vergiRepository?.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

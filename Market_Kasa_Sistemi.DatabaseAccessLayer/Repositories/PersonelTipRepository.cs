@@ -1,11 +1,12 @@
 ﻿using Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext;
 using Market_Kasa_Sistemi.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
 {
-    public class PersonelTipRepository : ARepository<PersonelTip>
+    public class PersonelTipRepository : ARepository<PersonelTip>, IDisposable
     {
         public PersonelTipRepository(DBContext context) : base(context) { }
 
@@ -47,6 +48,12 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             {
                 return context.ExecuteNonQuery(cmd);
             }
+        }
+
+        public void Dispose()
+        {
+            context?.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
 {
-    public class KullaniciRepository : ARepository<Kullanici>
+    public class KullaniciRepository : ARepository<Kullanici>, IDisposable
     {
         public KullaniciRepository(DBContext context) : base(context) { }
 
@@ -56,6 +56,12 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             {
                 return Convert.ToBoolean(context.ExecuteScalar(cmd));
             }
+        }
+
+        public void Dispose()
+        {
+            context?.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

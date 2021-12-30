@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext
 {
-    public class DBContext
+    public class DBContext : IDisposable
     {
         public SqlConnection Connection { get; private set; }
 
@@ -127,6 +127,12 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext
 
             CloseConnection();
             return items;
+        }
+
+        public void Dispose()
+        {
+            Connection?.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
