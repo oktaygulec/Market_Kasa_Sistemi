@@ -32,25 +32,11 @@ namespace Market_Kasa_Sistemi.Utils
             this.ColumnStyles = columnStyles;
         }
 
-        public void NewTableLayoutPanel(TableLayoutPanel container, ResponsiveControl[] controls, ResponsiveControl title)
+        private TableLayoutPanel CreateResponsiveTemplate(string tableName)
         {
-            container.Controls.Clear();
-
-            container.RowCount = 2;
-            container.RowStyles.Clear();
-            container.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
-            container.RowStyles.Add(new RowStyle(SizeType.Percent, 90));
-
-            container.ColumnCount = 1;
-            container.ColumnStyles.Clear();
-            container.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-
-            container.Dock = DockStyle.Fill;
-            container.Location = new Point(0, 0);
-            container.Padding = new Padding(32);
-
             TableLayoutPanel newTable = new TableLayoutPanel();
 
+            newTable.Name = tableName;
             newTable.RowCount = RowCount;
             newTable.ColumnCount = ColumnCount;
             newTable.Dock = DockStyle.Fill;
@@ -66,8 +52,14 @@ namespace Market_Kasa_Sistemi.Utils
                 newTable.ColumnStyles.Insert(i, new ColumnStyle(SizeType.Percent, ColumnStyles[i]));
             }
 
+            return newTable;
+        }
+
+        public TableLayoutPanel CreateResponsiveTemplate(string tableName, ResponsiveControl[] controls)
+        {
+            TableLayoutPanel newTable = CreateResponsiveTemplate(tableName);
             int counter = 0;
-            
+
             for (int i = 0; i < RowCount; i++)
             {
                 for (int j = 0; j < ColumnCount; j++)
@@ -80,24 +72,59 @@ namespace Market_Kasa_Sistemi.Utils
                 }
             }
 
-            container.Controls.Add(title.Control, 0, 0);
-            container.Controls.Add(newTable, 0, 1);
+            return newTable;
         }
 
-        public static void TableLayoutOnlyButtons(int rows, int cols, string titleText, TableLayoutPanel container, ResponsiveControl[] controls, Size formSize)
+        public TableLayoutPanel CreateResponsiveTemplate(string tableName, TableLayoutPanel[] panels)
         {
-            Label title = new Label
+            TableLayoutPanel newTable = CreateResponsiveTemplate(tableName);
+            int counter = 0;
+
+            for (int i = 0; i < RowCount; i++)
             {
-                Text = titleText.ToUpper(),
-                ForeColor = Color.MediumBlue
-            };
-        ResponsiveControl responsiveTitle = new ResponsiveControl(title, formSize, TextType.Title);
+                for (int j = 0; j < ColumnCount; j++)
+                {
+                    if (panels[counter] != null)
+                    {
+                        newTable.Controls.Add(panels[counter], j, i);
+                    }
+                    counter++;
+                }
+            }
 
-            float[] rowStyles = { 100f / rows, 100f / rows, 100f / rows };
-            float[] colStyles = { 100f / cols, 100f / cols, 100f / cols };
+            return newTable;
+        }
 
-            TableLayoutTemplate tmp = new TableLayoutTemplate(rows, cols, rowStyles, colStyles);
-            tmp.NewTableLayoutPanel(container, controls, responsiveTitle);
+        public TableLayoutPanel CreateContainerTable(ResponsiveControl title, TableLayoutPanel panel)
+        {
+            TableLayoutPanel container = new TableLayoutPanel();
+
+            container.RowCount = 2;
+            container.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
+            container.RowStyles.Add(new RowStyle(SizeType.Percent, 90));
+
+            container.ColumnCount = 1;
+            container.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+
+            container.Dock = DockStyle.Fill;
+            container.Location = new Point(0, 0);
+            container.Padding = new Padding(32);
+
+            container.Controls.Add(title.Control, 0, 0);
+            container.Controls.Add(panel, 0, 1);
+
+            return container;
+        }
+
+        public TableLayoutPanel TableLayoutOnlyButtons(ResponsiveControl title, string tableName, ResponsiveControl[] controls)
+        {
+            
+            RowStyles = new float[]{ 100f / RowCount, 100f / RowCount, 100f / RowCount };
+            ColumnStyles = new float[] { 100f / ColumnCount, 100f / ColumnCount, 100f / ColumnCount };
+
+            TableLayoutPanel panel = CreateResponsiveTemplate(tableName, controls);
+
+            return CreateContainerTable(title, panel);
         }
     }
 }
