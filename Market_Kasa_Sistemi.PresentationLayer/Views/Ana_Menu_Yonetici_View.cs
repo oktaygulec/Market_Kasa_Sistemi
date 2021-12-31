@@ -22,10 +22,6 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Ana_Menu_Yonetici_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-
             ResponsiveControl[] controls = {
                 new ResponsiveControl(satisButton, this.Size, TextType.ButtonText),
                 new ResponsiveControl(iadeButton, this.Size, TextType.ButtonText),
@@ -38,7 +34,21 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(programKapatButton, this.Size, TextType.ButtonText)
             };
 
-            TableLayoutTemplate.TableLayoutOnlyButtons(3, 3, "Ana Menü", tableLayoutPanel1, controls, this.Size);
+            Label title = new Label
+            {
+                Text = "Ana Sayfa".ToUpper()
+            };
+
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, TextType.Title);
+
+            TableLayoutPanel tlp = TableLayoutMaker.CreateEqualSizedTable(
+                responsiveTitle, 
+                "mainTable", 
+                controls,
+                3, 3
+            );
+
+            this.Controls.Add(tlp);
         }
     }
 }

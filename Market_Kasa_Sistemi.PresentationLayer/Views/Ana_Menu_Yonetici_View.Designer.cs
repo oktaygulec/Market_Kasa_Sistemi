@@ -28,206 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.satisButton = new System.Windows.Forms.Button();
-            this.iadeButton = new System.Windows.Forms.Button();
-            this.barkodOkuButton = new System.Windows.Forms.Button();
             this.zRaporuButton = new System.Windows.Forms.Button();
-            this.programKapatButton = new System.Windows.Forms.Button();
-            this.yoneticiAyarlariButton = new System.Windows.Forms.Button();
+            this.barkodOkuButton = new System.Windows.Forms.Button();
+            this.iadeButton = new System.Windows.Forms.Button();
+            this.satisButton = new System.Windows.Forms.Button();
             this.stokBilgisiButton = new System.Windows.Forms.Button();
+            this.yoneticiAyarlariButton = new System.Windows.Forms.Button();
             this.kullaniciDegistirButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.programKapatButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // satisButton
-            // 
-            this.satisButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(255)))), ((int)(((byte)(150)))));
-            this.satisButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.satisButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.satisButton.FlatAppearance.BorderSize = 0;
-            this.satisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.satisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.satisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.satisButton.Location = new System.Drawing.Point(48, 95);
-            this.satisButton.Margin = new System.Windows.Forms.Padding(16);
-            this.satisButton.Name = "satisButton";
-            this.satisButton.Size = new System.Drawing.Size(219, 109);
-            this.satisButton.TabIndex = 1;
-            this.satisButton.Text = "SATIŞ";
-            this.satisButton.UseVisualStyleBackColor = false;
-            // 
-            // iadeButton
-            // 
-            this.iadeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.iadeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iadeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iadeButton.FlatAppearance.BorderSize = 0;
-            this.iadeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.iadeButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iadeButton.Location = new System.Drawing.Point(299, 95);
-            this.iadeButton.Margin = new System.Windows.Forms.Padding(16);
-            this.iadeButton.Name = "iadeButton";
-            this.iadeButton.Size = new System.Drawing.Size(219, 109);
-            this.iadeButton.TabIndex = 2;
-            this.iadeButton.Text = "İADE";
-            this.iadeButton.UseVisualStyleBackColor = false;
-            // 
-            // barkodOkuButton
-            // 
-            this.barkodOkuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(99)))));
-            this.barkodOkuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.barkodOkuButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.barkodOkuButton.FlatAppearance.BorderSize = 0;
-            this.barkodOkuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.barkodOkuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.barkodOkuButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.barkodOkuButton.Location = new System.Drawing.Point(550, 95);
-            this.barkodOkuButton.Margin = new System.Windows.Forms.Padding(16);
-            this.barkodOkuButton.Name = "barkodOkuButton";
-            this.barkodOkuButton.Size = new System.Drawing.Size(220, 109);
-            this.barkodOkuButton.TabIndex = 3;
-            this.barkodOkuButton.Text = "BARKOD OKU";
-            this.barkodOkuButton.UseVisualStyleBackColor = false;
             // 
             // zRaporuButton
             // 
             this.zRaporuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(99)))), ((int)(((byte)(255)))));
             this.zRaporuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.zRaporuButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.zRaporuButton.FlatAppearance.BorderSize = 0;
             this.zRaporuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zRaporuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.zRaporuButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.zRaporuButton.Location = new System.Drawing.Point(48, 236);
+            this.zRaporuButton.Location = new System.Drawing.Point(48, 191);
             this.zRaporuButton.Margin = new System.Windows.Forms.Padding(16);
             this.zRaporuButton.Name = "zRaporuButton";
-            this.zRaporuButton.Size = new System.Drawing.Size(219, 109);
+            this.zRaporuButton.Size = new System.Drawing.Size(152, 81);
             this.zRaporuButton.TabIndex = 4;
             this.zRaporuButton.Text = "Z RAPORU";
             this.zRaporuButton.UseVisualStyleBackColor = false;
             // 
-            // programKapatButton
+            // barkodOkuButton
             // 
-            this.programKapatButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.programKapatButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.programKapatButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.programKapatButton.FlatAppearance.BorderSize = 0;
-            this.programKapatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.programKapatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.programKapatButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.programKapatButton.Location = new System.Drawing.Point(550, 377);
-            this.programKapatButton.Margin = new System.Windows.Forms.Padding(16);
-            this.programKapatButton.Name = "programKapatButton";
-            this.programKapatButton.Size = new System.Drawing.Size(220, 109);
-            this.programKapatButton.TabIndex = 8;
-            this.programKapatButton.Text = "PROGRAMI KAPAT";
-            this.programKapatButton.UseVisualStyleBackColor = false;
+            this.barkodOkuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(99)))));
+            this.barkodOkuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.barkodOkuButton.FlatAppearance.BorderSize = 0;
+            this.barkodOkuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.barkodOkuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barkodOkuButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.barkodOkuButton.Location = new System.Drawing.Point(458, 66);
+            this.barkodOkuButton.Margin = new System.Windows.Forms.Padding(16);
+            this.barkodOkuButton.Name = "barkodOkuButton";
+            this.barkodOkuButton.Size = new System.Drawing.Size(154, 81);
+            this.barkodOkuButton.TabIndex = 3;
+            this.barkodOkuButton.Text = "BARKOD OKU";
+            this.barkodOkuButton.UseVisualStyleBackColor = false;
             // 
-            // yoneticiAyarlariButton
+            // iadeButton
             // 
-            this.yoneticiAyarlariButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(99)))));
-            this.yoneticiAyarlariButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.yoneticiAyarlariButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.yoneticiAyarlariButton.FlatAppearance.BorderSize = 0;
-            this.yoneticiAyarlariButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yoneticiAyarlariButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yoneticiAyarlariButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.yoneticiAyarlariButton.Location = new System.Drawing.Point(550, 236);
-            this.yoneticiAyarlariButton.Margin = new System.Windows.Forms.Padding(16);
-            this.yoneticiAyarlariButton.Name = "yoneticiAyarlariButton";
-            this.yoneticiAyarlariButton.Size = new System.Drawing.Size(220, 109);
-            this.yoneticiAyarlariButton.TabIndex = 6;
-            this.yoneticiAyarlariButton.Text = "YÖNETİCİ AYARLARI";
-            this.yoneticiAyarlariButton.UseVisualStyleBackColor = false;
+            this.iadeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.iadeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iadeButton.FlatAppearance.BorderSize = 0;
+            this.iadeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.iadeButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iadeButton.Location = new System.Drawing.Point(253, 66);
+            this.iadeButton.Margin = new System.Windows.Forms.Padding(16);
+            this.iadeButton.Name = "iadeButton";
+            this.iadeButton.Size = new System.Drawing.Size(152, 81);
+            this.iadeButton.TabIndex = 2;
+            this.iadeButton.Text = "İADE";
+            this.iadeButton.UseVisualStyleBackColor = false;
+            // 
+            // satisButton
+            // 
+            this.satisButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(255)))), ((int)(((byte)(150)))));
+            this.satisButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.satisButton.FlatAppearance.BorderSize = 0;
+            this.satisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.satisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.satisButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.satisButton.Location = new System.Drawing.Point(48, 66);
+            this.satisButton.Margin = new System.Windows.Forms.Padding(16);
+            this.satisButton.Name = "satisButton";
+            this.satisButton.Size = new System.Drawing.Size(152, 81);
+            this.satisButton.TabIndex = 1;
+            this.satisButton.Text = "SATIŞ";
+            this.satisButton.UseVisualStyleBackColor = false;
             // 
             // stokBilgisiButton
             // 
             this.stokBilgisiButton.BackColor = System.Drawing.Color.Magenta;
             this.stokBilgisiButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stokBilgisiButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stokBilgisiButton.FlatAppearance.BorderSize = 0;
             this.stokBilgisiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stokBilgisiButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.stokBilgisiButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.stokBilgisiButton.Location = new System.Drawing.Point(299, 236);
+            this.stokBilgisiButton.Location = new System.Drawing.Point(253, 191);
             this.stokBilgisiButton.Margin = new System.Windows.Forms.Padding(16);
             this.stokBilgisiButton.Name = "stokBilgisiButton";
-            this.stokBilgisiButton.Size = new System.Drawing.Size(219, 109);
+            this.stokBilgisiButton.Size = new System.Drawing.Size(152, 81);
             this.stokBilgisiButton.TabIndex = 5;
             this.stokBilgisiButton.Text = "STOK BİLGİSİ";
             this.stokBilgisiButton.UseVisualStyleBackColor = false;
+            // 
+            // yoneticiAyarlariButton
+            // 
+            this.yoneticiAyarlariButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(99)))));
+            this.yoneticiAyarlariButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.yoneticiAyarlariButton.FlatAppearance.BorderSize = 0;
+            this.yoneticiAyarlariButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yoneticiAyarlariButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yoneticiAyarlariButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.yoneticiAyarlariButton.Location = new System.Drawing.Point(458, 191);
+            this.yoneticiAyarlariButton.Margin = new System.Windows.Forms.Padding(16);
+            this.yoneticiAyarlariButton.Name = "yoneticiAyarlariButton";
+            this.yoneticiAyarlariButton.Size = new System.Drawing.Size(154, 81);
+            this.yoneticiAyarlariButton.TabIndex = 6;
+            this.yoneticiAyarlariButton.Text = "YÖNETİCİ AYARLARI";
+            this.yoneticiAyarlariButton.UseVisualStyleBackColor = false;
             // 
             // kullaniciDegistirButton
             // 
             this.kullaniciDegistirButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(148)))), ((int)(((byte)(161)))));
             this.kullaniciDegistirButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kullaniciDegistirButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kullaniciDegistirButton.FlatAppearance.BorderSize = 0;
             this.kullaniciDegistirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciDegistirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciDegistirButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciDegistirButton.Location = new System.Drawing.Point(48, 377);
+            this.kullaniciDegistirButton.Location = new System.Drawing.Point(48, 304);
             this.kullaniciDegistirButton.Margin = new System.Windows.Forms.Padding(16);
             this.kullaniciDegistirButton.Name = "kullaniciDegistirButton";
-            this.kullaniciDegistirButton.Size = new System.Drawing.Size(219, 109);
+            this.kullaniciDegistirButton.Size = new System.Drawing.Size(152, 83);
             this.kullaniciDegistirButton.TabIndex = 7;
             this.kullaniciDegistirButton.Text = "KULLANICI DEĞİŞTİR";
             this.kullaniciDegistirButton.UseVisualStyleBackColor = false;
             // 
-            // tableLayoutPanel1
+            // programKapatButton
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.programKapatButton, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.kullaniciDegistirButton, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.yoneticiAyarlariButton, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.stokBilgisiButton, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.satisButton, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.iadeButton, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.barkodOkuButton, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.zRaporuButton, 0, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(32);
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(818, 534);
-            this.tableLayoutPanel1.TabIndex = 17;
+            this.programKapatButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.programKapatButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.programKapatButton.FlatAppearance.BorderSize = 0;
+            this.programKapatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.programKapatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.programKapatButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.programKapatButton.Location = new System.Drawing.Point(458, 304);
+            this.programKapatButton.Margin = new System.Windows.Forms.Padding(16);
+            this.programKapatButton.Name = "programKapatButton";
+            this.programKapatButton.Size = new System.Drawing.Size(154, 83);
+            this.programKapatButton.TabIndex = 8;
+            this.programKapatButton.Text = "PROGRAMI KAPAT";
+            this.programKapatButton.UseVisualStyleBackColor = false;
             // 
             // Ana_Menu_Yonetici_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(818, 534);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(661, 416);
+            this.Controls.Add(this.kullaniciDegistirButton);
+            this.Controls.Add(this.programKapatButton);
+            this.Controls.Add(this.zRaporuButton);
+            this.Controls.Add(this.stokBilgisiButton);
+            this.Controls.Add(this.satisButton);
+            this.Controls.Add(this.yoneticiAyarlariButton);
+            this.Controls.Add(this.iadeButton);
+            this.Controls.Add(this.barkodOkuButton);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Ana_Menu_Yonetici_View";
             this.Text = "Ana Menü";
             this.Load += new System.EventHandler(this.Ana_Menu_Yonetici_View_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button satisButton;
-        private System.Windows.Forms.Button iadeButton;
-        private System.Windows.Forms.Button barkodOkuButton;
+
         private System.Windows.Forms.Button zRaporuButton;
-        private System.Windows.Forms.Button programKapatButton;
-        private System.Windows.Forms.Button yoneticiAyarlariButton;
+        private System.Windows.Forms.Button barkodOkuButton;
+        private System.Windows.Forms.Button iadeButton;
+        private System.Windows.Forms.Button satisButton;
         private System.Windows.Forms.Button stokBilgisiButton;
+        private System.Windows.Forms.Button yoneticiAyarlariButton;
         private System.Windows.Forms.Button kullaniciDegistirButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button programKapatButton;
     }
 }
