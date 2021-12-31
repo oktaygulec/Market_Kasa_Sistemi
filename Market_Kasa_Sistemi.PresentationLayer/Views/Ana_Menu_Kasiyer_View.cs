@@ -31,7 +31,21 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(programKapatButton, this.Size, TextType.ButtonText)
             };
 
-            TableLayoutTemplate.TableLayoutOnlyButtons(3, 2, "Ana Menü", tableLayoutPanel1, controls, this.Size);
+            Label title = new Label
+            {
+                Text = "Ana Sayfa".ToUpper()
+            };
+
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, TextType.Title);
+
+            TableLayoutPanel tlp = TableLayoutMaker.CreateEqualSizedTable(
+                responsiveTitle, 
+                "mainTable", 
+                controls,
+                3, 2
+            );
+
+            this.Controls.Add(tlp);
         }
     }
 }

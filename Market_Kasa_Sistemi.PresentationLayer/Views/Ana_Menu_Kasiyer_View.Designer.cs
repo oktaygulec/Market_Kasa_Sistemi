@@ -34,7 +34,6 @@
             this.satisButton = new System.Windows.Forms.Button();
             this.stokBilgisiButton = new System.Windows.Forms.Button();
             this.kullaniciDegistirButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // programKapatButton
@@ -133,19 +132,6 @@
             this.kullaniciDegistirButton.Text = "KULLANICI DEĞİŞTİR";
             this.kullaniciDegistirButton.UseVisualStyleBackColor = false;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(576, 469);
-            this.tableLayoutPanel1.TabIndex = 17;
-            // 
             // Ana_Menu_Kasiyer_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,8 +143,7 @@
             this.Controls.Add(this.barkodOkuButton);
             this.Controls.Add(this.iadeButton);
             this.Controls.Add(this.satisButton);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Ana_Menu_Kasiyer_View";
             this.Text = "Ana Menü";
             this.Load += new System.EventHandler(this.Ana_Menu_Kasiyer_View_Load);
@@ -174,6 +159,5 @@
         private System.Windows.Forms.Button satisButton;
         private System.Windows.Forms.Button stokBilgisiButton;
         private System.Windows.Forms.Button kullaniciDegistirButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
