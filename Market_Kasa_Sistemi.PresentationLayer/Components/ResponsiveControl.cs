@@ -21,6 +21,7 @@ namespace Market_Kasa_Sistemi.Components
                 case TextType.Title:
                     this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, TextType.Title);
                     this.Control.Name = "lblTitle";
+                    this.Control.ForeColor = Color.MediumBlue;
                     this.Control.Anchor = AnchorStyles.None;
                     this.Control.AutoSize = true;
                     break;
