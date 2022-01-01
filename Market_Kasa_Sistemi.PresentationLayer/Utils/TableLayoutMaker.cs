@@ -136,7 +136,7 @@ namespace Market_Kasa_Sistemi.Utils
         public static TableLayoutPanel CreateTitleWithDividerTable(string tableTitleText, Size formSize)
         {
             Label lblTitle = new Label() { Text = tableTitleText };
-            ResponsiveControl tableTitleControl = new ResponsiveControl(lblTitle, formSize, ControlType.Subtitle);
+            ResponsiveControl tableTitleControl = new ResponsiveControl(lblTitle, formSize, ControlType.Title);
 
             Label divider = new Label();
             ResponsiveControl tableDividerControl = new ResponsiveControl(divider, formSize, ControlType.HorizontalDivider);
@@ -167,7 +167,7 @@ namespace Market_Kasa_Sistemi.Utils
             {
                 string titleText = tableTitlesText[i];
                 Label lblTitle = new Label() { Text = titleText };
-                tableTitleControls[i] = new ResponsiveControl(lblTitle, formSize, ControlType.Subtitle);
+                tableTitleControls[i] = new ResponsiveControl(lblTitle, formSize, ControlType.Title);
 
             }
 
@@ -193,6 +193,26 @@ namespace Market_Kasa_Sistemi.Utils
                 new TableLayoutPanel[] { tableTitle, tableDivider },
                 2, 1,
                 new float[] { 90f, 10f },
+                new float[] { 100f }
+            );
+        }
+
+        public static TableLayoutPanel CreateInputWithTitleTable(string titleText, string titleName, string textBoxName, Size formSize)
+        {
+            Label title = new Label() { Text = titleText, Name = titleName };
+            TextBox textBox = new TextBox() { Name = textBoxName };
+
+            ResponsiveControl[] controls = {
+                new ResponsiveControl(title, formSize, ControlType.Subtitle),
+                new ResponsiveControl(textBox, formSize, ControlType.Input),
+                null
+            };
+
+            return CreateResponsiveTable(
+                "inputWithTitleTable",
+                controls,
+                3, 1,
+                new float[] { 30f, 30f, 40f },
                 new float[] { 100f }
             );
         }
