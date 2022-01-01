@@ -33,10 +33,10 @@ namespace Market_Kasa_Sistemi.Views
 
             Label title = new Label
             {
-                Text = "Ana Sayfa".ToUpper()
+                Text = "Ana Sayfa"
             };
 
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.Title);
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateEqualSizedTable(
                 responsiveTitle, 

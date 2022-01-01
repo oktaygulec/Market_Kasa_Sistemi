@@ -32,6 +32,7 @@ namespace Market_Kasa_Sistemi.Views
             // Responsive control'leri oluşturma
             ResponsiveControl[] barkodControl =
             {
+                null, // barkod textbox'ın aşağı doğru kayması için boşluk
                 new ResponsiveControl(barkodGirisiTxt, this.Size, ControlType.Input)
             };
             ResponsiveControl[] butonControls =
@@ -44,8 +45,8 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel barkodGirisiPanel = TableLayoutMaker.CreateResponsiveTable(
                 "barkodPanel", // tabloya verilecek ad
                 barkodControl, // içerisine alınacak control'ler (component'ler)
-                1, 1, // tablonun satır ve sütun sayısı
-                new float[] { 50f }, // tablodaki satırların %'lik boyutu
+                2, 1, // tablonun satır ve sütun sayısı (1. satır boşluk, 2. satır TextBox)
+                new float[] { 50f, 50f }, // tablodaki satırların %'lik boyutu
                 new float[] { 100f } // tablodaki sütunların %'lik boyutu
             );
 
@@ -74,7 +75,7 @@ namespace Market_Kasa_Sistemi.Views
             };
 
             // Title'ı responsive yapma
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.Title);
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
 
             /* Yukarıda oluşturduğumuz tabloları container ile sarma 
                (%10'luk bir alana title, geri kalan %90'lık alana
