@@ -18,42 +18,48 @@ namespace Market_Kasa_Sistemi.Components
         {
             switch (textType)
             {
-                case ControlType.Title:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Title);
+                case ControlType.HeadTitle:
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.HeadTitle);
                     this.Control.ForeColor = Color.MediumBlue;
                     this.Control.Anchor = AnchorStyles.None;
                     this.Control.AutoSize = true;
                     this.Control.Text = this.Control.Text.ToUpper();
                     break;
-                case ControlType.Subtitle:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Subtitle);
+                case ControlType.Title:
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Title);
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.AutoSize = true;
-                    this.Control.Margin = new Padding(16, 0, 16, 0);
+                    this.Control.Margin = new Padding(0, 0, 16, 0);
                     break;
-                case ControlType.Button:
-                    float height = (control.Height - 100) * 2.6f;
-                    Size newSize = new Size((int)(formSize.Width + height), (int)(formSize.Height + height));
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, newSize, ControlType.Button);
+                case ControlType.Subtitle:
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Subtitle);
+                    this.Control.ForeColor = Color.Gray;
+                    this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
-                    this.Control.Margin = new Padding(16);
+                    this.Control.AutoSize = true;
+                    this.Control.Margin = new Padding(0, 0, 16, 0);
                     break;
                 case ControlType.Text:
                     this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Text);
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.AutoSize = true;
-                    this.Control.Margin = new Padding(16, 0, 16, 0);
+                    this.Control.Margin = new Padding(0, 0, 16, 0);
+                    break;
+                case ControlType.Button:
+                    float height = (control.Height - 100) * 2.6f;
+                    Size newSize = new Size((int)(formSize.Width + height), (int)(formSize.Height + height));
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newSize, ControlType.Button);
+                    this.Control.Dock = DockStyle.Fill;
+                    this.Control.Margin = new Padding(8, 32, 24, 0);
                     break;
                 case ControlType.Input:
-                    TextBox txt = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Input) as TextBox;
-                    txt.Anchor = AnchorStyles.Left;
-                    txt.Dock = DockStyle.Fill;
-                    txt.AutoSize = true;
-                    txt.Margin = new Padding(16);
-                    txt.TextAlign = HorizontalAlignment.Center;
-                    this.Control = txt;
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Input);
+                    this.Control.Anchor = AnchorStyles.Left;
+                    this.Control.Dock = DockStyle.Fill;
+                    this.Control.AutoSize = true;
+                    this.Control.Margin = new Padding(8, 0, 24, 0);
                     break;
                 case ControlType.HorizontalDivider:
                     Label divider = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.HorizontalDivider) as Label;

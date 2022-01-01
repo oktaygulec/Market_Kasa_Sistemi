@@ -27,28 +27,32 @@ namespace Market_Kasa_Sistemi.Utils
 
             switch (textType)
             {
-                case ControlType.Title:
+                case ControlType.HeadTitle:
                     fontSize = NewFontSize(formSize);
-                    font = new Font("Segoe UI", fontSize, FontStyle.Bold);
+                    font = new Font("Microsoft Sans Serif", fontSize, FontStyle.Bold);
+                    break;
+                case ControlType.Title:
+                    fontSize = NewFontSize(formSize) * 0.6f;
+                    font = new Font("Microsoft Sans Serif", fontSize, FontStyle.Bold);
                     break;
                 case ControlType.Subtitle:
-                    fontSize = NewFontSize(formSize) * 0.6f;
-                    font = new Font("Segoe UI", fontSize, FontStyle.Bold);
+                    fontSize = NewFontSize(formSize) * 0.5f;
+                    font = new Font("Microsoft Sans Serif", fontSize, FontStyle.Regular);
                     break;
                 case ControlType.Button:
                     fontSize = NewFontSize(formSize) * 0.9f;
-                    font = new Font("Segoe UI", fontSize, FontStyle.Bold);
+                    font = new Font("Microsoft Sans Serif", fontSize, FontStyle.Bold);
                     break;
                 case ControlType.Text:
-                    fontSize = NewFontSize(formSize) * 0.6f;
+                    fontSize = NewFontSize(formSize) * 0.5f;
                     font = new Font("Consolas", fontSize, FontStyle.Regular);
                     break;
                 case ControlType.Input:
                     fontSize = NewFontSize(formSize) * 0.8f;
-                    font = new Font("Segoe UI", fontSize, FontStyle.Regular);
+                    font = new Font("Microsoft Sans Serif", fontSize, FontStyle.Regular);
                     break;
                 default:
-                    fontSize = 16f;
+                    fontSize = NewFontSize(formSize) * 0.5f;
                     font = new Font("Consolas", fontSize, FontStyle.Regular);
                     break;
             }
