@@ -23,12 +23,12 @@ namespace Market_Kasa_Sistemi.Views
         private void Ana_Menu_Kasiyer_View_Load(object sender, EventArgs e)
         {
             ResponsiveControl[] controls = {
-                new ResponsiveControl(satisButton, this.Size, TextType.ButtonText),
-                new ResponsiveControl(iadeButton, this.Size, TextType.ButtonText),
-                new ResponsiveControl(barkodOkuButton, this.Size, TextType.ButtonText),
-                new ResponsiveControl(stokBilgisiButton, this.Size, TextType.ButtonText),
-                new ResponsiveControl(kullaniciDegistirButton, this.Size, TextType.ButtonText),
-                new ResponsiveControl(programKapatButton, this.Size, TextType.ButtonText)
+                new ResponsiveControl(satisButton, this.Size, ControlType.Button),
+                new ResponsiveControl(iadeButton, this.Size, ControlType.Button),
+                new ResponsiveControl(barkodOkuButton, this.Size, ControlType.Button),
+                new ResponsiveControl(stokBilgisiButton, this.Size, ControlType.Button),
+                new ResponsiveControl(kullaniciDegistirButton, this.Size, ControlType.Button),
+                new ResponsiveControl(programKapatButton, this.Size, ControlType.Button)
             };
 
             Label title = new Label
@@ -36,7 +36,7 @@ namespace Market_Kasa_Sistemi.Views
                 Text = "Ana Sayfa".ToUpper()
             };
 
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, TextType.Title);
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.Title);
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateEqualSizedTable(
                 responsiveTitle, 
