@@ -3,6 +3,7 @@
     public enum ControlType
     {
         Title,
+        HeadTitle,
         Subtitle,
         Button,
         Input,

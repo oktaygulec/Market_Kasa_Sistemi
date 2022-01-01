@@ -23,10 +23,10 @@ namespace Market_Kasa_Sistemi.Views
         private void Kategoriler_View_Load(object sender, EventArgs e)
         {
             //TopMost = true;
-            //FormBorderStyle = FormBorderStyle.None;
-            //WindowState = FormWindowState.Maximized;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
             Label title = new Label { Text = "Kategoriler".ToUpper() };
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.Title);
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
 
             TableLayoutPanel panel = TableLayoutMaker.CreateResponsiveTable(
                 "panel",
@@ -44,7 +44,7 @@ namespace Market_Kasa_Sistemi.Views
         private TableLayoutPanel LeftTable()
         {
             ResponsiveControl[] leftTableDGWControls = {
-                new ResponsiveControl(kategorilerDGW, this.Size, ControlType.Button)
+                new ResponsiveControl(kategorilerDGW, this.Size, ControlType.Input)
             };
 
             TableLayoutPanel leftTableTitlesWithDivider = TableLayoutMaker.CreateTitlesWithDividerTable
@@ -79,8 +79,6 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel rightTableTitleWithDivider = TableLayoutMaker.CreateTitleWithDividerTable("Kategori Ekle", this.Size);
 
             ResponsiveControl[] rightTableComponentsControls = {
-                new ResponsiveControl(lblKategoriAd, this.Size, ControlType.Text),
-                new ResponsiveControl(kategoriAdiTxt, this.Size, ControlType.Input),
                 new ResponsiveControl(kategoriEkleButton, this.Size, ControlType.Button),
                 new ResponsiveControl(kategoriSilButton, this.Size, ControlType.Button),
             };
@@ -92,8 +90,8 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel rightTableComponents = TableLayoutMaker.CreateResponsiveTable(
                 "rightTableComponents",
                 rightTableComponentsControls,
-                4, 1,
-                new float[] { 10f, 30f, 30f, 30f },
+                2, 1,
+                new float[] { 50f, 50f },
                 new float[] { 100f }
             );
 
@@ -105,11 +103,14 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 100f }
             );
 
+            TableLayoutPanel rightTableTopInput = TableLayoutMaker.CreateInputWithTitleTable(
+                "Kategori Adı", "rightTableKategoriAdTitle", "rightTableKategoriAdTextBox", this.Size);
+
             TableLayoutPanel rightTableContainer = TableLayoutMaker.CreateResponsiveTable(
                 "rightTableContainer",
-                new TableLayoutPanel[] { rightTableTitleWithDivider, rightTableComponents, rightTableBottom },
-                3, 1,
-                new float[] { 10f, 60f, 30f },
+                new TableLayoutPanel[] { rightTableTitleWithDivider, rightTableTopInput, rightTableComponents, rightTableBottom },
+                4, 1,
+                new float[] { 10f, 20f, 40f, 30f },
                 new float[] { 100f }
             );
 

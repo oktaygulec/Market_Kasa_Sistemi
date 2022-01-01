@@ -62,6 +62,7 @@
             this.lblKategoriAd.Size = new System.Drawing.Size(64, 13);
             this.lblKategoriAd.TabIndex = 58;
             this.lblKategoriAd.Text = "Kategori Adı";
+            this.lblKategoriAd.Visible = false;
             // 
             // kategoriAdiTxt
             // 
@@ -71,6 +72,7 @@
             this.kategoriAdiTxt.Name = "kategoriAdiTxt";
             this.kategoriAdiTxt.Size = new System.Drawing.Size(209, 27);
             this.kategoriAdiTxt.TabIndex = 57;
+            this.kategoriAdiTxt.Visible = false;
             // 
             // kategorilerDGW
             // 
@@ -111,7 +113,7 @@
             this.kategoriEkleButton.Name = "kategoriEkleButton";
             this.kategoriEkleButton.Size = new System.Drawing.Size(208, 31);
             this.kategoriEkleButton.TabIndex = 50;
-            this.kategoriEkleButton.Text = "KATEGORI EKLE";
+            this.kategoriEkleButton.Text = "KATEGORİ EKLE";
             this.kategoriEkleButton.UseVisualStyleBackColor = false;
             // 
             // cikisButton
