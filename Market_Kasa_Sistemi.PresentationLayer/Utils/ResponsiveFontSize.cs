@@ -19,32 +19,44 @@ namespace Market_Kasa_Sistemi.Utils
             return ratio * 0.4f;
         }
 
-        private static Font ResponsiveFont(Size formSize, TextType textType)
+        private static Font ResponsiveFont(Size formSize, ControlType textType)
         {
             float fontSize;
 
+            Font font;
+
             switch (textType)
             {
-                case TextType.Title:
+                case ControlType.Title:
                     fontSize = NewFontSize(formSize);
+                    font = new Font("Segoe UI", fontSize, FontStyle.Bold);
                     break;
-                case TextType.ButtonText:
+                case ControlType.Subtitle:
+                    fontSize = NewFontSize(formSize) * 0.6f;
+                    font = new Font("Segoe UI", fontSize, FontStyle.Bold);
+                    break;
+                case ControlType.Button:
                     fontSize = NewFontSize(formSize) * 0.9f;
+                    font = new Font("Segoe UI", fontSize, FontStyle.Bold);
                     break;
-                case TextType.Text:
+                case ControlType.Text:
+                    fontSize = NewFontSize(formSize) * 0.6f;
+                    font = new Font("Consolas", fontSize, FontStyle.Regular);
+                    break;
+                case ControlType.Input:
                     fontSize = NewFontSize(formSize) * 0.8f;
+                    font = new Font("Segoe UI", fontSize, FontStyle.Regular);
                     break;
                 default:
                     fontSize = 16f;
+                    font = new Font("Consolas", fontSize, FontStyle.Regular);
                     break;
             }
-
-            Font font = new Font("Consolas", fontSize, FontStyle.Bold);
 
             return font;
         }
 
-        public static void MakeResponsive(Control[] controls, Size formSize, TextType textType)
+        public static void MakeResponsive(Control[] controls, Size formSize, ControlType textType)
         {
             foreach (Control item in controls)
             {
@@ -55,7 +67,7 @@ namespace Market_Kasa_Sistemi.Utils
             }
         }
 
-        public static Control MakeResponsive(Control control, Size formSize, TextType textType)
+        public static Control MakeResponsive(Control control, Size formSize, ControlType textType)
         {
             control.Font = ResponsiveFont(formSize, textType);
             return control;
