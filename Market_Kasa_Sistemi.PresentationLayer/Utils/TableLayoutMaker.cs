@@ -1,4 +1,5 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.Enums;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,15 +7,29 @@ namespace Market_Kasa_Sistemi.Utils
 {
     public static class TableLayoutMaker
     {
-        private static TableLayoutPanel CreateResponsiveTable(string tableName, int rowCount, int columnCount, float[] rowStyles, float[] columnStyles)
+        private static TableLayoutPanel CreateResponsiveTable(string tableName)
         {
             TableLayoutPanel newTable = new TableLayoutPanel();
 
             newTable.Name = tableName;
-            newTable.RowCount = rowCount;
-            newTable.ColumnCount = columnCount;
+            newTable.RowCount = 1;
+            newTable.ColumnCount = 1;
             newTable.Dock = DockStyle.Fill;
             newTable.Location = new Point(0, 0);
+
+            newTable.RowStyles.Insert(0, new RowStyle(SizeType.Percent, 100f));
+
+            newTable.ColumnStyles.Insert(0, new ColumnStyle(SizeType.Percent, 100f));
+            
+            return newTable;
+        }
+
+        private static TableLayoutPanel CreateResponsiveTable(string tableName, int rowCount, int columnCount, float[] rowStyles, float[] columnStyles)
+        {
+            TableLayoutPanel newTable = CreateResponsiveTable(tableName);
+
+            newTable.RowCount = rowCount;
+            newTable.ColumnCount = columnCount;
 
             for (int i = 0; i < rowCount; i++)
             {
@@ -44,6 +59,18 @@ namespace Market_Kasa_Sistemi.Utils
                     }
                     counter++;
                 }
+            }
+
+            return newTable;
+        }
+
+        public static TableLayoutPanel CreateResponsiveTable(string tableName, ResponsiveControl control)
+        {
+            TableLayoutPanel newTable = CreateResponsiveTable(tableName);
+            
+            if (control != null && control.Control != null)
+            {
+                newTable.Controls.Add(control.Control, 0, 0);
             }
 
             return newTable;
@@ -104,6 +131,70 @@ namespace Market_Kasa_Sistemi.Utils
             TableLayoutPanel panel = CreateResponsiveTable(tableName, controls, rowCount, columnCount, rowStyles, columnStyles);
 
             return CreateContainerTable(title, panel);
+        }
+
+        public static TableLayoutPanel CreateTitleWithDividerTable(string tableTitleText, Size formSize)
+        {
+            Label lblTitle = new Label() { Text = tableTitleText };
+            ResponsiveControl tableTitleControl = new ResponsiveControl(lblTitle, formSize, ControlType.Subtitle);
+
+            Label divider = new Label();
+            ResponsiveControl tableDividerControl = new ResponsiveControl(divider, formSize, ControlType.HorizontalDivider);
+
+            TableLayoutPanel tableTitle = CreateResponsiveTable(
+                "tableTitle",
+                tableTitleControl
+            );
+
+            TableLayoutPanel tableDivider = CreateResponsiveTable(
+                "tableDivider",
+                tableDividerControl
+            );
+
+            return CreateResponsiveTable(
+                "tableTitleWithDivider",
+                new TableLayoutPanel[] { tableTitle, tableDivider },
+                2, 1,
+                new float[] { 90f, 10f },
+                new float[] { 100f }
+            );
+        }
+
+        public static TableLayoutPanel CreateTitlesWithDividerTable(string[] tableTitlesText, float[] columnStyles, Size formSize)
+        {
+            ResponsiveControl[] tableTitleControls = new ResponsiveControl[tableTitlesText.Length];
+            for (int i = 0; i < tableTitlesText.Length; i++)
+            {
+                string titleText = tableTitlesText[i];
+                Label lblTitle = new Label() { Text = titleText };
+                tableTitleControls[i] = new ResponsiveControl(lblTitle, formSize, ControlType.Subtitle);
+
+            }
+
+            Label divider = new Label();
+
+            ResponsiveControl tableDividerControl = new ResponsiveControl(divider, formSize, ControlType.HorizontalDivider);
+
+            TableLayoutPanel tableTitle = CreateResponsiveTable(
+                "tableTitle",
+                tableTitleControls,
+                1, tableTitlesText.Length,
+                new float[] { 100f },
+                columnStyles
+            );
+
+            TableLayoutPanel tableDivider = CreateResponsiveTable(
+                "tableDivider",
+                tableDividerControl
+            );
+
+            return CreateResponsiveTable(
+                "tableTitleWithDivider",
+                new TableLayoutPanel[] { tableTitle, tableDivider },
+                2, 1,
+                new float[] { 90f, 10f },
+                new float[] { 100f }
+            );
         }
     }
 }
