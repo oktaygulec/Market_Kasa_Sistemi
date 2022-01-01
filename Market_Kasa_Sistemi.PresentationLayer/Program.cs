@@ -18,6 +18,7 @@ namespace Market_Kasa_Sistemi
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            #region Giris Ekrani
             Main_View giris = new Main_View();
             if (giris.ShowDialog() == DialogResult.OK)
             {
@@ -25,7 +26,6 @@ namespace Market_Kasa_Sistemi
                 {
                     Application.Run(new Ana_Menu_Yonetici_View()
                     {
-                        TopMost = true,
                         FormBorderStyle = FormBorderStyle.None,
                         WindowState = FormWindowState.Maximized
                     });
@@ -34,12 +34,12 @@ namespace Market_Kasa_Sistemi
                 {
                     Application.Run(new Ana_Menu_Kasiyer_View()
                     {
-                        TopMost = true,
                         FormBorderStyle = FormBorderStyle.None,
                         WindowState = FormWindowState.Maximized
                     });
                 }
             }
+            #endregion
         }
     }
 }
