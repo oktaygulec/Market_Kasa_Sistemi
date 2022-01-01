@@ -22,25 +22,23 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Barkod_Oku_View_Load(object sender, EventArgs e)
         {
+            
+            // Oluşturulan tabloyu Form'a ekleme
+            this.Controls.Add(ContainerTable());
+        }
+
+        private TableLayoutPanel ContainerTable()
+        {
             // Responsive control'leri oluşturma
-            ResponsiveControl[] barkodControl = 
+            ResponsiveControl[] barkodControl =
             {
-                new ResponsiveControl(barkodGirisiTxt, this.Size, TextType.ButtonText)
+                new ResponsiveControl(barkodGirisiTxt, this.Size, ControlType.Input)
             };
-            ResponsiveControl[] butonControls = 
-            { 
-                new ResponsiveControl(urunGetirButton, this.Size, TextType.ButtonText),
-                new ResponsiveControl(cikisYapButton, this.Size, TextType.ButtonText)
-            };
-
-            // Title için label oluşturma
-            Label title = new Label
+            ResponsiveControl[] butonControls =
             {
-                Text = "Barkod Oku".ToUpper()
+                new ResponsiveControl(urunGetirButton, this.Size, ControlType.Button),
+                new ResponsiveControl(cikisYapButton, this.Size, ControlType.Button)
             };
-
-            // Title'ı responsive yapma
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, TextType.Title);
 
             // Barkod Girişi Input'u için tablo oluşturma
             TableLayoutPanel barkodGirisiPanel = TableLayoutMaker.CreateResponsiveTable(
@@ -69,14 +67,20 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 100f } // tablodaki sütunların %'lik boyutu
             );
 
+            // Title için label oluşturma
+            Label title = new Label
+            {
+                Text = "Barkod Oku"
+            };
+
+            // Title'ı responsive yapma
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.Title);
+
             /* Yukarıda oluşturduğumuz tabloları container ile sarma 
                (%10'luk bir alana title, geri kalan %90'lık alana
                yukarıdaki tablolar ekleniyor)
             */
-            TableLayoutPanel tlp = TableLayoutMaker.CreateContainerTable(responsiveTitle, surroundingPanel);
-
-            // Oluşturulan tabloyu Form'a ekleme
-            this.Controls.Add(tlp);
+            return TableLayoutMaker.CreateContainerTable(responsiveTitle, surroundingPanel);
         }
     }
 }
