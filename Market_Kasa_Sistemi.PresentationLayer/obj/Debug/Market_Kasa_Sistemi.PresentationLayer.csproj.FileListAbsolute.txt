@@ -75,3 +75,4 @@ C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.PresentationLayer.csproj.CopyComplete
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.exe
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.pdb
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Personeller_View.resources
