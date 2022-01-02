@@ -56,5 +56,10 @@ namespace Market_Kasa_Sistemi.Views
 
             return TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
         }
+
+        private void programKapatButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
