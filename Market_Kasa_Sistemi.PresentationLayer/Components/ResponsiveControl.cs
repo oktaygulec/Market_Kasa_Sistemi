@@ -16,8 +16,9 @@ namespace Market_Kasa_Sistemi.Components
 
         public ResponsiveControl(Control control, Size formSize, ControlType textType)
         {
-            float height = (control.Height - 100) * 2.6f;
-            Size newSize = new Size((int)(formSize.Width + height), (int)(formSize.Height + height));
+            float height = ((control.Height - 100) * 2.6f) - control.Width;
+            Size newButtonSize = new Size((int)(formSize.Width + height), (int)(formSize.Height + height));
+            Size newTextSize = new Size((int)(formSize.Width + height + 100), (int)(formSize.Height + height + 100));
             
             switch (textType)
             {
@@ -30,14 +31,14 @@ namespace Market_Kasa_Sistemi.Components
                     this.Control.Text = this.Control.Text.ToUpper();
                     break;
                 case ControlType.Title:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Title);
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newTextSize, ControlType.Title);
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.AutoSize = true;
                     this.Control.Margin = new Padding(0, 0, 16, 0);
                     break;
                 case ControlType.Subtitle:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Subtitle);
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newTextSize, ControlType.Subtitle);
                     this.Control.ForeColor = Color.Gray;
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
@@ -45,19 +46,19 @@ namespace Market_Kasa_Sistemi.Components
                     this.Control.Margin = new Padding(0, 0, 16, 0);
                     break;
                 case ControlType.Text:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Text);
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newTextSize, ControlType.Text);
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.AutoSize = true;
                     this.Control.Margin = new Padding(0, 0, 16, 0);
                     break;
                 case ControlType.Button:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, newSize, ControlType.Button);
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newButtonSize, ControlType.Button);
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.Margin = new Padding(8, 16, 24, 0);
                     break;
                 case ControlType.Input:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, newSize, ControlType.Input);
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newTextSize, ControlType.Input);
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.AutoSize = true;
