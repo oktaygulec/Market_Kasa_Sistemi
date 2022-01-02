@@ -34,9 +34,7 @@
             this.cikisButton = new System.Windows.Forms.Button();
             this.toplamTutar = new System.Windows.Forms.Label();
             this.iadeDGW = new System.Windows.Forms.DataGridView();
-            this.adetNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.iadeDGW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adetNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // fisGirisiTxt
@@ -130,21 +128,12 @@
             this.iadeDGW.Size = new System.Drawing.Size(502, 342);
             this.iadeDGW.TabIndex = 0;
             // 
-            // adetNumericUpDown
-            // 
-            this.adetNumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.adetNumericUpDown.Location = new System.Drawing.Point(694, 303);
-            this.adetNumericUpDown.Name = "adetNumericUpDown";
-            this.adetNumericUpDown.Size = new System.Drawing.Size(51, 20);
-            this.adetNumericUpDown.TabIndex = 32;
-            // 
             // Urun_Iade_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.adetNumericUpDown);
             this.Controls.Add(this.iadeDGW);
             this.Controls.Add(this.toplamTutar);
             this.Controls.Add(this.cikisButton);
@@ -156,7 +145,6 @@
             this.Text = "Ürün İade";
             this.Load += new System.EventHandler(this.Urun_Iade_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iadeDGW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adetNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +157,5 @@
         private System.Windows.Forms.Button cikisButton;
         private System.Windows.Forms.Label toplamTutar;
         private System.Windows.Forms.DataGridView iadeDGW;
-        private System.Windows.Forms.NumericUpDown adetNumericUpDown;
     }
 }
