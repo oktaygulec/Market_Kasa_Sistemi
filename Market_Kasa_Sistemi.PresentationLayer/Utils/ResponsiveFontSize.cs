@@ -48,7 +48,7 @@ namespace Market_Kasa_Sistemi.Utils
                     font = new Font("Consolas", fontSize, FontStyle.Regular);
                     break;
                 case ControlType.Input:
-                    fontSize = NewFontSize(formSize) * 0.8f;
+                    fontSize = NewFontSize(formSize) * 0.7f;
                     font = new Font("Microsoft Sans Serif", fontSize, FontStyle.Regular);
                     break;
                 default:
