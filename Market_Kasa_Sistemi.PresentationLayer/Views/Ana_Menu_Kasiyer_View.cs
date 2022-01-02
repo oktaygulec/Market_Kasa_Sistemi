@@ -38,12 +38,13 @@ namespace Market_Kasa_Sistemi.Views
 
             ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
 
-            TableLayoutPanel tlp = TableLayoutMaker.CreateEqualSizedTable(
-                responsiveTitle, 
+            TableLayoutPanel panel = TableLayoutMaker.CreateEqualSizedTable(
                 "mainTable", 
                 controls,
                 3, 2
             );
+
+            TableLayoutPanel tlp = TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
 
             this.Controls.Add(tlp);
         }

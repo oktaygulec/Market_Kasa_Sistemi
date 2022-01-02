@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,62 @@ namespace Market_Kasa_Sistemi.Views
         public Kayit_Ol_View()
         {
             InitializeComponent();
+        }
+
+        private void Kayit_Ol_View_Load(object sender, EventArgs e)
+        {
+            
+
+            this.Controls.Add(Table());
+        }
+
+        private TableLayoutPanel Table()
+        {
+            TableLayoutPanel kullaniciAdiPanel = TableLayoutMaker.CreateInputWithTitleTable(
+                "Kullanıcı Adı",
+                "kullaniciAdiPanel",
+                kullaniciAdiTxt,
+                new Size((int)(this.Size.Width + 200), (int)(this.Size.Height + 200))
+            );
+
+            TableLayoutPanel kullaniciSifrePanel = TableLayoutMaker.CreateInputWithTitleTable(
+                "Şifre",
+                "kullaniciSifrePanel",
+                kullaniciSifreTxt,
+                new Size((int)(this.Size.Width + 200), (int)(this.Size.Height + 200))
+            );
+
+            TableLayoutPanel kasiyerPanel = TableLayoutMaker.CreateInputWithTitleTable(
+                "Kasiyer",
+                "kullaniciSifrePanel",
+                kasiyerComboBox,
+                new Size((int)(this.Size.Width + 200), (int)(this.Size.Height + 200))
+            );
+
+            ResponsiveControl[] buttons = new ResponsiveControl[]
+            {
+                new ResponsiveControl(kayitOlButton, this.Size, ControlType.Button),
+                new ResponsiveControl(iptalButton, this.Size, ControlType.Button),
+            };
+
+            TableLayoutPanel buttonsPanel = TableLayoutMaker.CreateResponsiveTable(
+                "ButtonsPanel",
+                buttons,
+                1, 2,
+                new float[] { 100f },
+                new float[] { 50f, 50f }
+            );
+
+            TableLayoutPanel panel = TableLayoutMaker.CreateResponsiveTable(
+                "MainPanel",
+                new TableLayoutPanel[] { kullaniciAdiPanel, kullaniciSifrePanel, kasiyerPanel, buttonsPanel },
+                4, 1,
+                new float[] { 25f, 25f, 25f, 25f },
+                new float[] { 100f }
+            );
+
+            ResponsiveControl title = new ResponsiveControl(new Label() { Text = "Kayıt Ol", Name = "formTitle" }, this.Size, ControlType.HeadTitle);
+            return TableLayoutMaker.CreateContainerTable(title, panel);
         }
     }
 }
