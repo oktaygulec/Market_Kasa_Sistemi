@@ -50,7 +50,7 @@
             this.kategoriSilButton.Name = "kategoriSilButton";
             this.kategoriSilButton.Size = new System.Drawing.Size(208, 31);
             this.kategoriSilButton.TabIndex = 59;
-            this.kategoriSilButton.Text = "KATEGORİ SİL";
+            this.kategoriSilButton.Text = "SİL";
             this.kategoriSilButton.UseVisualStyleBackColor = false;
             // 
             // lblKategoriAd
@@ -112,7 +112,7 @@
             this.kategoriEkleButton.Name = "kategoriEkleButton";
             this.kategoriEkleButton.Size = new System.Drawing.Size(208, 31);
             this.kategoriEkleButton.TabIndex = 50;
-            this.kategoriEkleButton.Text = "KATEGORİ EKLE";
+            this.kategoriEkleButton.Text = "EKLE";
             this.kategoriEkleButton.UseVisualStyleBackColor = false;
             // 
             // cikisButton

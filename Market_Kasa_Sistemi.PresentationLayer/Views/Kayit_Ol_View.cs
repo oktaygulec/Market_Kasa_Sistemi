@@ -29,25 +29,27 @@ namespace Market_Kasa_Sistemi.Views
 
         private TableLayoutPanel Table()
         {
+            Size newSize = new Size((int)(this.Size.Width + 400), (int)(this.Size.Height + 400));
+
             TableLayoutPanel kullaniciAdiPanel = TableLayoutMaker.CreateInputWithTitleTable(
                 "Kullanıcı Adı",
                 "kullaniciAdiPanel",
                 kullaniciAdiTxt,
-                new Size((int)(this.Size.Width + 200), (int)(this.Size.Height + 200))
+                newSize
             );
 
             TableLayoutPanel kullaniciSifrePanel = TableLayoutMaker.CreateInputWithTitleTable(
                 "Şifre",
                 "kullaniciSifrePanel",
                 kullaniciSifreTxt,
-                new Size((int)(this.Size.Width + 200), (int)(this.Size.Height + 200))
+                newSize
             );
 
             TableLayoutPanel kasiyerPanel = TableLayoutMaker.CreateInputWithTitleTable(
                 "Kasiyer",
                 "kullaniciSifrePanel",
                 kasiyerComboBox,
-                new Size((int)(this.Size.Width + 200), (int)(this.Size.Height + 200))
+                newSize
             );
 
             ResponsiveControl[] buttons = new ResponsiveControl[]

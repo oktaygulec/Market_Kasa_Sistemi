@@ -27,7 +27,7 @@ namespace Market_Kasa_Sistemi.Views
                     this.Size,
                     "Kullanıcılar",
                     kullanicilarDGW,
-                    new string[] { "ID", "Kullanıcı Adı", "Personel Ad" },
+                    new string[] { "ID", "Adı", "Personel" },
                     new float[] { 20f, 40f, 40f },
                     RightTable()
                 );
@@ -54,6 +54,7 @@ namespace Market_Kasa_Sistemi.Views
             ResponsiveControl[] kullaniciButtonsControls = new ResponsiveControl[]
             {
                 new ResponsiveControl(kullaniciEkleButton, this.Size, ControlType.Button),
+                new ResponsiveControl(kullaniciDuzenleButton, this.Size, ControlType.Button),
                 new ResponsiveControl(kullaniciSilButton, this.Size, ControlType.Button)
             };
 
@@ -61,8 +62,8 @@ namespace Market_Kasa_Sistemi.Views
                 (
                     "tableKullaniciButtons",
                     kullaniciButtonsControls,
-                    2, 1,
-                    new float[] { 50f, 50f },
+                    3, 1,
+                    new float[] { 33f, 33f, 33f },
                     new float[] { 100f }
                 );
 
@@ -77,7 +78,7 @@ namespace Market_Kasa_Sistemi.Views
                     "rightTable",
                     new TableLayoutPanel[] { tableTitleWithDivider, tableInputs, tableKullaniciButtons, tableBottomButton },
                     4, 1,
-                    new float[] { 10f, 45f, 25f, 20f },
+                    new float[] { 10f, 45f, 30f, 15f },
                     new float[] { 100f }
                 );
         }

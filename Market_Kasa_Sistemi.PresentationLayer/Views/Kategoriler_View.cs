@@ -29,7 +29,7 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW(
                 this.Size, "Kategoriler", 
                 kategorilerDGW, 
-                new string[] { "ID", "Kategori Adı" },
+                new string[] { "ID", "Adı" },
                 new float[] { 30f, 70f }, 
                 RightTable()
             );

@@ -33,7 +33,7 @@ namespace Market_Kasa_Sistemi.Views
             ResponsiveControl[] barkodControl =
             {
                 null, // barkod textbox'ın aşağı doğru kayması için boşluk
-                new ResponsiveControl(barkodGirisiTxt, this.Size, ControlType.Input)
+                new ResponsiveControl(barkodGirisiTxt, new Size((int)(this.Size.Width + 500), (int)(this.Size.Height + 500)), ControlType.Input)
             };
             ResponsiveControl[] butonControls =
             {
