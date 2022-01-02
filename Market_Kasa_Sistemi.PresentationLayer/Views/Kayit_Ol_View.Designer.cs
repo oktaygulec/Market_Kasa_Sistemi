@@ -102,7 +102,7 @@
             this.Controls.Add(this.kullaniciAdiTxt);
             this.Controls.Add(this.kayitOlButton);
             this.Controls.Add(this.iptalButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Kayit_Ol_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

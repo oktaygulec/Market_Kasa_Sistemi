@@ -28,25 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.kullaniciAdiTxt = new System.Windows.Forms.TextBox();
             this.kullaniciSifreTxt = new System.Windows.Forms.TextBox();
             this.girisYapButton = new System.Windows.Forms.Button();
             this.kayitOlButton = new System.Windows.Forms.Button();
             this.lblWrong = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(177, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "KULLANICI GİRİŞİ";
             // 
             // kullaniciAdiTxt
             // 
@@ -104,6 +91,7 @@
             this.kayitOlButton.TabIndex = 4;
             this.kayitOlButton.Text = "KAYIT OL";
             this.kayitOlButton.UseVisualStyleBackColor = false;
+            this.kayitOlButton.Click += new System.EventHandler(this.kayitOlButton_Click);
             // 
             // lblWrong
             // 
@@ -116,6 +104,7 @@
             // 
             // Main_View
             // 
+            this.AcceptButton = this.girisYapButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -125,7 +114,6 @@
             this.Controls.Add(this.girisYapButton);
             this.Controls.Add(this.kullaniciSifreTxt);
             this.Controls.Add(this.kullaniciAdiTxt);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -140,8 +128,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox kullaniciAdiTxt;
         private System.Windows.Forms.TextBox kullaniciSifreTxt;
         private System.Windows.Forms.Button girisYapButton;

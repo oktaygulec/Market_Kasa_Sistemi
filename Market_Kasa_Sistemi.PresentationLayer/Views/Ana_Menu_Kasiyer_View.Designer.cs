@@ -51,6 +51,7 @@
             this.programKapatButton.TabIndex = 13;
             this.programKapatButton.Text = "PROGRAMI KAPAT";
             this.programKapatButton.UseVisualStyleBackColor = false;
+            this.programKapatButton.Click += new System.EventHandler(this.programKapatButton_Click);
             // 
             // barkodOkuButton
             // 

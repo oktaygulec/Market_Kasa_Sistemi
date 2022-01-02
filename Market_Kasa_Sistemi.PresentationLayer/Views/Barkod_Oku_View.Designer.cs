@@ -56,6 +56,7 @@
             this.urunGetirButton.TabIndex = 12;
             this.urunGetirButton.Text = "ÜRÜN GETİR";
             this.urunGetirButton.UseVisualStyleBackColor = false;
+            this.urunGetirButton.Click += new System.EventHandler(this.urunGetirButton_Click);
             // 
             // cikisYapButton
             // 

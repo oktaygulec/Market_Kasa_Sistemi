@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -82,6 +84,19 @@ namespace Market_Kasa_Sistemi.Views
                yukarıdaki tablolar ekleniyor)
             */
             return TableLayoutMaker.CreateContainerTable(responsiveTitle, surroundingPanel);
+        }
+
+        private void urunGetirButton_Click(object sender, EventArgs e)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Urun urun = uow.UrunRepository.GetItem(Convert.ToInt32(barkodGirisiTxt.Text));
+                
+                if(urun.Id != 0)
+                    MessageBox.Show(urun.UrunAd + " - Fiyat: " + urun.UrunFiyat, "Ürün Getir", MessageBoxButtons.OK);
+                else
+                    MessageBox.Show("Ürün bulunamadı.", "Ürün Getir", MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -1,5 +1,8 @@
-﻿using Market_Kasa_Sistemi.DatabaseAccessLayer;
+﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
+using Market_Kasa_Sistemi.Enums;
 using Market_Kasa_Sistemi.Models;
+using Market_Kasa_Sistemi.Utils;
 using Market_Kasa_Sistemi.Views;
 using System;
 using System.Collections.Generic;
@@ -49,11 +52,6 @@ namespace Market_Kasa_Sistemi
             }
         }
 
-        private void Main_View_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void girisYapButton_Click(object sender, EventArgs e)
         {
             using(UnitOfWork uow = new UnitOfWork())
@@ -69,6 +67,58 @@ namespace Market_Kasa_Sistemi
                     lblWrong.Text = "Kullanıcı adınız veya şifreniz yanlış.";
                 }
             }
+        }
+
+        private void Main_View_Load(object sender, EventArgs e)
+        {
+            this.Controls.Add(MainTable());
+        }
+
+        private TableLayoutPanel MainTable()
+        {
+            Size newSize = new Size((int)(this.Size.Width + 400), (int)(this.Size.Height + 400));
+            TableLayoutPanel kullaniciAdiPanel = TableLayoutMaker.CreateInputWithTitleTable("Kullanıcı Adı", "kullaniciAdiLabelText", kullaniciAdiTxt, newSize);
+            TableLayoutPanel kullaniciSifrePanel = TableLayoutMaker.CreateInputWithTitleTable("Şifre", "kullaniciSifreLabelText", kullaniciSifreTxt, newSize);
+
+            TableLayoutPanel tableInputs = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableInputs",
+                new TableLayoutPanel[] { kullaniciAdiPanel, kullaniciSifrePanel },
+                2, 1,
+                new float[] { 50f, 50f },
+                new float[] { 100f }
+            );
+
+            TableLayoutPanel tableButtons = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableButtons",
+                new ResponsiveControl[] 
+                { 
+                    new ResponsiveControl(girisYapButton, newSize, ControlType.Button),
+                    new ResponsiveControl(kayitOlButton, newSize, ControlType.Button)
+                },
+                1, 2,
+                new float[] { 100f },
+                new float[] { 50f, 50f }
+            );
+
+            TableLayoutPanel panel = TableLayoutMaker.CreateResponsiveTable
+            (
+                "panel",
+                new TableLayoutPanel[] { tableInputs, tableButtons },
+                2, 1,
+                new float[] { 50f, 50f },
+                new float[] { 100f }
+            );
+
+            ResponsiveControl title = new ResponsiveControl(new Label { Name = "titleLabel", Text = "KULLANICI GİRİŞİ" }, this.Size, ControlType.HeadTitle);
+            return TableLayoutMaker.CreateContainerTable(title, panel);
+        }
+
+        private void kayitOlButton_Click(object sender, EventArgs e)
+        {
+            Kayit_Ol_View kayitOlView = new Kayit_Ol_View();
+            kayitOlView.ShowDialog();
         }
     }
 }

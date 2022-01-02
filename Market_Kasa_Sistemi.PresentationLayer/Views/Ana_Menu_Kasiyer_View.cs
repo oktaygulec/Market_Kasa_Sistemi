@@ -48,5 +48,10 @@ namespace Market_Kasa_Sistemi.Views
 
             this.Controls.Add(tlp);
         }
+
+        private void programKapatButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
