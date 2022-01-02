@@ -62,19 +62,6 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 100f }
             );
 
-            TableLayoutPanel tableAdetInput = TableLayoutMaker.CreateResponsiveTable
-            (
-                "tableAdetInput",
-                new ResponsiveControl[] 
-                { 
-                    new ResponsiveControl(new Label() { Name = "lblTableAdetInput", Text = "Adet", TextAlign = ContentAlignment.MiddleLeft }, this.Size, ControlType.Title),
-                    new ResponsiveControl(adetNumericUpDown, this.Size, ControlType.Input),
-                },
-                1, 2,
-                new float[] { 100f },
-                new float[] { 50f, 50f }
-            );
-
             TableLayoutPanel tableBottomButtons = TableLayoutMaker.CreateResponsiveTable
             (
                 "tableBottomButtons",
@@ -88,19 +75,10 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 100f }
             );
 
-            TableLayoutPanel tableIadeEt = TableLayoutMaker.CreateResponsiveTable
-            (
-                "tableIadeEt",
-                new TableLayoutPanel[] { tableAdetInput, tableBottomButtons },
-                2, 1,
-                new float [] { 20f, 80f },
-                new float [] { 100f }
-            );
-
             return TableLayoutMaker.CreateResponsiveTable
             (
                 "rightTable",
-                new TableLayoutPanel[] { tableTitleWithDivider, tableFisGetir, null, tableIadeEt },
+                new TableLayoutPanel[] { tableTitleWithDivider, tableFisGetir, null, tableBottomButtons},
                 4, 1,
                 new float[] { 10f, 30f, 15f, 45f },
                 new float[] { 100f }
