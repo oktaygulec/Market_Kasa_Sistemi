@@ -118,7 +118,7 @@ namespace Market_Kasa_Sistemi.Utils
             return container;
         }
 
-        public static TableLayoutPanel CreateEqualSizedTable(ResponsiveControl title, string tableName, ResponsiveControl[] controls, int rowCount, int columnCount)
+        public static TableLayoutPanel CreateEqualSizedTable(string tableName, ResponsiveControl[] controls, int rowCount, int columnCount)
         {
             float[] rowStyles = new float[rowCount];
             for (int i = 0; i < rowCount; i++)
@@ -130,7 +130,7 @@ namespace Market_Kasa_Sistemi.Utils
 
             TableLayoutPanel panel = CreateResponsiveTable(tableName, controls, rowCount, columnCount, rowStyles, columnStyles);
 
-            return CreateContainerTable(title, panel);
+            return panel;
         }
 
         public static TableLayoutPanel CreateTitleWithDividerTable(string tableTitleText, Size formSize)
@@ -197,24 +197,61 @@ namespace Market_Kasa_Sistemi.Utils
             );
         }
 
-        public static TableLayoutPanel CreateInputWithTitleTable(string titleText, string titleName, string textBoxName, Size formSize)
+        public static TableLayoutPanel CreateInputWithTitleTable(string titleText, string titleName, Control input, Size formSize)
         {
             Label title = new Label() { Text = titleText, Name = titleName };
-            TextBox textBox = new TextBox() { Name = textBoxName };
 
             ResponsiveControl[] controls = {
                 new ResponsiveControl(title, formSize, ControlType.Subtitle),
-                new ResponsiveControl(textBox, formSize, ControlType.Input),
-                null
+                new ResponsiveControl(input, formSize, ControlType.Input),
             };
 
             return CreateResponsiveTable(
                 "inputWithTitleTable",
                 controls,
-                3, 1,
-                new float[] { 30f, 30f, 40f },
+                2, 1,
+                new float[] { 35f, 65f },
                 new float[] { 100f }
             );
+        }
+        
+        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, string titleText, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, TableLayoutPanel rightTable)
+        {
+            TableLayoutPanel leftTableTitlesWithDivider = CreateTitlesWithDividerTable
+                    (
+                        dgwTitles,
+                        dgwTitlesColStyles,
+                        formSize
+                    );
+
+            ResponsiveControl leftTableDGWControl = new ResponsiveControl(dgwControl, formSize, ControlType.Input);
+
+            TableLayoutPanel leftTableDGW = CreateResponsiveTable(
+                "leftTableDGW",
+                leftTableDGWControl
+            );
+
+
+            TableLayoutPanel leftTableContainer = CreateResponsiveTable(
+                "leftTableContainer",
+                new TableLayoutPanel[] { leftTableTitlesWithDivider, leftTableDGW },
+                2, 1,
+                new float[] { 10f, 90f },
+                new float[] { 100f }
+            );
+
+            Label title = new Label { Text = titleText };
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, formSize, ControlType.HeadTitle);
+
+            TableLayoutPanel panel = CreateResponsiveTable(
+                "panel",
+                new TableLayoutPanel[] { leftTableContainer, rightTable },
+                1, 2,
+                new float[] { 100f },
+                new float[] { 65f, 35f }
+            );
+
+            return CreateContainerTable(responsiveTitle, panel);
         }
     }
 }

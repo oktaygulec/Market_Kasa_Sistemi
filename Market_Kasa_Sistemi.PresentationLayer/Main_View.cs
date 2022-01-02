@@ -20,15 +20,21 @@ namespace Market_Kasa_Sistemi
         {
             InitializeComponent();
         }
-        private void kullanici_Placeholder(object sender, EventArgs e)
+        private void kullanici_PlaceholderEnter(object sender, EventArgs e)
         {
             TextBox textbox = sender as TextBox;
-            string textBoxName = textbox.Name;
             if (textbox.Text == "Kullanıcı Adı" || textbox.Text == "Şifre")
             {
                 textbox.Text = "";
                 textbox.ForeColor = Color.Black;
-            }else if (textbox.Text == "")
+            }
+        }
+
+        private void kullanici_PlaceholderLeave(object sender, EventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            string textBoxName = textbox.Name;
+            if (textbox.Text == "")
             {
                 if (textBoxName == "kullaniciAdiTxt")
                 {

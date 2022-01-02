@@ -23,57 +23,21 @@ namespace Market_Kasa_Sistemi.Views
         private void Kategoriler_View_Load(object sender, EventArgs e)
         {
             //TopMost = true;
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
-            Label title = new Label { Text = "Kategoriler".ToUpper() };
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
-
-            TableLayoutPanel panel = TableLayoutMaker.CreateResponsiveTable(
-                "panel",
-                new TableLayoutPanel[] {LeftTable(), RightTable()},
-                1, 2,
-                new float[] { 100f },
-                new float[] { 65f, 35f }
+            //FormBorderStyle = FormBorderStyle.None;
+            //WindowState = FormWindowState.Maximized;
+            
+            TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW(
+                this.Size, "Kategoriler", 
+                kategorilerDGW, 
+                new string[] { "ID", "Kategori Adı" },
+                new float[] { 30f, 70f }, 
+                RightTable()
             );
-
-            TableLayoutPanel tlp = TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
 
             this.Controls.Add(tlp);
         }
 
-        private TableLayoutPanel LeftTable()
-        {
-            ResponsiveControl[] leftTableDGWControls = {
-                new ResponsiveControl(kategorilerDGW, this.Size, ControlType.Input)
-            };
-
-            TableLayoutPanel leftTableTitlesWithDivider = TableLayoutMaker.CreateTitlesWithDividerTable
-                (
-                    new string[] { "ID", "Kategori Adı" },
-                    new float[] { 30f, 70f },
-                    this.Size
-                );
-
-            TableLayoutPanel leftTableDGW = TableLayoutMaker.CreateResponsiveTable(
-                "leftTableDGW",
-                leftTableDGWControls,
-                1, 1,
-                new float[] { 100f },
-                new float[] { 100f }
-            );
-
-
-            TableLayoutPanel leftTableContainer = TableLayoutMaker.CreateResponsiveTable(
-                "leftTableContainer",
-                new TableLayoutPanel[] { leftTableTitlesWithDivider, leftTableDGW },
-                2, 1,
-                new float[] { 10f, 90f },
-                new float[] { 100f }
-            );
-
-            return leftTableContainer;
-        }
-
+        
         private TableLayoutPanel RightTable()
         {
             TableLayoutPanel rightTableTitleWithDivider = TableLayoutMaker.CreateTitleWithDividerTable("Kategori Ekle", this.Size);
@@ -83,9 +47,7 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(kategoriSilButton, this.Size, ControlType.Button),
             };
 
-            ResponsiveControl[] rightTableBottomControls = {
-                new ResponsiveControl(cikisButton, this.Size, ControlType.Button)
-            };
+            ResponsiveControl rightTableBottomControl = new ResponsiveControl(cikisButton, this.Size, ControlType.Button);
 
             TableLayoutPanel rightTableComponents = TableLayoutMaker.CreateResponsiveTable(
                 "rightTableComponents",
@@ -97,14 +59,11 @@ namespace Market_Kasa_Sistemi.Views
 
             TableLayoutPanel rightTableBottom = TableLayoutMaker.CreateResponsiveTable(
                 "rightTableBottom",
-                rightTableBottomControls,
-                1, 1,
-                new float[] { 100f },
-                new float[] { 100f }
+                rightTableBottomControl
             );
 
             TableLayoutPanel rightTableTopInput = TableLayoutMaker.CreateInputWithTitleTable(
-                "Kategori Adı", "rightTableKategoriAdTitle", "rightTableKategoriAdTextBox", this.Size);
+                "Kategori Adı", "rightTableKategoriAdTitle", kategoriAdiTxt, this.Size);
 
             TableLayoutPanel rightTableContainer = TableLayoutMaker.CreateResponsiveTable(
                 "rightTableContainer",

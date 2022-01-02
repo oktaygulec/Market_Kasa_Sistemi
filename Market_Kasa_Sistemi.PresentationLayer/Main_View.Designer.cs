@@ -58,7 +58,8 @@
             this.kullaniciAdiTxt.Size = new System.Drawing.Size(322, 26);
             this.kullaniciAdiTxt.TabIndex = 1;
             this.kullaniciAdiTxt.Text = "Kullanıcı Adı";
-            this.kullaniciAdiTxt.MouseHover += new System.EventHandler(this.kullanici_Placeholder);
+            this.kullaniciAdiTxt.Enter += new System.EventHandler(this.kullanici_PlaceholderEnter);
+            this.kullaniciAdiTxt.Leave += new System.EventHandler(this.kullanici_PlaceholderLeave);
             // 
             // kullaniciSifreTxt
             // 
@@ -71,7 +72,8 @@
             this.kullaniciSifreTxt.Size = new System.Drawing.Size(322, 26);
             this.kullaniciSifreTxt.TabIndex = 2;
             this.kullaniciSifreTxt.Text = "Şifre";
-            this.kullaniciSifreTxt.Enter += new System.EventHandler(this.kullanici_Placeholder);
+            this.kullaniciSifreTxt.Enter += new System.EventHandler(this.kullanici_PlaceholderEnter);
+            this.kullaniciSifreTxt.Leave += new System.EventHandler(this.kullanici_PlaceholderLeave);
             // 
             // girisYapButton
             // 

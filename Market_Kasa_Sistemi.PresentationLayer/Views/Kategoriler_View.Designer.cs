@@ -72,7 +72,6 @@
             this.kategoriAdiTxt.Name = "kategoriAdiTxt";
             this.kategoriAdiTxt.Size = new System.Drawing.Size(209, 27);
             this.kategoriAdiTxt.TabIndex = 57;
-            this.kategoriAdiTxt.Visible = false;
             // 
             // kategorilerDGW
             // 

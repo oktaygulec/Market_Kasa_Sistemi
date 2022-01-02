@@ -16,8 +16,12 @@ namespace Market_Kasa_Sistemi.Components
 
         public ResponsiveControl(Control control, Size formSize, ControlType textType)
         {
+            float height = (control.Height - 100) * 2.6f;
+            Size newSize = new Size((int)(formSize.Width + height), (int)(formSize.Height + height));
+            
             switch (textType)
             {
+                    
                 case ControlType.HeadTitle:
                     this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.HeadTitle);
                     this.Control.ForeColor = Color.MediumBlue;
@@ -48,18 +52,16 @@ namespace Market_Kasa_Sistemi.Components
                     this.Control.Margin = new Padding(0, 0, 16, 0);
                     break;
                 case ControlType.Button:
-                    float height = (control.Height - 100) * 2.6f;
-                    Size newSize = new Size((int)(formSize.Width + height), (int)(formSize.Height + height));
                     this.Control = ResponsiveFontSize.MakeResponsive(control, newSize, ControlType.Button);
                     this.Control.Dock = DockStyle.Fill;
-                    this.Control.Margin = new Padding(8, 32, 24, 0);
+                    this.Control.Margin = new Padding(8, 16, 24, 0);
                     break;
                 case ControlType.Input:
-                    this.Control = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.Input);
+                    this.Control = ResponsiveFontSize.MakeResponsive(control, newSize, ControlType.Input);
                     this.Control.Anchor = AnchorStyles.Left;
                     this.Control.Dock = DockStyle.Fill;
                     this.Control.AutoSize = true;
-                    this.Control.Margin = new Padding(8, 0, 24, 0);
+                    this.Control.Margin = new Padding(8, 8, 24, 0);
                     break;
                 case ControlType.HorizontalDivider:
                     Label divider = ResponsiveFontSize.MakeResponsive(control, formSize, ControlType.HorizontalDivider) as Label;
