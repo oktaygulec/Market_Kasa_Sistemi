@@ -22,6 +22,13 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Ana_Menu_Yonetici_View_Load(object sender, EventArgs e)
         {
+
+
+            this.Controls.Add(MainTable());
+        }
+
+        private TableLayoutPanel MainTable()
+        {
             ResponsiveControl[] controls = {
                 new ResponsiveControl(satisButton, this.Size, ControlType.Button),
                 new ResponsiveControl(iadeButton, this.Size, ControlType.Button),
@@ -42,14 +49,12 @@ namespace Market_Kasa_Sistemi.Views
             ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
 
             TableLayoutPanel panel = TableLayoutMaker.CreateEqualSizedTable(
-                "mainTable", 
+                "mainTable",
                 controls,
                 3, 3
             );
 
-            TableLayoutPanel tlp = TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
-
-            this.Controls.Add(tlp);
+            return TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
         }
     }
 }
