@@ -248,7 +248,7 @@ namespace Market_Kasa_Sistemi.Utils
                 new TableLayoutPanel[] { leftTableContainer, rightTable },
                 1, 2,
                 new float[] { 100f },
-                new float[] { 65f, 35f }
+                new float[] { 75f, 25f }
             );
 
             return CreateContainerTable(responsiveTitle, panel);

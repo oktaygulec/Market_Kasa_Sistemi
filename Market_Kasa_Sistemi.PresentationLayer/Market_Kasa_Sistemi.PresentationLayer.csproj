@@ -175,6 +175,9 @@
     <EmbeddedResource Include="Views\Kullanicilar_View.resx">
       <DependentUpon>Kullanicilar_View.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Personeller_View.resx">
+      <DependentUpon>Personeller_View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Urunler_View.resx">
       <DependentUpon>Urunler_View.cs</DependentUpon>
     </EmbeddedResource>

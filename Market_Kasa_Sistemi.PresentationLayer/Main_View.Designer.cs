@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(191, 46);
+            this.label1.Location = new System.Drawing.Point(177, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 37);
@@ -52,7 +52,7 @@
             // 
             this.kullaniciAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciAdiTxt.ForeColor = System.Drawing.Color.DarkGray;
-            this.kullaniciAdiTxt.Location = new System.Drawing.Point(139, 110);
+            this.kullaniciAdiTxt.Location = new System.Drawing.Point(130, 146);
             this.kullaniciAdiTxt.Margin = new System.Windows.Forms.Padding(8, 2, 2, 2);
             this.kullaniciAdiTxt.Name = "kullaniciAdiTxt";
             this.kullaniciAdiTxt.Size = new System.Drawing.Size(322, 26);
@@ -65,7 +65,7 @@
             // 
             this.kullaniciSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciSifreTxt.ForeColor = System.Drawing.Color.DarkGray;
-            this.kullaniciSifreTxt.Location = new System.Drawing.Point(139, 168);
+            this.kullaniciSifreTxt.Location = new System.Drawing.Point(130, 204);
             this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
             this.kullaniciSifreTxt.PasswordChar = '●';
@@ -82,7 +82,7 @@
             this.girisYapButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.girisYapButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.girisYapButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.girisYapButton.Location = new System.Drawing.Point(139, 237);
+            this.girisYapButton.Location = new System.Drawing.Point(130, 312);
             this.girisYapButton.Margin = new System.Windows.Forms.Padding(2);
             this.girisYapButton.Name = "girisYapButton";
             this.girisYapButton.Size = new System.Drawing.Size(116, 65);
@@ -97,7 +97,7 @@
             this.kayitOlButton.FlatAppearance.BorderSize = 0;
             this.kayitOlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kayitOlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kayitOlButton.Location = new System.Drawing.Point(344, 237);
+            this.kayitOlButton.Location = new System.Drawing.Point(335, 312);
             this.kayitOlButton.Margin = new System.Windows.Forms.Padding(2);
             this.kayitOlButton.Name = "kayitOlButton";
             this.kayitOlButton.Size = new System.Drawing.Size(116, 65);
@@ -109,7 +109,7 @@
             // 
             this.lblWrong.AutoSize = true;
             this.lblWrong.ForeColor = System.Drawing.Color.Red;
-            this.lblWrong.Location = new System.Drawing.Point(136, 205);
+            this.lblWrong.Location = new System.Drawing.Point(127, 241);
             this.lblWrong.Name = "lblWrong";
             this.lblWrong.Size = new System.Drawing.Size(0, 13);
             this.lblWrong.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.kayitOlButton);
             this.Controls.Add(this.girisYapButton);
