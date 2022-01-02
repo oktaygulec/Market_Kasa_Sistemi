@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +20,91 @@ namespace Market_Kasa_Sistemi.Views
             InitializeComponent();
         }
 
+        private void Urun_Iade_View_Load(object sender, EventArgs e)
+        {
+            TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
+            (
+                this.Size,
+                "Ürün İade",
+                iadeDGW,
+                new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
+                new float[] { 20f, 40f, 15f, 25f},
+                RightTable(),
+                toplamTutar
+            );
+            this.Controls.Add(tlp);
+        }
+
+        private TableLayoutPanel RightTable()
+        {
+            TableLayoutPanel tableTitleWithDivider = TableLayoutMaker.CreateTitleWithDividerTable("İade Et", this.Size);
+
+            TableLayoutPanel tableFisInput = TableLayoutMaker.CreateInputWithTitleTable
+            (
+                "Fiş Giriş",
+                "fisGirisInputTitle",
+                fisGirisiTxt,
+                this.Size
+            );
+
+            TableLayoutPanel tableFisButton = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableFisButton",
+                new ResponsiveControl(fisGetirButton, this.Size, ControlType.Button)
+            );
+
+            TableLayoutPanel tableFisGetir = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableFisGetir",
+                new TableLayoutPanel[] { tableFisInput, tableFisButton },
+                2, 1,
+                new float[] { 50f, 50f },
+                new float[] { 100f }
+            );
+
+            TableLayoutPanel tableAdetInput = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableAdetInput",
+                new ResponsiveControl[] 
+                { 
+                    new ResponsiveControl(new Label() { Name = "lblTableAdetInput", Text = "Adet", TextAlign = ContentAlignment.MiddleLeft }, this.Size, ControlType.Title),
+                    new ResponsiveControl(adetNumericUpDown, this.Size, ControlType.Input),
+                },
+                1, 2,
+                new float[] { 100f },
+                new float[] { 50f, 50f }
+            );
+
+            TableLayoutPanel tableBottomButtons = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableBottomButtons",
+                new ResponsiveControl[] 
+                {
+                    new ResponsiveControl(iadeEtButton, this.Size, ControlType.Button),
+                    new ResponsiveControl(cikisButton, this.Size, ControlType.Button)
+                },
+                2, 1,
+                new float[] { 70f, 30f },
+                new float[] { 100f }
+            );
+
+            TableLayoutPanel tableIadeEt = TableLayoutMaker.CreateResponsiveTable
+            (
+                "tableIadeEt",
+                new TableLayoutPanel[] { tableAdetInput, tableBottomButtons },
+                2, 1,
+                new float [] { 20f, 80f },
+                new float [] { 100f }
+            );
+
+            return TableLayoutMaker.CreateResponsiveTable
+            (
+                "rightTable",
+                new TableLayoutPanel[] { tableTitleWithDivider, tableFisGetir, null, tableIadeEt },
+                4, 1,
+                new float[] { 10f, 30f, 15f, 45f },
+                new float[] { 100f }
+            );
+        }
     }
 }

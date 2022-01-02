@@ -86,6 +86,7 @@
             this.kullaniciSifreTxt.Location = new System.Drawing.Point(558, 134);
             this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
+            this.kullaniciSifreTxt.PasswordChar = '●';
             this.kullaniciSifreTxt.Size = new System.Drawing.Size(209, 27);
             this.kullaniciSifreTxt.TabIndex = 27;
             // 

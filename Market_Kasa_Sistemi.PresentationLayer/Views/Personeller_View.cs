@@ -52,17 +52,17 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 100f }
             );
 
-            ResponsiveControl[] kullaniciButtonsControls = new ResponsiveControl[]
+            ResponsiveControl[] personelButtonsControls = new ResponsiveControl[]
             {
                 new ResponsiveControl(personelEkleButton, this.Size, ControlType.Button),
                 new ResponsiveControl(personelDuzenleButton, this.Size, ControlType.Button),
                 new ResponsiveControl(personelSilButton, this.Size, ControlType.Button)
             };
 
-            TableLayoutPanel tableKullaniciButtons = TableLayoutMaker.CreateResponsiveTable
+            TableLayoutPanel tablePersonelButtons = TableLayoutMaker.CreateResponsiveTable
                 (
-                    "tableKullaniciButtons",
-                    kullaniciButtonsControls,
+                    "tablePersonelButtons",
+                    personelButtonsControls,
                     3, 1,
                     new float[] { 33f, 33f, 33f },
                     new float[] { 100f }
@@ -77,7 +77,7 @@ namespace Market_Kasa_Sistemi.Views
             return TableLayoutMaker.CreateResponsiveTable
                 (
                     "rightTable",
-                    new TableLayoutPanel[] { tableTitleWithDivider, tableInputs, tableKullaniciButtons, tableBottomButton },
+                    new TableLayoutPanel[] { tableTitleWithDivider, tableInputs, tablePersonelButtons, tableBottomButton },
                     4, 1,
                     new float[] { 10f, 45f, 30f, 15f },
                     new float[] { 100f }

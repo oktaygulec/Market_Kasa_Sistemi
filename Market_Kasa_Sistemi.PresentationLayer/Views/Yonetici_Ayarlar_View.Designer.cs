@@ -31,8 +31,6 @@
             this.kategorilerButton = new System.Windows.Forms.Button();
             this.urunlerButton = new System.Windows.Forms.Button();
             this.personellerButton = new System.Windows.Forms.Button();
-            this.headTitle = new System.Windows.Forms.Label();
-            this.yetkilerButton = new System.Windows.Forms.Button();
             this.kullanicilarButton = new System.Windows.Forms.Button();
             this.anaMenuyeDonButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,10 +43,10 @@
             this.kategorilerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kategorilerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kategorilerButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kategorilerButton.Location = new System.Drawing.Point(312, 326);
+            this.kategorilerButton.Location = new System.Drawing.Point(404, 258);
             this.kategorilerButton.Margin = new System.Windows.Forms.Padding(0);
             this.kategorilerButton.Name = "kategorilerButton";
-            this.kategorilerButton.Size = new System.Drawing.Size(215, 123);
+            this.kategorilerButton.Size = new System.Drawing.Size(242, 100);
             this.kategorilerButton.TabIndex = 11;
             this.kategorilerButton.Text = "KATEGORİLER";
             this.kategorilerButton.UseVisualStyleBackColor = false;
@@ -61,10 +59,10 @@
             this.urunlerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urunlerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunlerButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.urunlerButton.Location = new System.Drawing.Point(55, 326);
+            this.urunlerButton.Location = new System.Drawing.Point(139, 258);
             this.urunlerButton.Margin = new System.Windows.Forms.Padding(0);
             this.urunlerButton.Name = "urunlerButton";
-            this.urunlerButton.Size = new System.Drawing.Size(215, 123);
+            this.urunlerButton.Size = new System.Drawing.Size(242, 100);
             this.urunlerButton.TabIndex = 10;
             this.urunlerButton.Text = "ÜRÜNLER";
             this.urunlerButton.UseVisualStyleBackColor = false;
@@ -77,40 +75,13 @@
             this.personellerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.personellerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.personellerButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.personellerButton.Location = new System.Drawing.Point(575, 170);
+            this.personellerButton.Location = new System.Drawing.Point(404, 134);
             this.personellerButton.Margin = new System.Windows.Forms.Padding(0);
             this.personellerButton.Name = "personellerButton";
-            this.personellerButton.Size = new System.Drawing.Size(215, 123);
+            this.personellerButton.Size = new System.Drawing.Size(242, 100);
             this.personellerButton.TabIndex = 9;
             this.personellerButton.Text = "PERSONELLER";
             this.personellerButton.UseVisualStyleBackColor = false;
-            // 
-            // headTitle
-            // 
-            this.headTitle.AutoSize = true;
-            this.headTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.headTitle.ForeColor = System.Drawing.Color.MediumBlue;
-            this.headTitle.Location = new System.Drawing.Point(202, 62);
-            this.headTitle.Name = "headTitle";
-            this.headTitle.Size = new System.Drawing.Size(454, 48);
-            this.headTitle.TabIndex = 12;
-            this.headTitle.Text = "YÖNETİCİ AYARLARI";
-            // 
-            // yetkilerButton
-            // 
-            this.yetkilerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(99)))), ((int)(((byte)(255)))));
-            this.yetkilerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.yetkilerButton.FlatAppearance.BorderSize = 0;
-            this.yetkilerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yetkilerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yetkilerButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.yetkilerButton.Location = new System.Drawing.Point(312, 170);
-            this.yetkilerButton.Margin = new System.Windows.Forms.Padding(0);
-            this.yetkilerButton.Name = "yetkilerButton";
-            this.yetkilerButton.Size = new System.Drawing.Size(215, 123);
-            this.yetkilerButton.TabIndex = 14;
-            this.yetkilerButton.Text = "YETKİLER";
-            this.yetkilerButton.UseVisualStyleBackColor = false;
             // 
             // kullanicilarButton
             // 
@@ -120,10 +91,10 @@
             this.kullanicilarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullanicilarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullanicilarButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullanicilarButton.Location = new System.Drawing.Point(55, 170);
+            this.kullanicilarButton.Location = new System.Drawing.Point(139, 134);
             this.kullanicilarButton.Margin = new System.Windows.Forms.Padding(0);
             this.kullanicilarButton.Name = "kullanicilarButton";
-            this.kullanicilarButton.Size = new System.Drawing.Size(215, 123);
+            this.kullanicilarButton.Size = new System.Drawing.Size(242, 100);
             this.kullanicilarButton.TabIndex = 13;
             this.kullanicilarButton.Text = "KULLANICILAR";
             this.kullanicilarButton.UseVisualStyleBackColor = false;
@@ -136,30 +107,29 @@
             this.anaMenuyeDonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.anaMenuyeDonButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.anaMenuyeDonButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.anaMenuyeDonButton.Location = new System.Drawing.Point(575, 326);
+            this.anaMenuyeDonButton.Location = new System.Drawing.Point(269, 377);
             this.anaMenuyeDonButton.Margin = new System.Windows.Forms.Padding(0);
             this.anaMenuyeDonButton.Name = "anaMenuyeDonButton";
-            this.anaMenuyeDonButton.Size = new System.Drawing.Size(215, 123);
+            this.anaMenuyeDonButton.Size = new System.Drawing.Size(242, 100);
             this.anaMenuyeDonButton.TabIndex = 15;
             this.anaMenuyeDonButton.Text = "ANA MENÜYE DÖN";
             this.anaMenuyeDonButton.UseVisualStyleBackColor = false;
             // 
             // Yonetici_Ayarlar_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 512);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.anaMenuyeDonButton);
-            this.Controls.Add(this.yetkilerButton);
             this.Controls.Add(this.kullanicilarButton);
-            this.Controls.Add(this.headTitle);
             this.Controls.Add(this.kategorilerButton);
             this.Controls.Add(this.urunlerButton);
             this.Controls.Add(this.personellerButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Yonetici_Ayarlar_View";
             this.Text = "Yönetici Ayarları";
+            this.Load += new System.EventHandler(this.Yonetici_Ayarlar_View_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -168,8 +138,6 @@
         private System.Windows.Forms.Button kategorilerButton;
         private System.Windows.Forms.Button urunlerButton;
         private System.Windows.Forms.Button personellerButton;
-        private System.Windows.Forms.Label headTitle;
-        private System.Windows.Forms.Button yetkilerButton;
         private System.Windows.Forms.Button kullanicilarButton;
         private System.Windows.Forms.Button anaMenuyeDonButton;
     }

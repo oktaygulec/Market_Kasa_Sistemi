@@ -68,7 +68,6 @@ C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Urunler_View.resources
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Urun_Iade_View.resources
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Urun_Satis_View.resources
-C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Yetkiler_View.resources
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Yonetici_Ayarlar_View.resources
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.PresentationLayer.csproj.GenerateResource.cache
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.PresentationLayer.csproj.CoreCompileInputs.cache

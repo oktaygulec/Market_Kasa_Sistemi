@@ -132,12 +132,6 @@
     <Compile Include="Views\Urun_Satis_View.Designer.cs">
       <DependentUpon>Urun_Satis_View.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Yetkiler_View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Yetkiler_View.Designer.cs">
-      <DependentUpon>Yetkiler_View.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Yonetici_Ayarlar_View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Urun_Satis_View.resx">
       <DependentUpon>Urun_Satis_View.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Yetkiler_View.resx">
-      <DependentUpon>Yetkiler_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Yonetici_Ayarlar_View.resx">
       <DependentUpon>Yonetici_Ayarlar_View.cs</DependentUpon>
