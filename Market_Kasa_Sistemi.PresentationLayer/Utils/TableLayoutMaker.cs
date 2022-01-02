@@ -166,14 +166,12 @@ namespace Market_Kasa_Sistemi.Utils
             for (int i = 0; i < tableTitlesText.Length; i++)
             {
                 string titleText = tableTitlesText[i];
-                Label lblTitle = new Label() { Text = titleText };
+                Label lblTitle = new Label() { Text = titleText, TextAlign = ContentAlignment.TopCenter };
                 tableTitleControls[i] = new ResponsiveControl(lblTitle, formSize, ControlType.Title);
 
             }
 
-            Label divider = new Label();
-
-            ResponsiveControl tableDividerControl = new ResponsiveControl(divider, formSize, ControlType.HorizontalDivider);
+            ResponsiveControl tableDividerControl = new ResponsiveControl(new Label(), formSize, ControlType.HorizontalDivider);
 
             TableLayoutPanel tableTitle = CreateResponsiveTable(
                 "tableTitle",
@@ -215,24 +213,33 @@ namespace Market_Kasa_Sistemi.Utils
             );
         }
         
-        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, string titleText, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, TableLayoutPanel rightTable)
+        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, string titleText, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, TableLayoutPanel rightTable, Label toplam = null)
         {
             TableLayoutPanel leftTableTitlesWithDivider = CreateTitlesWithDividerTable
-                    (
-                        dgwTitles,
-                        dgwTitlesColStyles,
-                        formSize
-                    );
+            (
+                dgwTitles,
+                dgwTitlesColStyles,
+                formSize
+            );
 
             ResponsiveControl leftTableDGWControl = new ResponsiveControl(dgwControl, formSize, ControlType.Input);
 
-            TableLayoutPanel leftTableDGW = CreateResponsiveTable(
+            TableLayoutPanel leftTableDGW = toplam == null ? CreateResponsiveTable
+            (
                 "leftTableDGW",
                 leftTableDGWControl
+            ) : CreateResponsiveTable
+            (
+                "leftTableDGW",
+                new ResponsiveControl[] { leftTableDGWControl, new ResponsiveControl(toplam, formSize, ControlType.Title) },
+                2, 1,
+                new float[] { 90f, 10f },
+                new float[] { 100f }
             );
 
 
-            TableLayoutPanel leftTableContainer = CreateResponsiveTable(
+            TableLayoutPanel leftTableContainer = CreateResponsiveTable
+            (
                 "leftTableContainer",
                 new TableLayoutPanel[] { leftTableTitlesWithDivider, leftTableDGW },
                 2, 1,
