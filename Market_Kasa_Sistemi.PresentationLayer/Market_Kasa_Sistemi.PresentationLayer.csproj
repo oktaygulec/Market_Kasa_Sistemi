@@ -221,10 +221,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MarketDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="MarketDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MarketDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

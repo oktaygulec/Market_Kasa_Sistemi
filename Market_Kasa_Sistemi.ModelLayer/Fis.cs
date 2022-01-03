@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.Models
 {
     public class Fis : IModel
     {
+        [Browsable(false)]
         public int Id { get; set; }
         public DateTime FisTarih { get; set; }
         public OdemeTip OdemeTip { get; set; }
