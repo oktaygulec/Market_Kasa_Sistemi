@@ -89,6 +89,7 @@
             this.cikisButton.TabIndex = 27;
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
+            this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
             // toplamTutar
             // 

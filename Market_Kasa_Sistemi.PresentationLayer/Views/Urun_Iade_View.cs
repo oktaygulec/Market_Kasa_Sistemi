@@ -121,5 +121,10 @@ namespace Market_Kasa_Sistemi.Views
         {
             RemoveSatis();
         }
+
+        private void cikisButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
