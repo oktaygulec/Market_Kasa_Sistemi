@@ -50,6 +50,7 @@
             this.kategorilerButton.TabIndex = 11;
             this.kategorilerButton.Text = "KATEGORİLER";
             this.kategorilerButton.UseVisualStyleBackColor = false;
+            this.kategorilerButton.Click += new System.EventHandler(this.kategorilerButton_Click);
             // 
             // urunlerButton
             // 
@@ -66,6 +67,7 @@
             this.urunlerButton.TabIndex = 10;
             this.urunlerButton.Text = "ÜRÜNLER";
             this.urunlerButton.UseVisualStyleBackColor = false;
+            this.urunlerButton.Click += new System.EventHandler(this.urunlerButton_Click);
             // 
             // personellerButton
             // 
@@ -82,6 +84,7 @@
             this.personellerButton.TabIndex = 9;
             this.personellerButton.Text = "PERSONELLER";
             this.personellerButton.UseVisualStyleBackColor = false;
+            this.personellerButton.Click += new System.EventHandler(this.personellerButton_Click);
             // 
             // kullanicilarButton
             // 
@@ -98,6 +101,7 @@
             this.kullanicilarButton.TabIndex = 13;
             this.kullanicilarButton.Text = "KULLANICILAR";
             this.kullanicilarButton.UseVisualStyleBackColor = false;
+            this.kullanicilarButton.Click += new System.EventHandler(this.kullanicilarButton_Click);
             // 
             // anaMenuyeDonButton
             // 
@@ -114,6 +118,7 @@
             this.anaMenuyeDonButton.TabIndex = 15;
             this.anaMenuyeDonButton.Text = "ANA MENÜYE DÖN";
             this.anaMenuyeDonButton.UseVisualStyleBackColor = false;
+            this.anaMenuyeDonButton.Click += new System.EventHandler(this.anaMenuyeDonButton_Click);
             // 
             // Yonetici_Ayarlar_View
             // 
@@ -125,7 +130,7 @@
             this.Controls.Add(this.kategorilerButton);
             this.Controls.Add(this.urunlerButton);
             this.Controls.Add(this.personellerButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Yonetici_Ayarlar_View";
             this.Text = "Yönetici Ayarları";
             this.Load += new System.EventHandler(this.Yonetici_Ayarlar_View_Load);

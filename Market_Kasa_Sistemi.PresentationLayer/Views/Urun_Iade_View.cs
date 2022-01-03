@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,13 +17,19 @@ namespace Market_Kasa_Sistemi.Views
 {
     public partial class Urun_Iade_View : Form
     {
+        BindingSource source;
         public Urun_Iade_View()
         {
             InitializeComponent();
+            source = new BindingSource();
         }
 
         private void Urun_Iade_View_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
             (
                 this.Size,
@@ -83,6 +91,35 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 10f, 30f, 15f, 45f },
                 new float[] { 100f }
             );
+        }
+
+        private void GetSatislar()
+        {
+            iadeDGW.DataSource = source;
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                source.DataSource = uow.SatisRepository.AllSatisByFisId(Convert.ToInt32(fisGirisiTxt.Text));
+            }
+        }
+
+        private void RemoveSatis()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Satis removeThis = source.Current as Satis;
+                uow.SatisRepository.Remove(removeThis);
+                source.Remove(removeThis);
+            }
+        }
+
+        private void fisGetirButton_Click(object sender, EventArgs e)
+        {
+            GetSatislar();
+        }
+
+        private void iadeEtButton_Click(object sender, EventArgs e)
+        {
+            RemoveSatis();
         }
     }
 }

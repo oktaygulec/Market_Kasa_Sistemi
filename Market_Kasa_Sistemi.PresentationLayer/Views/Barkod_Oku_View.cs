@@ -24,7 +24,10 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Barkod_Oku_View_Load(object sender, EventArgs e)
         {
-            
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             // Oluşturulan tabloyu Form'a ekleme
             this.Controls.Add(ContainerTable());
         }
@@ -97,6 +100,11 @@ namespace Market_Kasa_Sistemi.Views
                 else
                     MessageBox.Show("Ürün bulunamadı.", "Ürün Getir", MessageBoxButtons.OK);
             }
+        }
+
+        private void cikisYapButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

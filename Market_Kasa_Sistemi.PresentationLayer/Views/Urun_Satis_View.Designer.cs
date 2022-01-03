@@ -43,7 +43,7 @@
             // 
             this.urunGirisiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunGirisiTxt.Location = new System.Drawing.Point(553, 150);
-            this.urunGirisiTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.urunGirisiTxt.Margin = new System.Windows.Forms.Padding(2);
             this.urunGirisiTxt.Name = "urunGirisiTxt";
             this.urunGirisiTxt.Size = new System.Drawing.Size(209, 27);
             this.urunGirisiTxt.TabIndex = 18;
@@ -55,7 +55,7 @@
             this.urunEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urunEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunEkleButton.Location = new System.Drawing.Point(553, 198);
-            this.urunEkleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.urunEkleButton.Margin = new System.Windows.Forms.Padding(2);
             this.urunEkleButton.Name = "urunEkleButton";
             this.urunEkleButton.Size = new System.Drawing.Size(208, 31);
             this.urunEkleButton.TabIndex = 21;
@@ -69,7 +69,7 @@
             this.urunCikartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urunCikartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunCikartButton.Location = new System.Drawing.Point(553, 243);
-            this.urunCikartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.urunCikartButton.Margin = new System.Windows.Forms.Padding(2);
             this.urunCikartButton.Name = "urunCikartButton";
             this.urunCikartButton.Size = new System.Drawing.Size(208, 31);
             this.urunCikartButton.TabIndex = 22;
@@ -81,7 +81,7 @@
             this.odemeTipiComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.odemeTipiComboBox.FormattingEnabled = true;
             this.odemeTipiComboBox.Location = new System.Drawing.Point(553, 352);
-            this.odemeTipiComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.odemeTipiComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.odemeTipiComboBox.Name = "odemeTipiComboBox";
             this.odemeTipiComboBox.Size = new System.Drawing.Size(209, 28);
             this.odemeTipiComboBox.TabIndex = 25;
@@ -93,7 +93,7 @@
             this.satisYapButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.satisYapButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.satisYapButton.Location = new System.Drawing.Point(553, 399);
-            this.satisYapButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satisYapButton.Margin = new System.Windows.Forms.Padding(2);
             this.satisYapButton.Name = "satisYapButton";
             this.satisYapButton.Size = new System.Drawing.Size(208, 93);
             this.satisYapButton.TabIndex = 26;
@@ -107,12 +107,13 @@
             this.iptalEtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iptalEtButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.iptalEtButton.Location = new System.Drawing.Point(553, 496);
-            this.iptalEtButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iptalEtButton.Margin = new System.Windows.Forms.Padding(2);
             this.iptalEtButton.Name = "iptalEtButton";
             this.iptalEtButton.Size = new System.Drawing.Size(208, 37);
             this.iptalEtButton.TabIndex = 27;
             this.iptalEtButton.Text = "İPTAL ET";
             this.iptalEtButton.UseVisualStyleBackColor = false;
+            this.iptalEtButton.Click += new System.EventHandler(this.iptalEtButton_Click);
             // 
             // toplamTutar
             // 
@@ -141,7 +142,7 @@
             this.satisDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satisDGW.ColumnHeadersVisible = false;
             this.satisDGW.Location = new System.Drawing.Point(30, 108);
-            this.satisDGW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satisDGW.Margin = new System.Windows.Forms.Padding(2);
             this.satisDGW.MultiSelect = false;
             this.satisDGW.Name = "satisDGW";
             this.satisDGW.ReadOnly = true;
@@ -169,7 +170,7 @@
             this.Controls.Add(this.urunEkleButton);
             this.Controls.Add(this.urunGirisiTxt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Urun_Satis_View";
             this.Text = "Ürün Satışı";
             this.Load += new System.EventHandler(this.Urun_Satis_View_Load);

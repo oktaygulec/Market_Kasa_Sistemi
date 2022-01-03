@@ -59,6 +59,7 @@
             this.fisGetirButton.TabIndex = 21;
             this.fisGetirButton.Text = "FİŞ GETİR";
             this.fisGetirButton.UseVisualStyleBackColor = false;
+            this.fisGetirButton.Click += new System.EventHandler(this.fisGetirButton_Click);
             // 
             // iadeEtButton
             // 
@@ -73,6 +74,7 @@
             this.iadeEtButton.TabIndex = 26;
             this.iadeEtButton.Text = "İADE ET";
             this.iadeEtButton.UseVisualStyleBackColor = false;
+            this.iadeEtButton.Click += new System.EventHandler(this.iadeEtButton_Click);
             // 
             // cikisButton
             // 

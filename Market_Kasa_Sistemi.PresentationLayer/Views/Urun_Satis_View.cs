@@ -22,6 +22,10 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Urun_Satis_View_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
 (
                 this.Size,
@@ -101,6 +105,11 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 10f, 40f, 15f, 35f },
                 new float[] { 100f }
             );
+        }
+
+        private void iptalEtButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

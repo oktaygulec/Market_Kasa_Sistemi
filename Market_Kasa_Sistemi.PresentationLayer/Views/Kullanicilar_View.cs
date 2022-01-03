@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,13 +17,20 @@ namespace Market_Kasa_Sistemi.Views
 {
     public partial class Kullanicilar_View : Form
     {
+        BindingSource source;
+
         public Kullanicilar_View()
         {
             InitializeComponent();
+            source = new BindingSource();
         }
 
         private void Kullanicilar_View_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
                 (
                     this.Size,
@@ -32,6 +41,7 @@ namespace Market_Kasa_Sistemi.Views
                     RightTable()
                 );
             this.Controls.Add(tlp);
+            GetKullanicilar();
         }
 
         private TableLayoutPanel RightTable()
@@ -83,5 +93,81 @@ namespace Market_Kasa_Sistemi.Views
                 );
         }
 
+        private void GetKullanicilar()
+        {
+            kullanicilarDGW.DataSource = source;
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                source.DataSource = uow.KullaniciRepository.ToList();
+                personelComboBox.DataSource = uow.PersonelRepository.ToList();
+                personelComboBox.DisplayMember = "PersonelAd";
+            }
+        }
+
+        private void AddNewKullanici()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Kullanici newKullanici = new Kullanici
+                {
+                    KullaniciAd = kullaniciAdiTxt.Text,
+                    KullaniciSifre = kullaniciSifreTxt.Text,
+                    Personel = personelComboBox.SelectedItem as Personel
+                };
+                newKullanici.Id = Convert.ToInt32(uow.KullaniciRepository.Add(newKullanici));
+                source.Add(newKullanici);
+            }
+        }
+
+        private void RemoveKullanici()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Kullanici removeThis = source.Current as Kullanici;
+                uow.KullaniciRepository.Remove(removeThis);
+                source.Remove(removeThis);
+            }
+        }
+
+        private void UpdateKullanici()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Kullanici updateThis = source.Current as Kullanici;
+                updateThis.KullaniciAd = kullaniciAdiTxt.Text;
+                updateThis.KullaniciSifre = kullaniciSifreTxt.Text;
+                updateThis.Personel = personelComboBox.SelectedItem as Personel;
+                uow.KullaniciRepository.Update(updateThis);
+                source.ResetCurrentItem();
+            }
+        }
+
+        private void kullaniciEkleButton_Click(object sender, EventArgs e)
+        {
+            AddNewKullanici();
+        }
+
+        private void kullaniciDuzenleButton_Click(object sender, EventArgs e)
+        {
+            UpdateKullanici();
+        }
+
+        private void kullaniciSilButton_Click(object sender, EventArgs e)
+        {
+            RemoveKullanici();
+        }
+
+        private void cikisButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void kullanicilarDGW_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Kullanici currentKullanici = source.Current as Kullanici;
+            kullaniciAdiTxt.Text = currentKullanici.KullaniciAd;
+            kullaniciSifreTxt.Text = currentKullanici.KullaniciSifre;
+            personelComboBox.SelectedIndex = personelComboBox.FindStringExact(currentKullanici.PersonelAd);
+        }
     }
 }
