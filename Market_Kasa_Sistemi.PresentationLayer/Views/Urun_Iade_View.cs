@@ -36,7 +36,7 @@ namespace Market_Kasa_Sistemi.Views
                 "Ürün İade",
                 iadeDGW,
                 new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
-                new float[] { 20f, 40f, 15f, 25f},
+                new float[] { 20f, 40f, 15f, 25f },
                 RightTable(),
                 toplamTutar
             );

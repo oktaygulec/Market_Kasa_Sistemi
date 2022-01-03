@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,16 +17,19 @@ namespace Market_Kasa_Sistemi.Views
 {
     public partial class Urun_Satis_View : Form
     {
+        BindingSource source;
+        decimal toplamTutar = 0;
         public Urun_Satis_View()
         {
             InitializeComponent();
+            source = new BindingSource();
         }
 
         private void Urun_Satis_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            //this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
 (
@@ -34,10 +39,18 @@ namespace Market_Kasa_Sistemi.Views
                 new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
                 new float[] { 20f, 40f, 15f, 25f },
                 RightTable(),
-                toplamTutar
+                toplamTutarLabel
             );
 
             this.Controls.Add(tlp);
+            satisDGW.DataSource = source;
+            toplamTutarLabel.Text = "";
+            
+            using(UnitOfWork uow = new UnitOfWork())
+            {
+                odemeTipiComboBox.DataSource = uow.OdemeTipRepository.ToList();
+                odemeTipiComboBox.DisplayMember = "OdemeTipAd";
+            }
         }
 
         private TableLayoutPanel RightTable()
@@ -107,9 +120,79 @@ namespace Market_Kasa_Sistemi.Views
             );
         }
 
+        private void UrunAdd()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                source.Add(uow.UrunRepository.GetItem(Convert.ToInt32(urunGirisiTxt.Text)));
+                toplamTutar += (source.Current as Urun).UrunFiyat;
+                toplamTutarLabel.Text = toplamTutar.ToString("C2");
+            }
+        }
+
+        private void SatisYap()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Fis newFis = new Fis
+                {
+                    FisTarih = DateTime.Now,
+                    OdemeTip = odemeTipiComboBox.SelectedItem as OdemeTip,
+                    Personel = uow.PersonelRepository.GetItem(Program.Kullanici.Personel.Id)
+                };
+
+                newFis.Id = Convert.ToInt32(uow.FisRepository.Add(newFis));
+
+                List<Satis> satislar = new List<Satis>();
+
+                for (int i = 0; i < source.List.Count; i++)
+                {
+                    Urun currentUrun = source.List[i] as Urun;
+                    if(satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id) != null)
+                    {
+                        Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
+                        satis.SatisAdet++;
+                        satis.Urun.UrunFiyat = currentUrun.UrunFiyat * satis.SatisAdet;
+                    }
+                    else
+                    {
+                        satislar.Add
+                        (
+                            new Satis 
+                            {
+                                SatisAdet = 1,
+                                Fis = newFis,
+                                Urun = currentUrun
+                            }
+                        );
+                    }
+                }
+
+                foreach (Satis item in satislar)
+                {
+                    uow.SatisRepository.Add(item);
+                }
+
+                MessageBox.Show(newFis.Id.ToString());
+                source.Clear();
+                toplamTutar = 0;
+                toplamTutarLabel.Text = "";
+            }
+        }
+
         private void iptalEtButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void urunEkleButton_Click(object sender, EventArgs e)
+        {
+            UrunAdd();
+        }
+
+        private void satisYapButton_Click(object sender, EventArgs e)
+        {
+            SatisYap();
         }
     }
 }
