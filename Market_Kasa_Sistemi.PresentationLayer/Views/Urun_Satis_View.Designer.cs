@@ -34,7 +34,7 @@
             this.odemeTipiComboBox = new System.Windows.Forms.ComboBox();
             this.satisYapButton = new System.Windows.Forms.Button();
             this.iptalEtButton = new System.Windows.Forms.Button();
-            this.toplamTutar = new System.Windows.Forms.Label();
+            this.toplamTutarLabel = new System.Windows.Forms.Label();
             this.satisDGW = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.satisDGW)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +44,7 @@
             this.urunGirisiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunGirisiTxt.Location = new System.Drawing.Point(553, 150);
             this.urunGirisiTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.urunGirisiTxt.MaxLength = 10;
             this.urunGirisiTxt.Name = "urunGirisiTxt";
             this.urunGirisiTxt.Size = new System.Drawing.Size(209, 27);
             this.urunGirisiTxt.TabIndex = 18;
@@ -61,6 +62,7 @@
             this.urunEkleButton.TabIndex = 21;
             this.urunEkleButton.Text = "EKLE";
             this.urunEkleButton.UseVisualStyleBackColor = false;
+            this.urunEkleButton.Click += new System.EventHandler(this.urunEkleButton_Click);
             // 
             // urunCikartButton
             // 
@@ -99,6 +101,7 @@
             this.satisYapButton.TabIndex = 26;
             this.satisYapButton.Text = "SATIŞ YAP";
             this.satisYapButton.UseVisualStyleBackColor = false;
+            this.satisYapButton.Click += new System.EventHandler(this.satisYapButton_Click);
             // 
             // iptalEtButton
             // 
@@ -115,18 +118,18 @@
             this.iptalEtButton.UseVisualStyleBackColor = false;
             this.iptalEtButton.Click += new System.EventHandler(this.iptalEtButton_Click);
             // 
-            // toplamTutar
+            // toplamTutarLabel
             // 
-            this.toplamTutar.AutoSize = true;
-            this.toplamTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.toplamTutar.Location = new System.Drawing.Point(455, 511);
-            this.toplamTutar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.toplamTutar.Name = "toplamTutar";
-            this.toplamTutar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toplamTutar.Size = new System.Drawing.Size(60, 22);
-            this.toplamTutar.TabIndex = 30;
-            this.toplamTutar.Text = "51651";
-            this.toplamTutar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.toplamTutarLabel.AutoSize = true;
+            this.toplamTutarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.toplamTutarLabel.Location = new System.Drawing.Point(455, 511);
+            this.toplamTutarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toplamTutarLabel.Name = "toplamTutarLabel";
+            this.toplamTutarLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toplamTutarLabel.Size = new System.Drawing.Size(60, 22);
+            this.toplamTutarLabel.TabIndex = 30;
+            this.toplamTutarLabel.Text = "51651";
+            this.toplamTutarLabel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // satisDGW
             // 
@@ -162,7 +165,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.satisDGW);
-            this.Controls.Add(this.toplamTutar);
+            this.Controls.Add(this.toplamTutarLabel);
             this.Controls.Add(this.iptalEtButton);
             this.Controls.Add(this.satisYapButton);
             this.Controls.Add(this.odemeTipiComboBox);
@@ -187,7 +190,7 @@
         private System.Windows.Forms.ComboBox odemeTipiComboBox;
         private System.Windows.Forms.Button satisYapButton;
         private System.Windows.Forms.Button iptalEtButton;
-        private System.Windows.Forms.Label toplamTutar;
+        private System.Windows.Forms.Label toplamTutarLabel;
         private System.Windows.Forms.DataGridView satisDGW;
     }
 }

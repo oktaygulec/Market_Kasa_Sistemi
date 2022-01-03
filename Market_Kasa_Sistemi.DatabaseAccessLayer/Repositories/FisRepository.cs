@@ -50,6 +50,14 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             }
         }
 
+        public int GetLastId()
+        {
+            using (SqlCommand cmd = context.CreateCommand("SELECT MAX(FisId) + 1 FROM Fis", System.Data.CommandType.Text))
+            {
+                return Convert.ToInt32(context.ExecuteScalar(cmd));
+            }
+        }
+
         public void Dispose()
         {
             context?.Dispose();
