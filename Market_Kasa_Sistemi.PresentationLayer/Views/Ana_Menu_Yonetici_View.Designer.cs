@@ -32,7 +32,6 @@
             this.barkodOkuButton = new System.Windows.Forms.Button();
             this.iadeButton = new System.Windows.Forms.Button();
             this.satisButton = new System.Windows.Forms.Button();
-            this.stokBilgisiButton = new System.Windows.Forms.Button();
             this.yoneticiAyarlariButton = new System.Windows.Forms.Button();
             this.programKapatButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -104,22 +103,6 @@
             this.satisButton.UseVisualStyleBackColor = false;
             this.satisButton.Click += new System.EventHandler(this.satisButton_Click);
             // 
-            // stokBilgisiButton
-            // 
-            this.stokBilgisiButton.BackColor = System.Drawing.Color.Magenta;
-            this.stokBilgisiButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stokBilgisiButton.FlatAppearance.BorderSize = 0;
-            this.stokBilgisiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stokBilgisiButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.stokBilgisiButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.stokBilgisiButton.Location = new System.Drawing.Point(253, 191);
-            this.stokBilgisiButton.Margin = new System.Windows.Forms.Padding(16);
-            this.stokBilgisiButton.Name = "stokBilgisiButton";
-            this.stokBilgisiButton.Size = new System.Drawing.Size(152, 81);
-            this.stokBilgisiButton.TabIndex = 5;
-            this.stokBilgisiButton.Text = "STOK BİLGİSİ";
-            this.stokBilgisiButton.UseVisualStyleBackColor = false;
-            // 
             // yoneticiAyarlariButton
             // 
             this.yoneticiAyarlariButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(99)))));
@@ -128,7 +111,7 @@
             this.yoneticiAyarlariButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yoneticiAyarlariButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yoneticiAyarlariButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.yoneticiAyarlariButton.Location = new System.Drawing.Point(458, 191);
+            this.yoneticiAyarlariButton.Location = new System.Drawing.Point(253, 191);
             this.yoneticiAyarlariButton.Margin = new System.Windows.Forms.Padding(16);
             this.yoneticiAyarlariButton.Name = "yoneticiAyarlariButton";
             this.yoneticiAyarlariButton.Size = new System.Drawing.Size(154, 81);
@@ -145,7 +128,7 @@
             this.programKapatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.programKapatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.programKapatButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.programKapatButton.Location = new System.Drawing.Point(253, 304);
+            this.programKapatButton.Location = new System.Drawing.Point(458, 189);
             this.programKapatButton.Margin = new System.Windows.Forms.Padding(16);
             this.programKapatButton.Name = "programKapatButton";
             this.programKapatButton.Size = new System.Drawing.Size(154, 83);
@@ -162,7 +145,6 @@
             this.ClientSize = new System.Drawing.Size(661, 416);
             this.Controls.Add(this.programKapatButton);
             this.Controls.Add(this.zRaporuButton);
-            this.Controls.Add(this.stokBilgisiButton);
             this.Controls.Add(this.satisButton);
             this.Controls.Add(this.yoneticiAyarlariButton);
             this.Controls.Add(this.iadeButton);
@@ -181,7 +163,6 @@
         private System.Windows.Forms.Button barkodOkuButton;
         private System.Windows.Forms.Button iadeButton;
         private System.Windows.Forms.Button satisButton;
-        private System.Windows.Forms.Button stokBilgisiButton;
         private System.Windows.Forms.Button yoneticiAyarlariButton;
         private System.Windows.Forms.Button programKapatButton;
     }

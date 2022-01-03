@@ -26,8 +26,6 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(satisButton, this.Size, ControlType.Button),
                 new ResponsiveControl(iadeButton, this.Size, ControlType.Button),
                 new ResponsiveControl(barkodOkuButton, this.Size, ControlType.Button),
-                new ResponsiveControl(stokBilgisiButton, this.Size, ControlType.Button),
-                null,
                 new ResponsiveControl(programKapatButton, this.Size, ControlType.Button)
             };
 
@@ -41,7 +39,7 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel panel = TableLayoutMaker.CreateEqualSizedTable(
                 "mainTable", 
                 controls,
-                2, 3
+                2, 2
             );
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);

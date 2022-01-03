@@ -33,11 +33,8 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(iadeButton, this.Size, ControlType.Button),
                 new ResponsiveControl(barkodOkuButton, this.Size, ControlType.Button),
                 new ResponsiveControl(zRaporuButton, this.Size, ControlType.Button),
-                new ResponsiveControl(stokBilgisiButton, this.Size, ControlType.Button),
                 new ResponsiveControl(yoneticiAyarlariButton, this.Size, ControlType.Button),
-                null,
                 new ResponsiveControl(programKapatButton, this.Size, ControlType.Button),
-                null,
             };
 
             Label title = new Label
@@ -50,7 +47,7 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel panel = TableLayoutMaker.CreateEqualSizedTable(
                 "mainTable",
                 controls,
-                3, 3
+                2, 3
             );
 
             return TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
