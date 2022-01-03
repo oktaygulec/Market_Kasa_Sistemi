@@ -1,16 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.Models
 {
     public class Satis : IModel
     {
-        public int Id { get; set; }
-        public int SatisAdet { get; set; }
-        public Fis Fis { get; set; }
-        public Urun Urun { get; set; }
+        private Urun _urun = new Urun();
 
+        [Browsable(false)]
+        public int Id { get; set; }
+
+        [Browsable(false)]
+        public Fis Fis { get; set; }
+        //public int FisId { get; set; }
+
+        [Browsable(false)]
+        public Urun Urun { get { return _urun; } set { _urun = value; } }
+        public int UrunBarkod { get { return Urun.Id; } set { Urun.Id = value; } }
+        public string UrunAd { get { return Urun.UrunAd; } set { Urun.UrunAd = value; } }
+        public int SatisAdet { get; set; }
+        public decimal UrunFiyat { get { return Urun.UrunFiyat; } set { Urun.UrunFiyat = value; } }
         public SqlParameter GetIdParameter()
         {
             return new SqlParameter("SatisId", this.Id);
