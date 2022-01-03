@@ -22,8 +22,7 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Ana_Menu_Yonetici_View_Load(object sender, EventArgs e)
         {
-
-
+            
             this.Controls.Add(MainTable());
         }
 
@@ -36,9 +35,9 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(zRaporuButton, this.Size, ControlType.Button),
                 new ResponsiveControl(stokBilgisiButton, this.Size, ControlType.Button),
                 new ResponsiveControl(yoneticiAyarlariButton, this.Size, ControlType.Button),
-                new ResponsiveControl(kullaniciDegistirButton, this.Size, ControlType.Button),
                 null,
-                new ResponsiveControl(programKapatButton, this.Size, ControlType.Button)
+                new ResponsiveControl(programKapatButton, this.Size, ControlType.Button),
+                null,
             };
 
             Label title = new Label
@@ -60,6 +59,30 @@ namespace Market_Kasa_Sistemi.Views
         private void programKapatButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void satisButton_Click(object sender, EventArgs e)
+        {
+            Urun_Satis_View satisView = new Urun_Satis_View();
+            satisView.Show();
+        }
+
+        private void iadeButton_Click(object sender, EventArgs e)
+        {
+            Urun_Iade_View iadeView = new Urun_Iade_View();
+            iadeView.Show();
+        }
+
+        private void barkodOkuButton_Click(object sender, EventArgs e)
+        {
+            Barkod_Oku_View barkodView = new Barkod_Oku_View();
+            barkodView.Show();
+        }
+
+        private void yoneticiAyarlariButton_Click(object sender, EventArgs e)
+        {
+            Yonetici_Ayarlar_View yoneticiView = new Yonetici_Ayarlar_View();
+            yoneticiView.Show();
         }
     }
 }

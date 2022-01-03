@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.Models
@@ -10,12 +11,18 @@ namespace Market_Kasa_Sistemi.Models
         public string UrunAd { get; set; }
         public decimal UrunFiyat { get; set; }
         public int UrunStokAdet { get; set; }
+
+        [Browsable(false)]
         public Kategori Kategori { get; set; }
+        public string KategoriAd { get { return Kategori.KategoriAd; } }
+
+        [Browsable(false)]
         public Vergi Vergi { get; set; }
+        public int VergiMiktar { get { return Vergi.VergiMiktar; } }
 
         public SqlParameter GetIdParameter()
         {
-            return new SqlParameter("UrunId", this.Id);
+            return new SqlParameter("UrunBarkod", this.Id);
         }
 
         public List<SqlParameter> GetInsertParameters()

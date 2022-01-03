@@ -222,7 +222,7 @@ namespace Market_Kasa_Sistemi.Utils
                 formSize
             );
 
-            ResponsiveControl leftTableDGWControl = new ResponsiveControl(dgwControl, formSize, ControlType.Input);
+            ResponsiveControl leftTableDGWControl = new ResponsiveControl(dgwControl, formSize, ControlType.Text);
 
             TableLayoutPanel leftTableDGW = toplam == null ? CreateResponsiveTable
             (

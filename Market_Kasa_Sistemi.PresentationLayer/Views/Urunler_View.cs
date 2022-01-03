@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,23 +17,31 @@ namespace Market_Kasa_Sistemi.Views
 {
     public partial class Urunler_View : Form
     {
+        BindingSource source;
         public Urunler_View()
         {
             InitializeComponent();
+            source = new BindingSource();
         }
 
         private void Urunler_View_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
             (
                 this.Size,
                 "Ürünler",
                 urunlerDGW,
-                new string[] { "Barkod", "Ad", "Adet", "Fiyat", "Kategori", "Vergi" },
+                new string[] { "Barkod", "Ad", "Fiyat", "Adet", "Kategori", "Vergi" },
                 new float[] { 15f, 15f, 15f, 15f, 15f, 15f },
                 RightTable()
             );
             this.Controls.Add(tlp);
+
+            GetUrunler();
         }
 
         private TableLayoutPanel RightTable()
@@ -126,6 +136,93 @@ namespace Market_Kasa_Sistemi.Views
                 new float[] { 10f, 90f },
                 new float[] { 100f }
             );
+        }
+
+        private void GetUrunler()
+        {
+            urunlerDGW.DataSource = source;
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                source.DataSource = uow.UrunRepository.ToList();
+
+                urunKategoriComboBox.DataSource = uow.KategoriRepository.ToList();
+                urunKategoriComboBox.DisplayMember = "KategoriAd";
+
+                vergiMiktarComboBox.DataSource = uow.VergiRepository.ToList();
+                vergiMiktarComboBox.DisplayMember = "VergiMiktar";
+            }
+        }
+
+        private void AddNewUrunler()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Urun newUrun = new Urun
+                {
+                    UrunAd = urunAdiTxt.Text,
+                    UrunFiyat = Convert.ToDecimal(urunFiyatiTxt.Text),
+                    UrunStokAdet = Convert.ToInt32(urunAdetTxt.Text),
+                    Kategori = urunKategoriComboBox.SelectedItem as Kategori,
+                    Vergi = vergiMiktarComboBox.SelectedItem as Vergi,
+                };
+                newUrun.Id = Convert.ToInt32(uow.UrunRepository.Add(newUrun));
+                source.Add(newUrun);
+            }
+        }
+
+        private void RemoveUrun()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Urun removeThis = source.Current as Urun;
+                uow.UrunRepository.Remove(removeThis);
+                source.Remove(removeThis);
+            }
+        }
+
+        private void UpdateUrun()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Urun updateThis = source.Current as Urun;
+                updateThis.UrunAd = urunAdiTxt.Text;
+                updateThis.UrunFiyat = Convert.ToDecimal(urunFiyatiTxt.Text);
+                updateThis.UrunStokAdet = Convert.ToInt32(urunAdetTxt.Text);
+                updateThis.Kategori = urunKategoriComboBox.SelectedItem as Kategori;
+                updateThis.Vergi = vergiMiktarComboBox.SelectedItem as Vergi;
+                uow.UrunRepository.Update(updateThis);
+                source.ResetCurrentItem();
+            }
+        }
+
+        private void urunEkleButton_Click(object sender, EventArgs e)
+        {
+            AddNewUrunler();
+        }
+
+        private void urunDuzenleButton_Click(object sender, EventArgs e)
+        {
+            UpdateUrun();
+        }
+
+        private void urunSilButton_Click(object sender, EventArgs e)
+        {
+            RemoveUrun();
+        }
+
+        private void cikisButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void urunlerDGW_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Urun currentUrun = source.Current as Urun;
+            urunAdiTxt.Text = currentUrun.UrunAd;
+            urunFiyatiTxt.Text = currentUrun.UrunFiyat.ToString();
+            urunAdetTxt.Text = currentUrun.UrunStokAdet.ToString();
+            urunKategoriComboBox.SelectedIndex = urunKategoriComboBox.FindStringExact(currentUrun.KategoriAd);
+            vergiMiktarComboBox.SelectedIndex = vergiMiktarComboBox.FindStringExact(currentUrun.VergiMiktar.ToString());
         }
     }
 }

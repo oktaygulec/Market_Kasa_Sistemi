@@ -34,7 +34,6 @@
             this.satisButton = new System.Windows.Forms.Button();
             this.stokBilgisiButton = new System.Windows.Forms.Button();
             this.yoneticiAyarlariButton = new System.Windows.Forms.Button();
-            this.kullaniciDegistirButton = new System.Windows.Forms.Button();
             this.programKapatButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -69,6 +68,7 @@
             this.barkodOkuButton.TabIndex = 3;
             this.barkodOkuButton.Text = "BARKOD OKU";
             this.barkodOkuButton.UseVisualStyleBackColor = false;
+            this.barkodOkuButton.Click += new System.EventHandler(this.barkodOkuButton_Click);
             // 
             // iadeButton
             // 
@@ -85,6 +85,7 @@
             this.iadeButton.TabIndex = 2;
             this.iadeButton.Text = "İADE";
             this.iadeButton.UseVisualStyleBackColor = false;
+            this.iadeButton.Click += new System.EventHandler(this.iadeButton_Click);
             // 
             // satisButton
             // 
@@ -101,6 +102,7 @@
             this.satisButton.TabIndex = 1;
             this.satisButton.Text = "SATIŞ";
             this.satisButton.UseVisualStyleBackColor = false;
+            this.satisButton.Click += new System.EventHandler(this.satisButton_Click);
             // 
             // stokBilgisiButton
             // 
@@ -133,22 +135,7 @@
             this.yoneticiAyarlariButton.TabIndex = 6;
             this.yoneticiAyarlariButton.Text = "YÖNETİCİ AYARLARI";
             this.yoneticiAyarlariButton.UseVisualStyleBackColor = false;
-            // 
-            // kullaniciDegistirButton
-            // 
-            this.kullaniciDegistirButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(148)))), ((int)(((byte)(161)))));
-            this.kullaniciDegistirButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kullaniciDegistirButton.FlatAppearance.BorderSize = 0;
-            this.kullaniciDegistirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kullaniciDegistirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciDegistirButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciDegistirButton.Location = new System.Drawing.Point(48, 304);
-            this.kullaniciDegistirButton.Margin = new System.Windows.Forms.Padding(16);
-            this.kullaniciDegistirButton.Name = "kullaniciDegistirButton";
-            this.kullaniciDegistirButton.Size = new System.Drawing.Size(152, 83);
-            this.kullaniciDegistirButton.TabIndex = 7;
-            this.kullaniciDegistirButton.Text = "KULLANICI DEĞİŞTİR";
-            this.kullaniciDegistirButton.UseVisualStyleBackColor = false;
+            this.yoneticiAyarlariButton.Click += new System.EventHandler(this.yoneticiAyarlariButton_Click);
             // 
             // programKapatButton
             // 
@@ -158,7 +145,7 @@
             this.programKapatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.programKapatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.programKapatButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.programKapatButton.Location = new System.Drawing.Point(458, 304);
+            this.programKapatButton.Location = new System.Drawing.Point(253, 304);
             this.programKapatButton.Margin = new System.Windows.Forms.Padding(16);
             this.programKapatButton.Name = "programKapatButton";
             this.programKapatButton.Size = new System.Drawing.Size(154, 83);
@@ -173,7 +160,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(661, 416);
-            this.Controls.Add(this.kullaniciDegistirButton);
             this.Controls.Add(this.programKapatButton);
             this.Controls.Add(this.zRaporuButton);
             this.Controls.Add(this.stokBilgisiButton);
@@ -197,7 +183,6 @@
         private System.Windows.Forms.Button satisButton;
         private System.Windows.Forms.Button stokBilgisiButton;
         private System.Windows.Forms.Button yoneticiAyarlariButton;
-        private System.Windows.Forms.Button kullaniciDegistirButton;
         private System.Windows.Forms.Button programKapatButton;
     }
 }

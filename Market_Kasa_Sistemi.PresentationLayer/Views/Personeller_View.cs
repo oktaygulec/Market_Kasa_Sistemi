@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,13 +17,19 @@ namespace Market_Kasa_Sistemi.Views
 {
     public partial class Personeller_View : Form
     {
+        BindingSource source;
         public Personeller_View()
         {
             InitializeComponent();
+            source = new BindingSource();
         }
 
         private void Personeller_View_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
                 (
                     this.Size,
@@ -32,6 +40,7 @@ namespace Market_Kasa_Sistemi.Views
                     RightTable()
                 );
             this.Controls.Add(tlp);
+            GetPersoneller();
         }
 
         private TableLayoutPanel RightTable()
@@ -82,6 +91,86 @@ namespace Market_Kasa_Sistemi.Views
                     new float[] { 10f, 45f, 30f, 15f },
                     new float[] { 100f }
                 );
+        }
+
+        private void GetPersoneller()
+        {
+            personellerDGW.DataSource = source;
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                source.DataSource = uow.PersonelRepository.ToList();
+                personelTipiComboBox.DataSource = uow.PersonelTipRepository.ToList();
+                personelTipiComboBox.DisplayMember = "PersonelTipAd";
+            }
+        }
+
+        private void AddNewPersonel()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Personel newPersonel = new Personel
+                {
+                    PersonelAd = personelAdiTxt.Text,
+                    PersonelSoyad = personelSoyadiTxt.Text,
+                    PersonelBaslangicTarih = baslangicTarihDateTimePicker.Value,
+                    PersonelTip = personelTipiComboBox.SelectedItem as PersonelTip
+                };
+                newPersonel.Id = Convert.ToInt32(uow.PersonelRepository.Add(newPersonel));
+                source.Add(newPersonel);
+            }
+        }
+
+        private void RemovePersonel()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Personel removeThis = source.Current as Personel;
+                uow.PersonelRepository.Remove(removeThis);
+                source.Remove(removeThis);
+            }
+        }
+
+        private void UpdatePersonel()
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                Personel updateThis = source.Current as Personel;
+                updateThis.PersonelAd = personelAdiTxt.Text;
+                updateThis.PersonelSoyad = personelSoyadiTxt.Text;
+                updateThis.PersonelBaslangicTarih = baslangicTarihDateTimePicker.Value;
+                updateThis.PersonelTip = personelTipiComboBox.SelectedItem as PersonelTip;
+                uow.PersonelRepository.Update(updateThis);
+                source.ResetCurrentItem();
+            }
+        }
+
+        private void personelEkleButton_Click(object sender, EventArgs e)
+        {
+            AddNewPersonel();
+        }
+
+        private void personelDuzenleButton_Click(object sender, EventArgs e)
+        {
+            UpdatePersonel();
+        }
+
+        private void personelSilButton_Click(object sender, EventArgs e)
+        {
+            RemovePersonel();
+        }
+
+        private void cikisButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void personellerDGW_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Personel currentPersonel = source.Current as Personel;
+            personelAdiTxt.Text = currentPersonel.PersonelAd;
+            personelSoyadiTxt.Text = currentPersonel.PersonelSoyad;
+            baslangicTarihDateTimePicker.Value = currentPersonel.PersonelBaslangicTarih;
+            personelTipiComboBox.SelectedIndex = personelTipiComboBox.FindStringExact(currentPersonel.PersonelTipAd);
         }
     }
 }

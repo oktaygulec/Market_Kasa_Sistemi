@@ -72,6 +72,7 @@ namespace Market_Kasa_Sistemi
         private void Main_View_Load(object sender, EventArgs e)
         {
             this.Controls.Add(MainTable());
+            this.AcceptButton = girisYapButton;
         }
 
         private TableLayoutPanel MainTable()

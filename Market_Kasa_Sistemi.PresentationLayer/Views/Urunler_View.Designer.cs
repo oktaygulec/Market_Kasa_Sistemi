@@ -49,6 +49,7 @@
             this.urunlerDGW.AllowUserToResizeRows = false;
             this.urunlerDGW.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.urunlerDGW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.urunlerDGW.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.urunlerDGW.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urunlerDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.urunlerDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -67,6 +68,7 @@
             this.urunlerDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.urunlerDGW.Size = new System.Drawing.Size(522, 445);
             this.urunlerDGW.TabIndex = 28;
+            this.urunlerDGW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.urunlerDGW_CellClick);
             // 
             // cikisButton
             // 
@@ -81,6 +83,7 @@
             this.cikisButton.TabIndex = 39;
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
+            this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
             // urunEkleButton
             // 
@@ -95,6 +98,7 @@
             this.urunEkleButton.TabIndex = 38;
             this.urunEkleButton.Text = "EKLE";
             this.urunEkleButton.UseVisualStyleBackColor = false;
+            this.urunEkleButton.Click += new System.EventHandler(this.urunEkleButton_Click);
             // 
             // urunAdiTxt
             // 
@@ -156,6 +160,7 @@
             this.urunSilButton.TabIndex = 51;
             this.urunSilButton.Text = "SİL";
             this.urunSilButton.UseVisualStyleBackColor = false;
+            this.urunSilButton.Click += new System.EventHandler(this.urunSilButton_Click);
             // 
             // urunDuzenleButton
             // 
@@ -170,6 +175,7 @@
             this.urunDuzenleButton.TabIndex = 52;
             this.urunDuzenleButton.Text = "DÜZENLE";
             this.urunDuzenleButton.UseVisualStyleBackColor = false;
+            this.urunDuzenleButton.Click += new System.EventHandler(this.urunDuzenleButton_Click);
             // 
             // Urunler_View
             // 

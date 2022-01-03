@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.Models
@@ -8,8 +9,13 @@ namespace Market_Kasa_Sistemi.Models
     {
         public int Id { get; set; }
         public string KullaniciAd { get; set; }
+
+        [Browsable(false)]
         public string KullaniciSifre { get; set; }
+
+        [Browsable(false)]
         public Personel Personel { get; set; }
+        public string PersonelAd { get { return Personel.PersonelAd; } }
 
         public SqlParameter GetIdParameter()
         {

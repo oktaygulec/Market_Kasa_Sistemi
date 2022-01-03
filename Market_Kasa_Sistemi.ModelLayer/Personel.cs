@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace Market_Kasa_Sistemi.Models
@@ -10,7 +11,9 @@ namespace Market_Kasa_Sistemi.Models
         public string PersonelAd { get; set; }
         public string PersonelSoyad { get; set; }
         public DateTime PersonelBaslangicTarih { get; set; }
+        [Browsable(false)]
         public PersonelTip PersonelTip { get; set; }
+        public string PersonelTipAd { get { return PersonelTip.PersonelTipAd; } }
 
         public SqlParameter GetIdParameter()
         {

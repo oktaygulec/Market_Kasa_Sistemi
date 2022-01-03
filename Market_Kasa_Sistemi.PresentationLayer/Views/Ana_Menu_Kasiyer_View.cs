@@ -27,7 +27,7 @@ namespace Market_Kasa_Sistemi.Views
                 new ResponsiveControl(iadeButton, this.Size, ControlType.Button),
                 new ResponsiveControl(barkodOkuButton, this.Size, ControlType.Button),
                 new ResponsiveControl(stokBilgisiButton, this.Size, ControlType.Button),
-                new ResponsiveControl(kullaniciDegistirButton, this.Size, ControlType.Button),
+                null,
                 new ResponsiveControl(programKapatButton, this.Size, ControlType.Button)
             };
 
@@ -41,7 +41,7 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel panel = TableLayoutMaker.CreateEqualSizedTable(
                 "mainTable", 
                 controls,
-                3, 2
+                2, 3
             );
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
@@ -52,6 +52,18 @@ namespace Market_Kasa_Sistemi.Views
         private void programKapatButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void satisButton_Click(object sender, EventArgs e)
+        {
+            Urun_Satis_View satisView = new Urun_Satis_View();
+            satisView.Show();
+        }
+
+        private void iadeButton_Click(object sender, EventArgs e)
+        {
+            Urun_Iade_View iadeView = new Urun_Iade_View();
+            iadeView.Show();
         }
     }
 }

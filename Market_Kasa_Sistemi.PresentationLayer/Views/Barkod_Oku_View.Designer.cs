@@ -71,6 +71,7 @@
             this.cikisYapButton.TabIndex = 14;
             this.cikisYapButton.Text = "ÇIKIŞ YAP";
             this.cikisYapButton.UseVisualStyleBackColor = false;
+            this.cikisYapButton.Click += new System.EventHandler(this.cikisYapButton_Click);
             // 
             // Barkod_Oku_View
             // 

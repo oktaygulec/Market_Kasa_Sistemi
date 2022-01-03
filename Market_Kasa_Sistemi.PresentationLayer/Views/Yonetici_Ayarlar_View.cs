@@ -22,6 +22,9 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Yonetici_Ayarlar_View_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
             this.Controls.Add(MainTable());
         }
@@ -76,6 +79,35 @@ namespace Market_Kasa_Sistemi.Views
             );
 
             return TableLayoutMaker.CreateContainerTable(responsiveTitle, panel);
+        }
+
+        private void kullanicilarButton_Click(object sender, EventArgs e)
+        {
+            Kullanicilar_View kullanicilarView = new Kullanicilar_View();
+            kullanicilarView.Show();
+        }
+
+        private void personellerButton_Click(object sender, EventArgs e)
+        {
+            Personeller_View personellerView = new Personeller_View();
+            personellerView.Show();
+        }
+
+        private void urunlerButton_Click(object sender, EventArgs e)
+        {
+            Urunler_View urunlerView = new Urunler_View();
+            urunlerView.Show();
+        }
+
+        private void kategorilerButton_Click(object sender, EventArgs e)
+        {
+            Kategoriler_View kategorilerView = new Kategoriler_View();
+            kategorilerView.Show();
+        }
+
+        private void anaMenuyeDonButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

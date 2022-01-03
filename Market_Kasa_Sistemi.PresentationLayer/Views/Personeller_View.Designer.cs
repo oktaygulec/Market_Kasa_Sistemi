@@ -48,6 +48,7 @@
             this.personellerDGW.AllowUserToResizeRows = false;
             this.personellerDGW.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.personellerDGW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.personellerDGW.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.personellerDGW.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.personellerDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.personellerDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -66,6 +67,7 @@
             this.personellerDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.personellerDGW.Size = new System.Drawing.Size(509, 471);
             this.personellerDGW.TabIndex = 28;
+            this.personellerDGW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personellerDGW_CellClick);
             // 
             // cikisButton
             // 
@@ -80,6 +82,7 @@
             this.cikisButton.TabIndex = 39;
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
+            this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
             // personelEkleButton
             // 
@@ -94,6 +97,7 @@
             this.personelEkleButton.TabIndex = 38;
             this.personelEkleButton.Text = "EKLE";
             this.personelEkleButton.UseVisualStyleBackColor = false;
+            this.personelEkleButton.Click += new System.EventHandler(this.personelEkleButton_Click);
             // 
             // personelAdiTxt
             // 
@@ -126,6 +130,7 @@
             this.personelSilButton.TabIndex = 51;
             this.personelSilButton.Text = "SİL";
             this.personelSilButton.UseVisualStyleBackColor = false;
+            this.personelSilButton.Click += new System.EventHandler(this.personelSilButton_Click);
             // 
             // personelDuzenleButton
             // 
@@ -140,6 +145,7 @@
             this.personelDuzenleButton.TabIndex = 52;
             this.personelDuzenleButton.Text = "DÜZENLE";
             this.personelDuzenleButton.UseVisualStyleBackColor = false;
+            this.personelDuzenleButton.Click += new System.EventHandler(this.personelDuzenleButton_Click);
             // 
             // personelTipiComboBox
             // 
