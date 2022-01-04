@@ -34,13 +34,15 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
                 (
                     this.Size,
-                    "Kullanıcılar",
                     kullanicilarDGW,
                     new string[] { "ID", "Adı", "Personel" },
                     new float[] { 20f, 40f, 40f },
                     RightTable()
                 );
-            this.Controls.Add(tlp);
+            Label title = new Label { Text = "Kullanıcılar" };
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
+
+            this.Controls.Add(TableLayoutMaker.CreateContainerTable(responsiveTitle, tlp));
             GetKullanicilar();
         }
 

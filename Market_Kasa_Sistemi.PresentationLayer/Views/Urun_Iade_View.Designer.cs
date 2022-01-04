@@ -32,7 +32,7 @@
             this.fisGetirButton = new System.Windows.Forms.Button();
             this.iadeEtButton = new System.Windows.Forms.Button();
             this.cikisButton = new System.Windows.Forms.Button();
-            this.toplamTutar = new System.Windows.Forms.Label();
+            this.toplamTutarLabel = new System.Windows.Forms.Label();
             this.iadeDGW = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.iadeDGW)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +42,7 @@
             this.fisGirisiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.fisGirisiTxt.Location = new System.Drawing.Point(561, 111);
             this.fisGirisiTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.fisGirisiTxt.MaxLength = 5;
             this.fisGirisiTxt.Name = "fisGirisiTxt";
             this.fisGirisiTxt.Size = new System.Drawing.Size(209, 27);
             this.fisGirisiTxt.TabIndex = 18;
@@ -91,17 +92,16 @@
             this.cikisButton.UseVisualStyleBackColor = false;
             this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
-            // toplamTutar
+            // toplamTutarLabel
             // 
-            this.toplamTutar.AutoSize = true;
-            this.toplamTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.toplamTutar.Location = new System.Drawing.Point(439, 506);
-            this.toplamTutar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.toplamTutar.Name = "toplamTutar";
-            this.toplamTutar.Size = new System.Drawing.Size(87, 22);
-            this.toplamTutar.TabIndex = 30;
-            this.toplamTutar.Text = "51651 TL";
-            this.toplamTutar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.toplamTutarLabel.AutoSize = true;
+            this.toplamTutarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.toplamTutarLabel.Location = new System.Drawing.Point(439, 506);
+            this.toplamTutarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toplamTutarLabel.Name = "toplamTutarLabel";
+            this.toplamTutarLabel.Size = new System.Drawing.Size(0, 22);
+            this.toplamTutarLabel.TabIndex = 30;
+            this.toplamTutarLabel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // iadeDGW
             // 
@@ -138,7 +138,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.iadeDGW);
-            this.Controls.Add(this.toplamTutar);
+            this.Controls.Add(this.toplamTutarLabel);
             this.Controls.Add(this.cikisButton);
             this.Controls.Add(this.iadeEtButton);
             this.Controls.Add(this.fisGetirButton);
@@ -158,7 +158,7 @@
         private System.Windows.Forms.Button fisGetirButton;
         private System.Windows.Forms.Button iadeEtButton;
         private System.Windows.Forms.Button cikisButton;
-        private System.Windows.Forms.Label toplamTutar;
+        private System.Windows.Forms.Label toplamTutarLabel;
         private System.Windows.Forms.DataGridView iadeDGW;
     }
 }

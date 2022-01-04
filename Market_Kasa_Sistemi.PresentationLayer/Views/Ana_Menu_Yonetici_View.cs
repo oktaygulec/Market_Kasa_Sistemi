@@ -81,5 +81,11 @@ namespace Market_Kasa_Sistemi.Views
             Yonetici_Ayarlar_View yoneticiView = new Yonetici_Ayarlar_View();
             yoneticiView.Show();
         }
+
+        private void zRaporuButton_Click(object sender, EventArgs e)
+        {
+            Z_Raporu_View zRaporuView = new Z_Raporu_View();
+            zRaporuView.Show();
+        }
     }
 }
