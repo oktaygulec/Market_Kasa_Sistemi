@@ -66,6 +66,7 @@
             this.barkodOkuButton.TabIndex = 12;
             this.barkodOkuButton.Text = "BARKOD OKU";
             this.barkodOkuButton.UseVisualStyleBackColor = false;
+            this.barkodOkuButton.Click += new System.EventHandler(this.barkodOkuButton_Click);
             // 
             // iadeButton
             // 
