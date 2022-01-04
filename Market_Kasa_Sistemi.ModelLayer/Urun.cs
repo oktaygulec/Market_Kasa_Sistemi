@@ -11,7 +11,9 @@ namespace Market_Kasa_Sistemi.Models
         public string UrunAd { get; set; }
         public decimal UrunFiyat { get; set; }
         public int UrunStokAdet { get; set; }
-
+        [Browsable(false)]
+        public decimal KdvliUrunFiyat { get { return UrunFiyat + UrunFiyat * VergiMiktar / 100; } }
+        
         [Browsable(false)]
         public Kategori Kategori { get; set; }
         public string KategoriAd { get { return Kategori.KategoriAd; } }

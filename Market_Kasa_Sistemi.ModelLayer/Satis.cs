@@ -21,7 +21,14 @@ namespace Market_Kasa_Sistemi.Models
         public int UrunBarkod { get { return Urun.Id; } set { Urun.Id = value; } }
         public string UrunAd { get { return Urun.UrunAd; } set { Urun.UrunAd = value; } }
         public int SatisAdet { get; set; }
-        public decimal ToplamFiyat { get { return Urun.UrunFiyat * SatisAdet; } }
+        public decimal ToplamFiyat { get { return SatisAdet * Urun.UrunFiyat; } }
+
+        [Browsable(false)]
+        public decimal ToplamKdvliFiyat { get { return SatisAdet * (Urun.UrunFiyat + Urun.UrunFiyat * Urun.VergiMiktar / 100); } }
+
+        [Browsable(false)]
+        public decimal UrunFiyat { get { return Urun.UrunFiyat; } }
+
         public SqlParameter GetIdParameter()
         {
             return new SqlParameter("SatisId", this.Id);
