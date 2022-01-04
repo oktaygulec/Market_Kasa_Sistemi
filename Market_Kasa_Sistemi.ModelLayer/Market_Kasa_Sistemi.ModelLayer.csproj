@@ -53,6 +53,7 @@
     <Compile Include="Personel.cs" />
     <Compile Include="Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZRaporu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

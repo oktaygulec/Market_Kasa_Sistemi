@@ -103,3 +103,4 @@ C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.P
 C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.exe
 C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.pdb
 C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Z_Raporu_View.resources
+C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.PresentationLayer\obj\Debug\Market_Kasa_Sistemi.Views.Z_Raporu_View.resources
