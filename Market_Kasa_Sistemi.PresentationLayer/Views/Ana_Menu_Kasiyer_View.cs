@@ -63,5 +63,11 @@ namespace Market_Kasa_Sistemi.Views
             Urun_Iade_View iadeView = new Urun_Iade_View();
             iadeView.Show();
         }
+
+        private void barkodOkuButton_Click(object sender, EventArgs e)
+        {
+            Barkod_Oku_View barkodOkuView = new Barkod_Oku_View();
+            barkodOkuView.Show();
+        }
     }
 }
