@@ -1,4 +1,5 @@
 ﻿using Market_Kasa_Sistemi.DatabaseAccessLayer.DatabaseContext;
+using Market_Kasa_Sistemi.ModelLayer;
 using Market_Kasa_Sistemi.Models;
 using System;
 using System.Collections.Generic;
@@ -50,11 +51,11 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             }
         }
 
-        public List<Satis> GetZReport()
+        public List<ZRaporu> GetZReport()
         {
             using (SqlCommand cmd = context.CreateCommand("SELECT * FROM VwZReport", System.Data.CommandType.Text))
             {
-                return context.ToList<Satis>(cmd);
+                return context.ToList<ZRaporu>(cmd);
             }
         }
 

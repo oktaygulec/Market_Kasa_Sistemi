@@ -77,6 +77,7 @@
             this.urunCikartButton.TabIndex = 22;
             this.urunCikartButton.Text = "ÇIKART";
             this.urunCikartButton.UseVisualStyleBackColor = false;
+            this.urunCikartButton.Click += new System.EventHandler(this.urunCikartButton_Click);
             // 
             // odemeTipiComboBox
             // 
@@ -139,9 +140,10 @@
             this.satisDGW.AllowUserToResizeRows = false;
             this.satisDGW.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.satisDGW.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.satisDGW.BackgroundColor = System.Drawing.Color.White;
             this.satisDGW.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.satisDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.satisDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.satisDGW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.satisDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.satisDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satisDGW.ColumnHeadersVisible = false;
             this.satisDGW.Location = new System.Drawing.Point(30, 108);

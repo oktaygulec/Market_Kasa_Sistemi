@@ -135,7 +135,7 @@ namespace Market_Kasa_Sistemi.Utils
 
         public static TableLayoutPanel CreateTitleWithDividerTable(string tableTitleText, Size formSize)
         {
-            Label lblTitle = new Label() { Text = tableTitleText };
+            Label lblTitle = new Label() { Text = tableTitleText, TextAlign = ContentAlignment.BottomLeft };
             ResponsiveControl tableTitleControl = new ResponsiveControl(lblTitle, formSize, ControlType.Title);
 
             Label divider = new Label();
@@ -160,15 +160,17 @@ namespace Market_Kasa_Sistemi.Utils
             );
         }
 
-        public static TableLayoutPanel CreateTitlesWithDividerTable(string[] tableTitlesText, float[] columnStyles, Size formSize)
+        public static TableLayoutPanel CreateTitlesWithDividerTable(string[] tableTitlesText, Size formSize)
         {
             ResponsiveControl[] tableTitleControls = new ResponsiveControl[tableTitlesText.Length];
-            for (int i = 0; i < tableTitlesText.Length; i++)
+
+            float[] columnStyles = new float[tableTitlesText.Length];
+            for(int i = 0; i < tableTitlesText.Length; i++)
             {
                 string titleText = tableTitlesText[i];
-                Label lblTitle = new Label() { Text = titleText, TextAlign = ContentAlignment.TopCenter };
+                Label lblTitle = new Label() { Text = titleText, TextAlign = ContentAlignment.BottomLeft };
                 tableTitleControls[i] = new ResponsiveControl(lblTitle, formSize, ControlType.Title);
-
+                columnStyles[i] = 100 / tableTitlesText.Length;
             }
 
             ResponsiveControl tableDividerControl = new ResponsiveControl(new Label(), formSize, ControlType.HorizontalDivider);
@@ -213,12 +215,11 @@ namespace Market_Kasa_Sistemi.Utils
             );
         }
         
-        public static TableLayoutPanel CreateTitlesAndDGWTable(Size formSize, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, Label toplam = null)
+        public static TableLayoutPanel CreateTitlesAndDGWTable(Size formSize, Control dgwControl, string[] dgwTitles, Label toplam = null)
         {
             TableLayoutPanel leftTableTitlesWithDivider = CreateTitlesWithDividerTable
             (
                 dgwTitles,
-                dgwTitlesColStyles,
                 formSize
             );
 
@@ -250,9 +251,9 @@ namespace Market_Kasa_Sistemi.Utils
             return leftTableContainer;
         }
 
-        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, TableLayoutPanel rightTable, Label toplam = null)
+        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, Control dgwControl, string[] dgwTitles, TableLayoutPanel rightTable, Label toplam = null)
         {
-            TableLayoutPanel leftTableContainer = CreateTitlesAndDGWTable(formSize, dgwControl, dgwTitles, dgwTitlesColStyles, toplam); 
+            TableLayoutPanel leftTableContainer = CreateTitlesAndDGWTable(formSize, dgwControl, dgwTitles,  toplam); 
             TableLayoutPanel panel = CreateResponsiveTable(
                 "panel",
                 new TableLayoutPanel[] { leftTableContainer, rightTable },

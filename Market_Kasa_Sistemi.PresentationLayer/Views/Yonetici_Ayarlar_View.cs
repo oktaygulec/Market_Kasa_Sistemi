@@ -22,9 +22,7 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Yonetici_Ayarlar_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            FormSettings.SetFullscreen(this);
 
             this.Controls.Add(MainTable());
         }
