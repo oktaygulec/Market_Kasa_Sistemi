@@ -24,9 +24,7 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Barkod_Oku_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            FormSettings.SetFullscreen(this);
 
             // Oluşturulan tabloyu Form'a ekleme
             this.Controls.Add(ContainerTable());
@@ -91,14 +89,20 @@ namespace Market_Kasa_Sistemi.Views
 
         private void urunGetirButton_Click(object sender, EventArgs e)
         {
+            Urun urun;
+
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Urun urun = uow.UrunRepository.GetItem(Convert.ToInt32(barkodGirisiTxt.Text));
-                
-                if(urun.Id != 0)
-                    MessageBox.Show(urun.UrunAd + " - Fiyat: " + urun.UrunFiyat, "Ürün Getir", MessageBoxButtons.OK);
-                else
-                    MessageBox.Show("Ürün bulunamadı.", "Ürün Getir", MessageBoxButtons.OK);
+                urun = uow.UrunRepository.GetItem(Convert.ToInt32(barkodGirisiTxt.Text));
+            }
+
+            if(urun.Id != 0)
+            {
+                MessageBox.Show(urun.UrunAd + " - Fiyat: " + urun.UrunFiyat, "Ürün Getir", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Ürün bulunamadı.", "Ürün Getir", MessageBoxButtons.OK);
             }
         }
 

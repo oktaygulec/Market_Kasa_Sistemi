@@ -19,6 +19,7 @@ namespace Market_Kasa_Sistemi.Views
     {
         BindingSource source;
         decimal toplamTutar = 0;
+        decimal kdvliToplamTutar = 0;
         public Urun_Satis_View()
         {
             InitializeComponent();
@@ -27,16 +28,14 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Urun_Satis_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            FormSettings.SetFullscreen(this);
+            FormSettings.SetDataGridView(satisDGW);
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
 (
                 this.Size,
                 satisDGW,
                 new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
-                new float[] { 20f, 40f, 15f, 25f },
                 RightTable(),
                 toplamTutarLabel
             );
@@ -121,51 +120,66 @@ namespace Market_Kasa_Sistemi.Views
             );
         }
 
-        Fis newFis;
         List<Satis> satislar = new List<Satis>();
 
-        private void UrunAdd()
+        private void SatisEkle()
         {
+            Urun currentUrun;
+
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                currentUrun = uow.UrunRepository.GetItem(Convert.ToInt32(urunGirisiTxt.Text));
+            }
+
+            Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
+                
+            if (satis == null)
+            {
+                satislar.Add
+                (
+                    new Satis
+                    {
+                        SatisAdet = 1,
+                        Fis = new Fis(),
+                        Urun = currentUrun
+                    }
+                );
+            }
+            else
+            {
+                satis.SatisAdet += 1;
+            }
+
+            toplamTutar += currentUrun.UrunFiyat;
+            kdvliToplamTutar += currentUrun.KdvliUrunFiyat;
+
+            source.DataSource = satislar;
+            source.ResetBindings(false);
+            toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
+        }
+
+        private void SatisCikart()
+        {
+            Satis currentSatis = source.Current as Satis;
+            toplamTutar -= currentSatis.ToplamFiyat;
+            kdvliToplamTutar -= currentSatis.ToplamKdvliFiyat;
+            satislar.Remove(currentSatis);
+            source.Remove(currentSatis);
+            source.ResetBindings(false);
+        }
+
+        private void SatisYap()
+        {
+            Fis newFis;
             using (UnitOfWork uow = new UnitOfWork())
             {
                 newFis = new Fis
                 {
                     FisTarih = DateTime.Now,
-                    OdemeTip = odemeTipiComboBox.SelectedItem as OdemeTip,
-                    Personel = uow.PersonelRepository.GetItem(Program.Kullanici.Personel.Id)
+                    Personel = uow.PersonelRepository.GetItem(Program.Kullanici.Personel.Id),
+                    OdemeTip = odemeTipiComboBox.SelectedItem as OdemeTip
                 };
 
-                Urun currentUrun = uow.UrunRepository.GetItem(Convert.ToInt32(urunGirisiTxt.Text));
-                Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
-                
-                if (satis == null)
-                {
-                    satislar.Add
-                    (
-                        new Satis
-                        {
-                            SatisAdet = 1,
-                            Fis = newFis,
-                            Urun = currentUrun
-                        }
-                    );
-                }
-                else
-                {
-                    satis.SatisAdet += 1;
-                }
-                toplamTutar += currentUrun.UrunFiyat;
-
-                source.DataSource = satislar;
-                source.ResetBindings(false);
-                toplamTutarLabel.Text = toplamTutar.ToString("C2");
-            }
-        }
-
-        private void SatisYap()
-        {
-            using (UnitOfWork uow = new UnitOfWork())
-            {
                 newFis.Id = Convert.ToInt32(uow.FisRepository.Add(newFis));
 
                 foreach (Satis item in satislar)
@@ -173,12 +187,13 @@ namespace Market_Kasa_Sistemi.Views
                     item.Fis = newFis;
                     uow.SatisRepository.Add(item);
                 }
-
-                MessageBox.Show(newFis.Id.ToString());
-                source.Clear();
-                toplamTutar = 0;
-                toplamTutarLabel.Text = "";
             }
+
+            MessageBox.Show(newFis.Id.ToString());
+            source.Clear();
+            toplamTutar = 0;
+            toplamTutarLabel.Text = "";
+            urunGirisiTxt.Text = "";
         }
 
         private void iptalEtButton_Click(object sender, EventArgs e)
@@ -188,12 +203,17 @@ namespace Market_Kasa_Sistemi.Views
 
         private void urunEkleButton_Click(object sender, EventArgs e)
         {
-            UrunAdd();
+            SatisEkle();
         }
 
         private void satisYapButton_Click(object sender, EventArgs e)
         {
             SatisYap();
+        }
+
+        private void urunCikartButton_Click(object sender, EventArgs e)
+        {
+            SatisCikart();
         }
     }
 }

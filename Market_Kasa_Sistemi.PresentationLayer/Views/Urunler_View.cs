@@ -26,16 +26,14 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Urunler_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            FormSettings.SetDataGridView(urunlerDGW);
+            FormSettings.SetFullscreen(this);
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
             (
                 this.Size,
                 urunlerDGW,
                 new string[] { "Barkod", "Ad", "Fiyat", "Adet", "Kategori", "Vergi" },
-                new float[] { 15f, 15f, 15f, 15f, 15f, 15f },
                 RightTable()
             );
             Label title = new Label { Text = "Ürünler" };
@@ -143,58 +141,66 @@ namespace Market_Kasa_Sistemi.Views
         private void GetUrunler()
         {
             urunlerDGW.DataSource = source;
+
             using (UnitOfWork uow = new UnitOfWork())
             {
                 source.DataSource = uow.UrunRepository.ToList();
 
                 urunKategoriComboBox.DataSource = uow.KategoriRepository.ToList();
-                urunKategoriComboBox.DisplayMember = "KategoriAd";
 
                 vergiMiktarComboBox.DataSource = uow.VergiRepository.ToList();
-                vergiMiktarComboBox.DisplayMember = "VergiMiktar";
             }
+
+            urunKategoriComboBox.DisplayMember = "KategoriAd";
+            vergiMiktarComboBox.DisplayMember = "VergiMiktar";
         }
 
         private void AddNewUrunler()
         {
+            Urun newUrun = new Urun
+            {
+                UrunAd = urunAdiTxt.Text,
+                UrunFiyat = Convert.ToDecimal(urunFiyatiTxt.Text),
+                UrunStokAdet = Convert.ToInt32(urunAdetTxt.Text),
+                Kategori = urunKategoriComboBox.SelectedItem as Kategori,
+                Vergi = vergiMiktarComboBox.SelectedItem as Vergi,
+            };
+
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Urun newUrun = new Urun
-                {
-                    UrunAd = urunAdiTxt.Text,
-                    UrunFiyat = Convert.ToDecimal(urunFiyatiTxt.Text),
-                    UrunStokAdet = Convert.ToInt32(urunAdetTxt.Text),
-                    Kategori = urunKategoriComboBox.SelectedItem as Kategori,
-                    Vergi = vergiMiktarComboBox.SelectedItem as Vergi,
-                };
                 newUrun.Id = Convert.ToInt32(uow.UrunRepository.Add(newUrun));
-                source.Add(newUrun);
             }
+
+            source.Add(newUrun);
         }
 
         private void RemoveUrun()
         {
+            Urun removeThis = source.Current as Urun;
+
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Urun removeThis = source.Current as Urun;
                 uow.UrunRepository.Remove(removeThis);
-                source.Remove(removeThis);
             }
+
+            source.Remove(removeThis);
         }
 
         private void UpdateUrun()
         {
+            Urun updateThis = source.Current as Urun;
+            updateThis.UrunAd = urunAdiTxt.Text;
+            updateThis.UrunFiyat = Convert.ToDecimal(urunFiyatiTxt.Text);
+            updateThis.UrunStokAdet = Convert.ToInt32(urunAdetTxt.Text);
+            updateThis.Kategori = urunKategoriComboBox.SelectedItem as Kategori;
+            updateThis.Vergi = vergiMiktarComboBox.SelectedItem as Vergi;
+
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Urun updateThis = source.Current as Urun;
-                updateThis.UrunAd = urunAdiTxt.Text;
-                updateThis.UrunFiyat = Convert.ToDecimal(urunFiyatiTxt.Text);
-                updateThis.UrunStokAdet = Convert.ToInt32(urunAdetTxt.Text);
-                updateThis.Kategori = urunKategoriComboBox.SelectedItem as Kategori;
-                updateThis.Vergi = vergiMiktarComboBox.SelectedItem as Vergi;
                 uow.UrunRepository.Update(updateThis);
-                source.ResetCurrentItem();
             }
+
+            source.ResetCurrentItem();
         }
 
         private void urunEkleButton_Click(object sender, EventArgs e)

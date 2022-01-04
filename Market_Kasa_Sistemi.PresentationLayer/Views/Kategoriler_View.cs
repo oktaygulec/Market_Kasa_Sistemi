@@ -26,15 +26,13 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Kategoriler_View_Load(object sender, EventArgs e)
         {
-            TopMost = true;
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
+            FormSettings.SetDataGridView(kategorilerDGW);
+            FormSettings.SetFullscreen(this);
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW(
                 this.Size,  
                 kategorilerDGW, 
                 new string[] { "ID", "Adı" },
-                new float[] { 50f, 50f }, 
                 RightTable()
             );
 
@@ -96,33 +94,39 @@ namespace Market_Kasa_Sistemi.Views
 
         private void AddNewKategori()
         {
+            Kategori newKategori = new Kategori { KategoriAd = kategoriAdiTxt.Text };
+            
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Kategori newKategori = new Kategori { KategoriAd = kategoriAdiTxt.Text };
                 newKategori.Id = Convert.ToInt32(uow.KategoriRepository.Add(newKategori));
-                source.Add(newKategori);
             }
+
+            source.Add(newKategori);
         }
 
         private void RemoveKategori()
         {
+            Kategori removeThis = source.Current as Kategori;
+            
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Kategori removeThis = source.Current as Kategori;
                 uow.KategoriRepository.Remove(removeThis);
-                source.Remove(removeThis);
             }
+            
+            source.Remove(removeThis);
         }
 
         private void UpdateKategori()
         {
+            Kategori updateThis = source.Current as Kategori;
+            updateThis.KategoriAd = kategoriAdiTxt.Text;
+            
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Kategori updateThis = source.Current as Kategori;
-                updateThis.KategoriAd = kategoriAdiTxt.Text;
                 uow.KategoriRepository.Update(updateThis);
-                source.ResetCurrentItem();
             }
+
+            source.ResetCurrentItem();
         }
 
         private void kategoriEkleButton_Click(object sender, EventArgs e)

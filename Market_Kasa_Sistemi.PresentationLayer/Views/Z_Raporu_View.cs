@@ -1,6 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
 using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.ModelLayer;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -25,9 +26,8 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Z_Raporu_View_Load(object sender, EventArgs e)
         {
-            TopMost = true;
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
+            FormSettings.SetDataGridView(zRaporuDGW);
+            FormSettings.SetFullscreen(this);
 
             Label title = new Label { Text = "Z Raporu" };
             ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
@@ -38,40 +38,55 @@ namespace Market_Kasa_Sistemi.Views
 
         private TableLayoutPanel GetView()
         {
-            TableLayoutPanel table = TableLayoutMaker.CreateTitlesAndDGWTable
-            (
-                this.Size,
-                zRaporuDGW,
-                new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
-                new float[] { 20f, 40f, 15f, 25f }
-            );
+            TableLayoutPanel tableTitleWithDivider = TableLayoutMaker.CreateTitleWithDividerTable("Satış Yap", this.Size);
+
             ResponsiveControl cikisButtonResponsive = new ResponsiveControl(cikisButton, this.Size, ControlType.Button);
             ResponsiveControl zRaporuYazdirButtonResponsive = new ResponsiveControl(zRaporuYazdirButton, this.Size, ControlType.Button);
             TableLayoutPanel buttonTable = TableLayoutMaker.CreateResponsiveTable
             (
                 "buttonTable",
-                new ResponsiveControl[] { zRaporuYazdirButtonResponsive, cikisButtonResponsive },
-                1, 2,
-                new float[] { 100f },
-                new float[] { 50f, 50f }
-            );
-            return TableLayoutMaker.CreateResponsiveTable
-            (
-                "mainTable",
-                new TableLayoutPanel[] { table, buttonTable },
-                2, 1,
-                new float[] { 85f, 15f },
+                new ResponsiveControl[] { zRaporuYazdirButtonResponsive, null, cikisButtonResponsive },
+                3, 1,
+                new float[] { 33f, 33f, 33f },
                 new float[] { 100f }
             );
+
+            TableLayoutPanel rightPanel = TableLayoutMaker.CreateResponsiveTable
+            (
+                "rightPanel",
+                new TableLayoutPanel[] { tableTitleWithDivider, buttonTable },
+                2, 1,
+                new float[] { 10f, 90f },
+                new float[] { 100f }
+            );
+
+            TableLayoutPanel table = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
+            (
+                this.Size,
+                zRaporuDGW,
+                new string[] { "ID", "Tarih", "Ödeme Tipi", "Toplam Fiyat"},
+                rightPanel,
+                toplamTutarLabel
+            );
+
+            return table;
         }
 
         private void GetZRaporu()
         {
             zRaporuDGW.DataSource = source;
 
+            List<ZRaporu> rapor = new List<ZRaporu>();
+            
             using (UnitOfWork uow = new UnitOfWork())
             {
-                source.DataSource = uow.SatisRepository.GetZReport();
+                rapor = uow.SatisRepository.GetZReport();
+                source.DataSource = rapor;
+            }
+
+            foreach (var item in rapor)
+            {
+                toplamTutarLabel.Text = rapor.Sum(x => x.ToplamFiyat).ToString("C2");
             }
         }
 

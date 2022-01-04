@@ -26,16 +26,14 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Personeller_View_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            FormSettings.SetDataGridView(personellerDGW);
+            FormSettings.SetFullscreen(this);
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
                 (
                     this.Size,
                     personellerDGW,
                     new string[] { "ID", "Adı", "Soyadı", "Başlangıç Tarihi", "Tipi" },
-                    new float[] { 10f, 20f, 20f, 30f, 20f },
                     RightTable()
                 );
             Label title = new Label { Text = "Personeller" };
@@ -102,48 +100,51 @@ namespace Market_Kasa_Sistemi.Views
             {
                 source.DataSource = uow.PersonelRepository.ToList();
                 personelTipiComboBox.DataSource = uow.PersonelTipRepository.ToList();
-                personelTipiComboBox.DisplayMember = "PersonelTipAd";
             }
+            personelTipiComboBox.DisplayMember = "PersonelTipAd";
         }
 
         private void AddNewPersonel()
         {
+            Personel newPersonel = new Personel
+            {
+                PersonelAd = personelAdiTxt.Text,
+                PersonelSoyad = personelSoyadiTxt.Text,
+                PersonelBaslangicTarih = baslangicTarihDateTimePicker.Value,
+                PersonelTip = personelTipiComboBox.SelectedItem as PersonelTip
+            };
+
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Personel newPersonel = new Personel
-                {
-                    PersonelAd = personelAdiTxt.Text,
-                    PersonelSoyad = personelSoyadiTxt.Text,
-                    PersonelBaslangicTarih = baslangicTarihDateTimePicker.Value,
-                    PersonelTip = personelTipiComboBox.SelectedItem as PersonelTip
-                };
                 newPersonel.Id = Convert.ToInt32(uow.PersonelRepository.Add(newPersonel));
-                source.Add(newPersonel);
             }
+
+            source.Add(newPersonel);
         }
 
         private void RemovePersonel()
         {
+            Personel removeThis = source.Current as Personel;
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Personel removeThis = source.Current as Personel;
                 uow.PersonelRepository.Remove(removeThis);
-                source.Remove(removeThis);
             }
+            source.Remove(removeThis);
         }
 
         private void UpdatePersonel()
         {
+            Personel updateThis = source.Current as Personel;
+            updateThis.PersonelAd = personelAdiTxt.Text;
+            updateThis.PersonelSoyad = personelSoyadiTxt.Text;
+            updateThis.PersonelBaslangicTarih = baslangicTarihDateTimePicker.Value;
+            updateThis.PersonelTip = personelTipiComboBox.SelectedItem as PersonelTip;
+
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Personel updateThis = source.Current as Personel;
-                updateThis.PersonelAd = personelAdiTxt.Text;
-                updateThis.PersonelSoyad = personelSoyadiTxt.Text;
-                updateThis.PersonelBaslangicTarih = baslangicTarihDateTimePicker.Value;
-                updateThis.PersonelTip = personelTipiComboBox.SelectedItem as PersonelTip;
                 uow.PersonelRepository.Update(updateThis);
-                source.ResetCurrentItem();
             }
+            source.ResetCurrentItem();
         }
 
         private void personelEkleButton_Click(object sender, EventArgs e)
