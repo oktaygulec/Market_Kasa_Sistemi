@@ -175,6 +175,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Urun_Satis_View";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün Satışı";
             this.Load += new System.EventHandler(this.Urun_Satis_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.satisDGW)).EndInit();

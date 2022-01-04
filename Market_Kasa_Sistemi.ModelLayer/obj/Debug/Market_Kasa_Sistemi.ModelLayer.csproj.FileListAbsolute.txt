@@ -16,3 +16,9 @@ C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.dll
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
 C:\Users\Miyajinco\Desktop\Development\CSharp\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
+C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.pdb

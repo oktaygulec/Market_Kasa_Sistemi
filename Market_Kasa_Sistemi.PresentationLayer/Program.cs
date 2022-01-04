@@ -26,8 +26,8 @@ namespace Market_Kasa_Sistemi
                 {
                     Application.Run(new Ana_Menu_Yonetici_View()
                     {
-                        FormBorderStyle = FormBorderStyle.None,
-                        WindowState = FormWindowState.Maximized
+                        //FormBorderStyle = FormBorderStyle.None,
+                        //WindowState = FormWindowState.Maximized
                     });
                 }
                 else

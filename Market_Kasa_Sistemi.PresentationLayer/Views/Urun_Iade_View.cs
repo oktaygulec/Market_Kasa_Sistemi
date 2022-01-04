@@ -18,6 +18,7 @@ namespace Market_Kasa_Sistemi.Views
     public partial class Urun_Iade_View : Form
     {
         BindingSource source;
+        decimal toplamTutar = 0;
         public Urun_Iade_View()
         {
             InitializeComponent();
@@ -26,21 +27,23 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Urun_Iade_View_Load(object sender, EventArgs e)
         {
-            //this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //this.WindowState = FormWindowState.Maximized;
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
             (
                 this.Size,
-                "Ürün İade",
                 iadeDGW,
                 new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
                 new float[] { 20f, 40f, 15f, 25f },
                 RightTable(),
-                toplamTutar
+                toplamTutarLabel
             );
-            this.Controls.Add(tlp);
+            Label title = new Label { Text = "Ürün İade" };
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
+
+            this.Controls.Add(TableLayoutMaker.CreateContainerTable(responsiveTitle, tlp));
         }
 
         private TableLayoutPanel RightTable()
@@ -99,6 +102,11 @@ namespace Market_Kasa_Sistemi.Views
             using (UnitOfWork uow = new UnitOfWork())
             {
                 source.DataSource = uow.SatisRepository.AllSatisByFisId(Convert.ToInt32(fisGirisiTxt.Text));
+                foreach (Satis item in source.DataSource as List<Satis>)
+                {
+                    toplamTutar += item.ToplamFiyat;
+                }
+                toplamTutarLabel.Text = toplamTutar.ToString("C2");
             }
         }
 
@@ -109,6 +117,9 @@ namespace Market_Kasa_Sistemi.Views
                 Satis removeThis = source.Current as Satis;
                 uow.SatisRepository.Remove(removeThis);
                 source.Remove(removeThis);
+
+                toplamTutar -= removeThis.ToplamFiyat;
+                toplamTutarLabel.Text = toplamTutar.ToString("C2");
             }
         }
 

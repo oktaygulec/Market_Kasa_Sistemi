@@ -33,13 +33,15 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
             (
                 this.Size,
-                "Ürünler",
                 urunlerDGW,
                 new string[] { "Barkod", "Ad", "Fiyat", "Adet", "Kategori", "Vergi" },
                 new float[] { 15f, 15f, 15f, 15f, 15f, 15f },
                 RightTable()
             );
-            this.Controls.Add(tlp);
+            Label title = new Label { Text = "Ürünler" };
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
+
+            this.Controls.Add(TableLayoutMaker.CreateContainerTable(responsiveTitle, tlp));
 
             GetUrunler();
         }

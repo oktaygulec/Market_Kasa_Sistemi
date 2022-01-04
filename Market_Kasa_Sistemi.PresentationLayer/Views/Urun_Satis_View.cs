@@ -27,22 +27,23 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Urun_Satis_View_Load(object sender, EventArgs e)
         {
-            //this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //this.WindowState = FormWindowState.Maximized;
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW
 (
                 this.Size,
-                "Satış",
                 satisDGW,
                 new string[] { "Barkod", "Adı", "Adeti", "Fiyatı" },
                 new float[] { 20f, 40f, 15f, 25f },
                 RightTable(),
                 toplamTutarLabel
             );
+            Label title = new Label { Text = "Satış" };
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
 
-            this.Controls.Add(tlp);
+            this.Controls.Add(TableLayoutMaker.CreateContainerTable(responsiveTitle,tlp));
             satisDGW.DataSource = source;
             toplamTutarLabel.Text = "";
             
@@ -120,12 +121,43 @@ namespace Market_Kasa_Sistemi.Views
             );
         }
 
+        Fis newFis;
+        List<Satis> satislar = new List<Satis>();
+
         private void UrunAdd()
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                source.Add(uow.UrunRepository.GetItem(Convert.ToInt32(urunGirisiTxt.Text)));
-                toplamTutar += (source.Current as Urun).UrunFiyat;
+                newFis = new Fis
+                {
+                    FisTarih = DateTime.Now,
+                    OdemeTip = odemeTipiComboBox.SelectedItem as OdemeTip,
+                    Personel = uow.PersonelRepository.GetItem(Program.Kullanici.Personel.Id)
+                };
+
+                Urun currentUrun = uow.UrunRepository.GetItem(Convert.ToInt32(urunGirisiTxt.Text));
+                Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
+                
+                if (satis == null)
+                {
+                    satislar.Add
+                    (
+                        new Satis
+                        {
+                            SatisAdet = 1,
+                            Fis = newFis,
+                            Urun = currentUrun
+                        }
+                    );
+                }
+                else
+                {
+                    satis.SatisAdet += 1;
+                }
+                toplamTutar += currentUrun.UrunFiyat;
+
+                source.DataSource = satislar;
+                source.ResetBindings(false);
                 toplamTutarLabel.Text = toplamTutar.ToString("C2");
             }
         }
@@ -134,42 +166,11 @@ namespace Market_Kasa_Sistemi.Views
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                Fis newFis = new Fis
-                {
-                    FisTarih = DateTime.Now,
-                    OdemeTip = odemeTipiComboBox.SelectedItem as OdemeTip,
-                    Personel = uow.PersonelRepository.GetItem(Program.Kullanici.Personel.Id)
-                };
-
                 newFis.Id = Convert.ToInt32(uow.FisRepository.Add(newFis));
-
-                List<Satis> satislar = new List<Satis>();
-
-                for (int i = 0; i < source.List.Count; i++)
-                {
-                    Urun currentUrun = source.List[i] as Urun;
-                    if(satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id) != null)
-                    {
-                        Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
-                        satis.SatisAdet++;
-                        satis.Urun.UrunFiyat = currentUrun.UrunFiyat * satis.SatisAdet;
-                    }
-                    else
-                    {
-                        satislar.Add
-                        (
-                            new Satis 
-                            {
-                                SatisAdet = 1,
-                                Fis = newFis,
-                                Urun = currentUrun
-                            }
-                        );
-                    }
-                }
 
                 foreach (Satis item in satislar)
                 {
+                    item.Fis = newFis;
                     uow.SatisRepository.Add(item);
                 }
 

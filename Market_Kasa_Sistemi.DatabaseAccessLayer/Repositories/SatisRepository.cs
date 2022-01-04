@@ -50,11 +50,11 @@ namespace Market_Kasa_Sistemi.DatabaseAccessLayer.Repositories
             }
         }
 
-        public decimal GetZReport()
+        public List<Satis> GetZReport()
         {
-            using (SqlCommand cmd = context.CreateCommand("SELECT ToplamFiyat FROM VwZReport", System.Data.CommandType.Text))
+            using (SqlCommand cmd = context.CreateCommand("SELECT * FROM VwZReport", System.Data.CommandType.Text))
             {
-                return Convert.ToDecimal(context.ExecuteScalar(cmd));
+                return context.ToList<Satis>(cmd);
             }
         }
 

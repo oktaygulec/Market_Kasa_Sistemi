@@ -51,6 +51,7 @@
             this.zRaporuButton.TabIndex = 4;
             this.zRaporuButton.Text = "Z RAPORU";
             this.zRaporuButton.UseVisualStyleBackColor = false;
+            this.zRaporuButton.Click += new System.EventHandler(this.zRaporuButton_Click);
             // 
             // barkodOkuButton
             // 

@@ -213,7 +213,7 @@ namespace Market_Kasa_Sistemi.Utils
             );
         }
         
-        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, string titleText, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, TableLayoutPanel rightTable, Label toplam = null)
+        public static TableLayoutPanel CreateTitlesAndDGWTable(Size formSize, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, Label toplam = null)
         {
             TableLayoutPanel leftTableTitlesWithDivider = CreateTitlesWithDividerTable
             (
@@ -247,9 +247,12 @@ namespace Market_Kasa_Sistemi.Utils
                 new float[] { 100f }
             );
 
-            Label title = new Label { Text = titleText };
-            ResponsiveControl responsiveTitle = new ResponsiveControl(title, formSize, ControlType.HeadTitle);
+            return leftTableContainer;
+        }
 
+        public static TableLayoutPanel CreateDualTableWithTitlesAndDGW(Size formSize, Control dgwControl, string[] dgwTitles, float[] dgwTitlesColStyles, TableLayoutPanel rightTable, Label toplam = null)
+        {
+            TableLayoutPanel leftTableContainer = CreateTitlesAndDGWTable(formSize, dgwControl, dgwTitles, dgwTitlesColStyles, toplam); 
             TableLayoutPanel panel = CreateResponsiveTable(
                 "panel",
                 new TableLayoutPanel[] { leftTableContainer, rightTable },
@@ -258,7 +261,7 @@ namespace Market_Kasa_Sistemi.Utils
                 new float[] { 75f, 25f }
             );
 
-            return CreateContainerTable(responsiveTitle, panel);
+            return panel;
         }
     }
 }

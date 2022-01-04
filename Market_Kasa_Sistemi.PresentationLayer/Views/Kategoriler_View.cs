@@ -31,14 +31,17 @@ namespace Market_Kasa_Sistemi.Views
             WindowState = FormWindowState.Maximized;
 
             TableLayoutPanel tlp = TableLayoutMaker.CreateDualTableWithTitlesAndDGW(
-                this.Size, "Kategoriler", 
+                this.Size,  
                 kategorilerDGW, 
                 new string[] { "ID", "Adı" },
                 new float[] { 50f, 50f }, 
                 RightTable()
             );
 
-            this.Controls.Add(tlp);
+            Label title = new Label { Text = "Kategoriler" };
+            ResponsiveControl responsiveTitle = new ResponsiveControl(title, this.Size, ControlType.HeadTitle);
+
+            this.Controls.Add(TableLayoutMaker.CreateContainerTable(responsiveTitle, tlp));
 
             GetKategoriler();
         }
