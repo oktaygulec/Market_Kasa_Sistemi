@@ -22,19 +22,47 @@ namespace Market_Kasa_Sistemi.Utils
                 return true;
             }
         }
-
-        public static bool ValidateAllControls(ErrorProvider provider,Control[] controls)
+        public static bool ValidateAllControls(ErrorProvider provider, Control[] controls)
         {
             int controlCount = controls.Length;
             int trueValidates = 0;
             foreach (Control control in controls)
             {
-                if(ValidationControl(provider, control))
+                if (ValidationControl(provider, control))
                 {
                     trueValidates++;
                 }
             }
-            return (controlCount == trueValidates)?true:false;
+            return (controlCount == trueValidates) ? true : false;
+        }
+
+        public static bool ValidationOnlyEmptyControl(ErrorProvider provider, Control control)
+        {
+            if (String.IsNullOrWhiteSpace(control.Text))
+            {
+                provider.SetError(control, "Alan boş olamaz.");
+                return false;
+            }
+            else
+            {
+                provider.SetError(control, "");
+                return true;
+            }
+        }
+
+
+        public static bool ValidateOnlyEmptyControls(ErrorProvider provider, Control[] controls)
+        {
+            int controlCount = controls.Length;
+            int trueValidates = 0;
+            foreach (Control control in controls)
+            {
+                if (ValidationOnlyEmptyControl(provider, control))
+                {
+                    trueValidates++;
+                }
+            }
+            return (controlCount == trueValidates) ? true : false;
         }
     }
 }
