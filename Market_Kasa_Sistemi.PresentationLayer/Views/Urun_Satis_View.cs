@@ -199,6 +199,7 @@ namespace Market_Kasa_Sistemi.Views
             MessageBox.Show(newFis.Id.ToString());
             source.Clear();
             toplamTutar = 0;
+            kdvliToplamTutar = 0;
             toplamTutarLabel.Text = "";
             urunGirisiTxt.Text = "";
         }
@@ -229,7 +230,7 @@ namespace Market_Kasa_Sistemi.Views
             if (source.List.Count > 0)
                 SatisCikart();
             else
-                MessageBox.Show("Satış Giriniz..", "Ürün Satış", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ürün Giriniz..", "Ürün Satış", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

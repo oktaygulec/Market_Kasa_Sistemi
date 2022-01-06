@@ -103,12 +103,12 @@ namespace Market_Kasa_Sistemi.Views
                 source.DataSource = uow.SatisRepository.AllSatisByFisId(Convert.ToInt32(fisGirisiTxt.Text));
             }
             if(source.List.Count > 0) { 
-            foreach (Satis item in source.DataSource as List<Satis>)
-            {
-                toplamTutar += item.ToplamFiyat;
-                kdvliToplamTutar += item.ToplamKdvliFiyat;
-            }
-            toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
+                foreach (Satis item in source.DataSource as List<Satis>)
+                {
+                    toplamTutar += item.ToplamFiyat;
+                    kdvliToplamTutar += item.ToplamKdvliFiyat;
+                }
+                toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
             }
             else
             {
