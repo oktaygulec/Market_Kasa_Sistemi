@@ -22,3 +22,9 @@ C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.M
 C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.dll
 C:\Users\PC\source\repos\oktaygulec\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
+C:\Users\hyuna\Desktop\Solution\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\hyuna\Desktop\Solution\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\bin\Debug\Market_Kasa_Sistemi.ModelLayer.pdb
+C:\Users\hyuna\Desktop\Solution\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.AssemblyReference.cache
+C:\Users\hyuna\Desktop\Solution\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\hyuna\Desktop\Solution\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.dll
+C:\Users\hyuna\Desktop\Solution\GorselProgramlamaProje\Market_Kasa_Sistemi.ModelLayer\obj\Debug\Market_Kasa_Sistemi.ModelLayer.pdb

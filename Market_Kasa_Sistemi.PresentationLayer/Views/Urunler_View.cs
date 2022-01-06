@@ -205,12 +205,20 @@ namespace Market_Kasa_Sistemi.Views
 
         private void urunEkleButton_Click(object sender, EventArgs e)
         {
-            AddNewUrunler();
+            Control[] controls = new Control[] { urunAdiTxt,urunFiyatiTxt,urunAdetTxt };
+            if (Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                AddNewUrunler();
+            }
         }
 
         private void urunDuzenleButton_Click(object sender, EventArgs e)
         {
-            UpdateUrun();
+            Control[] controls = new Control[] { urunAdiTxt, urunFiyatiTxt, urunAdetTxt };
+            if (Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                UpdateUrun();
+            }
         }
 
         private void urunSilButton_Click(object sender, EventArgs e)

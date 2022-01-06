@@ -100,9 +100,13 @@ namespace Market_Kasa_Sistemi.Views
 
         private void kayitOlButton_Click(object sender, EventArgs e)
         {
-            AddNewUser();
-            MessageBox.Show("Yeni kullanıcı oluşturuldu.");
-            this.Close();
+            Control[] controls = new Control[] { kullaniciAdiTxt,kullaniciSifreTxt };
+            if (Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                AddNewUser();
+                MessageBox.Show("Yeni kullanıcı oluşturuldu.");
+                this.Close();
+            }
         }
 
         private void iptalButton_Click(object sender, EventArgs e)

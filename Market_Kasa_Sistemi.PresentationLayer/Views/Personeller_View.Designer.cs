@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.personellerDGW = new System.Windows.Forms.DataGridView();
             this.cikisButton = new System.Windows.Forms.Button();
             this.personelEkleButton = new System.Windows.Forms.Button();
@@ -37,7 +38,9 @@
             this.personelDuzenleButton = new System.Windows.Forms.Button();
             this.personelTipiComboBox = new System.Windows.Forms.ComboBox();
             this.baslangicTarihDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.personellerDGW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // personellerDGW
@@ -54,8 +57,8 @@
             this.personellerDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.personellerDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.personellerDGW.ColumnHeadersVisible = false;
-            this.personellerDGW.Location = new System.Drawing.Point(11, 65);
-            this.personellerDGW.Margin = new System.Windows.Forms.Padding(2);
+            this.personellerDGW.Location = new System.Drawing.Point(15, 80);
+            this.personellerDGW.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personellerDGW.MultiSelect = false;
             this.personellerDGW.Name = "personellerDGW";
             this.personellerDGW.ReadOnly = true;
@@ -65,7 +68,7 @@
             this.personellerDGW.RowTemplate.Height = 24;
             this.personellerDGW.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.personellerDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.personellerDGW.Size = new System.Drawing.Size(509, 471);
+            this.personellerDGW.Size = new System.Drawing.Size(679, 580);
             this.personellerDGW.TabIndex = 28;
             this.personellerDGW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personellerDGW_CellClick);
             // 
@@ -75,10 +78,10 @@
             this.cikisButton.FlatAppearance.BorderSize = 0;
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cikisButton.Location = new System.Drawing.Point(565, 462);
-            this.cikisButton.Margin = new System.Windows.Forms.Padding(2);
+            this.cikisButton.Location = new System.Drawing.Point(753, 569);
+            this.cikisButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cikisButton.Name = "cikisButton";
-            this.cikisButton.Size = new System.Drawing.Size(208, 86);
+            this.cikisButton.Size = new System.Drawing.Size(277, 106);
             this.cikisButton.TabIndex = 39;
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
@@ -90,10 +93,10 @@
             this.personelEkleButton.FlatAppearance.BorderSize = 0;
             this.personelEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.personelEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.personelEkleButton.Location = new System.Drawing.Point(565, 297);
-            this.personelEkleButton.Margin = new System.Windows.Forms.Padding(2);
+            this.personelEkleButton.Location = new System.Drawing.Point(753, 366);
+            this.personelEkleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personelEkleButton.Name = "personelEkleButton";
-            this.personelEkleButton.Size = new System.Drawing.Size(208, 31);
+            this.personelEkleButton.Size = new System.Drawing.Size(277, 38);
             this.personelEkleButton.TabIndex = 38;
             this.personelEkleButton.Text = "EKLE";
             this.personelEkleButton.UseVisualStyleBackColor = false;
@@ -102,19 +105,19 @@
             // personelAdiTxt
             // 
             this.personelAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.personelAdiTxt.Location = new System.Drawing.Point(565, 91);
-            this.personelAdiTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.personelAdiTxt.Location = new System.Drawing.Point(753, 112);
+            this.personelAdiTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personelAdiTxt.Name = "personelAdiTxt";
-            this.personelAdiTxt.Size = new System.Drawing.Size(208, 27);
+            this.personelAdiTxt.Size = new System.Drawing.Size(276, 32);
             this.personelAdiTxt.TabIndex = 37;
             // 
             // personelSoyadiTxt
             // 
             this.personelSoyadiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.personelSoyadiTxt.Location = new System.Drawing.Point(565, 138);
-            this.personelSoyadiTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.personelSoyadiTxt.Location = new System.Drawing.Point(753, 170);
+            this.personelSoyadiTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personelSoyadiTxt.Name = "personelSoyadiTxt";
-            this.personelSoyadiTxt.Size = new System.Drawing.Size(208, 27);
+            this.personelSoyadiTxt.Size = new System.Drawing.Size(276, 32);
             this.personelSoyadiTxt.TabIndex = 43;
             // 
             // personelSilButton
@@ -123,10 +126,10 @@
             this.personelSilButton.FlatAppearance.BorderSize = 0;
             this.personelSilButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.personelSilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.personelSilButton.Location = new System.Drawing.Point(565, 390);
-            this.personelSilButton.Margin = new System.Windows.Forms.Padding(2);
+            this.personelSilButton.Location = new System.Drawing.Point(753, 480);
+            this.personelSilButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personelSilButton.Name = "personelSilButton";
-            this.personelSilButton.Size = new System.Drawing.Size(208, 31);
+            this.personelSilButton.Size = new System.Drawing.Size(277, 38);
             this.personelSilButton.TabIndex = 51;
             this.personelSilButton.Text = "SİL";
             this.personelSilButton.UseVisualStyleBackColor = false;
@@ -138,10 +141,10 @@
             this.personelDuzenleButton.FlatAppearance.BorderSize = 0;
             this.personelDuzenleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.personelDuzenleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.personelDuzenleButton.Location = new System.Drawing.Point(565, 345);
-            this.personelDuzenleButton.Margin = new System.Windows.Forms.Padding(2);
+            this.personelDuzenleButton.Location = new System.Drawing.Point(753, 425);
+            this.personelDuzenleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personelDuzenleButton.Name = "personelDuzenleButton";
-            this.personelDuzenleButton.Size = new System.Drawing.Size(208, 31);
+            this.personelDuzenleButton.Size = new System.Drawing.Size(277, 38);
             this.personelDuzenleButton.TabIndex = 52;
             this.personelDuzenleButton.Text = "DÜZENLE";
             this.personelDuzenleButton.UseVisualStyleBackColor = false;
@@ -151,24 +154,29 @@
             // 
             this.personelTipiComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.personelTipiComboBox.FormattingEnabled = true;
-            this.personelTipiComboBox.Location = new System.Drawing.Point(565, 251);
-            this.personelTipiComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.personelTipiComboBox.Location = new System.Drawing.Point(753, 309);
+            this.personelTipiComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personelTipiComboBox.Name = "personelTipiComboBox";
-            this.personelTipiComboBox.Size = new System.Drawing.Size(208, 28);
+            this.personelTipiComboBox.Size = new System.Drawing.Size(276, 34);
             this.personelTipiComboBox.TabIndex = 53;
             // 
             // baslangicTarihDateTimePicker
             // 
-            this.baslangicTarihDateTimePicker.Location = new System.Drawing.Point(565, 208);
+            this.baslangicTarihDateTimePicker.Location = new System.Drawing.Point(753, 256);
+            this.baslangicTarihDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.baslangicTarihDateTimePicker.Name = "baslangicTarihDateTimePicker";
-            this.baslangicTarihDateTimePicker.Size = new System.Drawing.Size(208, 20);
+            this.baslangicTarihDateTimePicker.Size = new System.Drawing.Size(276, 22);
             this.baslangicTarihDateTimePicker.TabIndex = 55;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Personeller_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.baslangicTarihDateTimePicker);
             this.Controls.Add(this.personelTipiComboBox);
             this.Controls.Add(this.personelDuzenleButton);
@@ -178,11 +186,12 @@
             this.Controls.Add(this.cikisButton);
             this.Controls.Add(this.personelEkleButton);
             this.Controls.Add(this.personelAdiTxt);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Personeller_View";
             this.Text = "Personeller";
             this.Load += new System.EventHandler(this.Personeller_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.personellerDGW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +208,6 @@
         private System.Windows.Forms.Button personelDuzenleButton;
         private System.Windows.Forms.ComboBox personelTipiComboBox;
         private System.Windows.Forms.DateTimePicker baslangicTarihDateTimePicker;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

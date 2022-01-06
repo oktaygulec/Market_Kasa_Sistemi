@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kullaniciEkleButton = new System.Windows.Forms.Button();
             this.cikisButton = new System.Windows.Forms.Button();
             this.kullaniciAdiTxt = new System.Windows.Forms.TextBox();
@@ -36,7 +37,9 @@
             this.personelComboBox = new System.Windows.Forms.ComboBox();
             this.kullanicilarDGW = new System.Windows.Forms.DataGridView();
             this.kullaniciDuzenleButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarDGW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // kullaniciEkleButton
@@ -47,10 +50,10 @@
             this.kullaniciEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciEkleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciEkleButton.Location = new System.Drawing.Point(558, 221);
+            this.kullaniciEkleButton.Location = new System.Drawing.Point(744, 272);
             this.kullaniciEkleButton.Margin = new System.Windows.Forms.Padding(0);
             this.kullaniciEkleButton.Name = "kullaniciEkleButton";
-            this.kullaniciEkleButton.Size = new System.Drawing.Size(208, 31);
+            this.kullaniciEkleButton.Size = new System.Drawing.Size(277, 38);
             this.kullaniciEkleButton.TabIndex = 16;
             this.kullaniciEkleButton.Text = "EKLE";
             this.kullaniciEkleButton.UseVisualStyleBackColor = false;
@@ -64,10 +67,10 @@
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cikisButton.Location = new System.Drawing.Point(559, 420);
+            this.cikisButton.Location = new System.Drawing.Point(745, 517);
             this.cikisButton.Margin = new System.Windows.Forms.Padding(0);
             this.cikisButton.Name = "cikisButton";
-            this.cikisButton.Size = new System.Drawing.Size(206, 100);
+            this.cikisButton.Size = new System.Drawing.Size(275, 123);
             this.cikisButton.TabIndex = 15;
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
@@ -76,20 +79,20 @@
             // kullaniciAdiTxt
             // 
             this.kullaniciAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciAdiTxt.Location = new System.Drawing.Point(558, 86);
-            this.kullaniciAdiTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.kullaniciAdiTxt.Location = new System.Drawing.Point(744, 106);
+            this.kullaniciAdiTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kullaniciAdiTxt.Name = "kullaniciAdiTxt";
-            this.kullaniciAdiTxt.Size = new System.Drawing.Size(209, 27);
+            this.kullaniciAdiTxt.Size = new System.Drawing.Size(277, 32);
             this.kullaniciAdiTxt.TabIndex = 25;
             // 
             // kullaniciSifreTxt
             // 
             this.kullaniciSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciSifreTxt.Location = new System.Drawing.Point(558, 134);
-            this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.kullaniciSifreTxt.Location = new System.Drawing.Point(744, 165);
+            this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
             this.kullaniciSifreTxt.PasswordChar = '*';
-            this.kullaniciSifreTxt.Size = new System.Drawing.Size(209, 27);
+            this.kullaniciSifreTxt.Size = new System.Drawing.Size(277, 32);
             this.kullaniciSifreTxt.TabIndex = 27;
             // 
             // kullaniciSilButton
@@ -100,10 +103,10 @@
             this.kullaniciSilButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciSilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciSilButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciSilButton.Location = new System.Drawing.Point(559, 303);
+            this.kullaniciSilButton.Location = new System.Drawing.Point(745, 373);
             this.kullaniciSilButton.Margin = new System.Windows.Forms.Padding(0);
             this.kullaniciSilButton.Name = "kullaniciSilButton";
-            this.kullaniciSilButton.Size = new System.Drawing.Size(207, 31);
+            this.kullaniciSilButton.Size = new System.Drawing.Size(276, 38);
             this.kullaniciSilButton.TabIndex = 31;
             this.kullaniciSilButton.Text = "SİL";
             this.kullaniciSilButton.UseVisualStyleBackColor = false;
@@ -112,9 +115,10 @@
             // personelComboBox
             // 
             this.personelComboBox.FormattingEnabled = true;
-            this.personelComboBox.Location = new System.Drawing.Point(558, 183);
+            this.personelComboBox.Location = new System.Drawing.Point(744, 225);
+            this.personelComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.personelComboBox.Name = "personelComboBox";
-            this.personelComboBox.Size = new System.Drawing.Size(210, 21);
+            this.personelComboBox.Size = new System.Drawing.Size(279, 24);
             this.personelComboBox.TabIndex = 33;
             // 
             // kullanicilarDGW
@@ -131,8 +135,8 @@
             this.kullanicilarDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.kullanicilarDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kullanicilarDGW.ColumnHeadersVisible = false;
-            this.kullanicilarDGW.Location = new System.Drawing.Point(28, 64);
-            this.kullanicilarDGW.Margin = new System.Windows.Forms.Padding(2);
+            this.kullanicilarDGW.Location = new System.Drawing.Point(37, 79);
+            this.kullanicilarDGW.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kullanicilarDGW.MultiSelect = false;
             this.kullanicilarDGW.Name = "kullanicilarDGW";
             this.kullanicilarDGW.ReadOnly = true;
@@ -142,7 +146,7 @@
             this.kullanicilarDGW.RowTemplate.Height = 24;
             this.kullanicilarDGW.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.kullanicilarDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kullanicilarDGW.Size = new System.Drawing.Size(493, 456);
+            this.kullanicilarDGW.Size = new System.Drawing.Size(657, 561);
             this.kullanicilarDGW.TabIndex = 17;
             this.kullanicilarDGW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kullanicilarDGW_CellClick);
             // 
@@ -154,20 +158,24 @@
             this.kullaniciDuzenleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciDuzenleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciDuzenleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kullaniciDuzenleButton.Location = new System.Drawing.Point(559, 262);
+            this.kullaniciDuzenleButton.Location = new System.Drawing.Point(745, 322);
             this.kullaniciDuzenleButton.Margin = new System.Windows.Forms.Padding(0);
             this.kullaniciDuzenleButton.Name = "kullaniciDuzenleButton";
-            this.kullaniciDuzenleButton.Size = new System.Drawing.Size(208, 31);
+            this.kullaniciDuzenleButton.Size = new System.Drawing.Size(277, 38);
             this.kullaniciDuzenleButton.TabIndex = 34;
             this.kullaniciDuzenleButton.Text = "DÜZENLE";
             this.kullaniciDuzenleButton.UseVisualStyleBackColor = false;
             this.kullaniciDuzenleButton.Click += new System.EventHandler(this.kullaniciDuzenleButton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Kullanicilar_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 551);
+            this.ClientSize = new System.Drawing.Size(1045, 678);
             this.Controls.Add(this.kullaniciDuzenleButton);
             this.Controls.Add(this.personelComboBox);
             this.Controls.Add(this.kullaniciSilButton);
@@ -176,11 +184,12 @@
             this.Controls.Add(this.kullanicilarDGW);
             this.Controls.Add(this.kullaniciEkleButton);
             this.Controls.Add(this.cikisButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Kullanicilar_View";
             this.Text = "Kullanıcılar";
             this.Load += new System.EventHandler(this.Kullanicilar_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarDGW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +205,6 @@
         private System.Windows.Forms.ComboBox personelComboBox;
         private System.Windows.Forms.DataGridView kullanicilarDGW;
         private System.Windows.Forms.Button kullaniciDuzenleButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -149,12 +149,20 @@ namespace Market_Kasa_Sistemi.Views
 
         private void personelEkleButton_Click(object sender, EventArgs e)
         {
-            AddNewPersonel();
+            Control[] controls = new Control[] { personelAdiTxt,personelSoyadiTxt};
+            if(Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                AddNewPersonel();
+            }
         }
 
         private void personelDuzenleButton_Click(object sender, EventArgs e)
         {
-            UpdatePersonel();
+            Control[] controls = new Control[] { personelAdiTxt, personelSoyadiTxt };
+            if (Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                UpdatePersonel();
+            }
         }
 
         private void personelSilButton_Click(object sender, EventArgs e)
