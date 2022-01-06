@@ -14,7 +14,6 @@ namespace Market_Kasa_Sistemi.Models
 
         [Browsable(false)]
         public Fis Fis { get; set; }
-        //public int FisId { get; set; }
 
         [Browsable(false)]
         public Urun Urun { get { return _urun; } set { _urun = value; } }
