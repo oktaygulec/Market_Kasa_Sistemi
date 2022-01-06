@@ -206,7 +206,7 @@ namespace Market_Kasa_Sistemi.Views
         private void urunEkleButton_Click(object sender, EventArgs e)
         {
             Control[] controls = new Control[] { urunAdiTxt,urunFiyatiTxt,urunAdetTxt };
-            if (Validation.ValidateAllControls(errorProvider1, controls))
+            if (Validation.ValidateOnlyEmptyControls(errorProvider1, controls))
             {
                 AddNewUrunler();
             }
@@ -215,7 +215,7 @@ namespace Market_Kasa_Sistemi.Views
         private void urunDuzenleButton_Click(object sender, EventArgs e)
         {
             Control[] controls = new Control[] { urunAdiTxt, urunFiyatiTxt, urunAdetTxt };
-            if (Validation.ValidateAllControls(errorProvider1, controls))
+            if (Validation.ValidateOnlyEmptyControls(errorProvider1, controls))
             {
                 UpdateUrun();
             }
