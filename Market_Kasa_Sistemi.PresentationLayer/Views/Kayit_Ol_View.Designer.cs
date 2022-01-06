@@ -32,7 +32,7 @@
             this.iptalButton = new System.Windows.Forms.Button();
             this.kullaniciAdiTxt = new System.Windows.Forms.TextBox();
             this.kullaniciSifreTxt = new System.Windows.Forms.TextBox();
-            this.kasiyerComboBox = new System.Windows.Forms.ComboBox();
+            this.personelComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // kayitOlButton
@@ -48,6 +48,7 @@
             this.kayitOlButton.TabIndex = 9;
             this.kayitOlButton.Text = "KAYIT OL";
             this.kayitOlButton.UseVisualStyleBackColor = false;
+            this.kayitOlButton.Click += new System.EventHandler(this.kayitOlButton_Click);
             // 
             // iptalButton
             // 
@@ -63,6 +64,7 @@
             this.iptalButton.TabIndex = 8;
             this.iptalButton.Text = "İPTAL";
             this.iptalButton.UseVisualStyleBackColor = false;
+            this.iptalButton.Click += new System.EventHandler(this.iptalButton_Click);
             // 
             // kullaniciAdiTxt
             // 
@@ -79,25 +81,27 @@
             this.kullaniciSifreTxt.Location = new System.Drawing.Point(135, 166);
             this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
+            this.kullaniciSifreTxt.PasswordChar = '*';
             this.kullaniciSifreTxt.Size = new System.Drawing.Size(322, 27);
             this.kullaniciSifreTxt.TabIndex = 11;
             // 
-            // kasiyerComboBox
+            // personelComboBox
             // 
-            this.kasiyerComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kasiyerComboBox.FormattingEnabled = true;
-            this.kasiyerComboBox.Location = new System.Drawing.Point(135, 229);
-            this.kasiyerComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.kasiyerComboBox.Name = "kasiyerComboBox";
-            this.kasiyerComboBox.Size = new System.Drawing.Size(322, 28);
-            this.kasiyerComboBox.TabIndex = 12;
+            this.personelComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.personelComboBox.FormattingEnabled = true;
+            this.personelComboBox.Location = new System.Drawing.Point(135, 229);
+            this.personelComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.personelComboBox.Name = "personelComboBox";
+            this.personelComboBox.Size = new System.Drawing.Size(322, 28);
+            this.personelComboBox.TabIndex = 12;
+            this.personelComboBox.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.personelComboBox_Format);
             // 
             // Kayit_Ol_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.kasiyerComboBox);
+            this.Controls.Add(this.personelComboBox);
             this.Controls.Add(this.kullaniciSifreTxt);
             this.Controls.Add(this.kullaniciAdiTxt);
             this.Controls.Add(this.kayitOlButton);
@@ -119,6 +123,6 @@
         private System.Windows.Forms.Button iptalButton;
         private System.Windows.Forms.TextBox kullaniciAdiTxt;
         private System.Windows.Forms.TextBox kullaniciSifreTxt;
-        private System.Windows.Forms.ComboBox kasiyerComboBox;
+        private System.Windows.Forms.ComboBox personelComboBox;
     }
 }

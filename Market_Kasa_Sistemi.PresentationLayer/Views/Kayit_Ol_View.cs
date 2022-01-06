@@ -1,5 +1,7 @@
 ﻿using Market_Kasa_Sistemi.Components;
+using Market_Kasa_Sistemi.DatabaseAccessLayer;
 using Market_Kasa_Sistemi.Enums;
+using Market_Kasa_Sistemi.Models;
 using Market_Kasa_Sistemi.Utils;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,11 @@ namespace Market_Kasa_Sistemi.Views
 
         private void Kayit_Ol_View_Load(object sender, EventArgs e)
         {
-            
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                personelComboBox.DataSource = uow.PersonelRepository.ToList();
+                personelComboBox.DisplayMember = "PersonelAd";
+            }
 
             this.Controls.Add(Table());
         }
@@ -48,7 +54,7 @@ namespace Market_Kasa_Sistemi.Views
             TableLayoutPanel kasiyerPanel = TableLayoutMaker.CreateInputWithTitleTable(
                 "Kasiyer",
                 "kullaniciSifrePanel",
-                kasiyerComboBox,
+                personelComboBox,
                 newSize
             );
 
@@ -76,6 +82,40 @@ namespace Market_Kasa_Sistemi.Views
 
             ResponsiveControl title = new ResponsiveControl(new Label() { Text = "Kayıt Ol", Name = "formTitle" }, this.Size, ControlType.HeadTitle);
             return TableLayoutMaker.CreateContainerTable(title, panel);
+        }
+
+        private void AddNewUser()
+        {
+            Kullanici newUser = new Kullanici
+            {
+                KullaniciAd = kullaniciAdiTxt.Text,
+                KullaniciSifre = kullaniciSifreTxt.Text,
+                Personel = personelComboBox.SelectedItem as Personel
+            };
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                uow.KullaniciRepository.Add(newUser);
+            }
+        }
+
+        private void kayitOlButton_Click(object sender, EventArgs e)
+        {
+            AddNewUser();
+            MessageBox.Show("Yeni kullanıcı oluşturuldu.");
+            this.Close();
+        }
+
+        private void iptalButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void personelComboBox_Format(object sender, ListControlConvertEventArgs e)
+        {
+            string ad = (e.ListItem as Personel).PersonelAd;
+            string soyad = (e.ListItem as Personel).PersonelSoyad;
+
+            e.Value = ad + " " + soyad;
         }
     }
 }
