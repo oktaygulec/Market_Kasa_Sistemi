@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kategoriSilButton = new System.Windows.Forms.Button();
             this.lblKategoriAd = new System.Windows.Forms.Label();
             this.kategoriAdiTxt = new System.Windows.Forms.TextBox();
@@ -35,7 +36,9 @@
             this.kategoriEkleButton = new System.Windows.Forms.Button();
             this.cikisButton = new System.Windows.Forms.Button();
             this.kategoriDuzenleButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kategorilerDGW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // kategoriSilButton
@@ -46,10 +49,10 @@
             this.kategoriSilButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kategoriSilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kategoriSilButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kategoriSilButton.Location = new System.Drawing.Point(567, 222);
+            this.kategoriSilButton.Location = new System.Drawing.Point(756, 273);
             this.kategoriSilButton.Margin = new System.Windows.Forms.Padding(0);
             this.kategoriSilButton.Name = "kategoriSilButton";
-            this.kategoriSilButton.Size = new System.Drawing.Size(208, 31);
+            this.kategoriSilButton.Size = new System.Drawing.Size(277, 38);
             this.kategoriSilButton.TabIndex = 59;
             this.kategoriSilButton.Text = "SİL";
             this.kategoriSilButton.UseVisualStyleBackColor = false;
@@ -58,10 +61,9 @@
             // lblKategoriAd
             // 
             this.lblKategoriAd.AutoSize = true;
-            this.lblKategoriAd.Location = new System.Drawing.Point(567, 63);
-            this.lblKategoriAd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKategoriAd.Location = new System.Drawing.Point(756, 78);
             this.lblKategoriAd.Name = "lblKategoriAd";
-            this.lblKategoriAd.Size = new System.Drawing.Size(64, 13);
+            this.lblKategoriAd.Size = new System.Drawing.Size(80, 16);
             this.lblKategoriAd.TabIndex = 58;
             this.lblKategoriAd.Text = "Kategori Adı";
             this.lblKategoriAd.Visible = false;
@@ -69,10 +71,10 @@
             // kategoriAdiTxt
             // 
             this.kategoriAdiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kategoriAdiTxt.Location = new System.Drawing.Point(567, 81);
-            this.kategoriAdiTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.kategoriAdiTxt.Location = new System.Drawing.Point(756, 100);
+            this.kategoriAdiTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kategoriAdiTxt.Name = "kategoriAdiTxt";
-            this.kategoriAdiTxt.Size = new System.Drawing.Size(209, 27);
+            this.kategoriAdiTxt.Size = new System.Drawing.Size(277, 32);
             this.kategoriAdiTxt.TabIndex = 57;
             // 
             // kategorilerDGW
@@ -88,7 +90,7 @@
             this.kategorilerDGW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.kategorilerDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kategorilerDGW.ColumnHeadersVisible = false;
-            this.kategorilerDGW.Location = new System.Drawing.Point(13, 63);
+            this.kategorilerDGW.Location = new System.Drawing.Point(17, 78);
             this.kategorilerDGW.Margin = new System.Windows.Forms.Padding(0);
             this.kategorilerDGW.MultiSelect = false;
             this.kategorilerDGW.Name = "kategorilerDGW";
@@ -99,7 +101,7 @@
             this.kategorilerDGW.RowTemplate.Height = 24;
             this.kategorilerDGW.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.kategorilerDGW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kategorilerDGW.Size = new System.Drawing.Size(546, 470);
+            this.kategorilerDGW.Size = new System.Drawing.Size(728, 578);
             this.kategorilerDGW.TabIndex = 51;
             this.kategorilerDGW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kategorilerDGW_CellClick);
             // 
@@ -111,10 +113,10 @@
             this.kategoriEkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kategoriEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.kategoriEkleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kategoriEkleButton.Location = new System.Drawing.Point(567, 128);
+            this.kategoriEkleButton.Location = new System.Drawing.Point(756, 158);
             this.kategoriEkleButton.Margin = new System.Windows.Forms.Padding(0);
             this.kategoriEkleButton.Name = "kategoriEkleButton";
-            this.kategoriEkleButton.Size = new System.Drawing.Size(208, 31);
+            this.kategoriEkleButton.Size = new System.Drawing.Size(277, 38);
             this.kategoriEkleButton.TabIndex = 50;
             this.kategoriEkleButton.Text = "EKLE";
             this.kategoriEkleButton.UseVisualStyleBackColor = false;
@@ -128,10 +130,10 @@
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cikisButton.Location = new System.Drawing.Point(614, 433);
+            this.cikisButton.Location = new System.Drawing.Point(819, 533);
             this.cikisButton.Margin = new System.Windows.Forms.Padding(0);
             this.cikisButton.Name = "cikisButton";
-            this.cikisButton.Size = new System.Drawing.Size(161, 100);
+            this.cikisButton.Size = new System.Drawing.Size(215, 123);
             this.cikisButton.TabIndex = 49;
             this.cikisButton.Text = "ÇIKIŞ YAP";
             this.cikisButton.UseVisualStyleBackColor = false;
@@ -145,20 +147,24 @@
             this.kategoriDuzenleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kategoriDuzenleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kategoriDuzenleButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kategoriDuzenleButton.Location = new System.Drawing.Point(567, 174);
+            this.kategoriDuzenleButton.Location = new System.Drawing.Point(756, 214);
             this.kategoriDuzenleButton.Margin = new System.Windows.Forms.Padding(0);
             this.kategoriDuzenleButton.Name = "kategoriDuzenleButton";
-            this.kategoriDuzenleButton.Size = new System.Drawing.Size(208, 31);
+            this.kategoriDuzenleButton.Size = new System.Drawing.Size(277, 38);
             this.kategoriDuzenleButton.TabIndex = 60;
             this.kategoriDuzenleButton.Text = "DÜZENLE";
             this.kategoriDuzenleButton.UseVisualStyleBackColor = false;
             this.kategoriDuzenleButton.Click += new System.EventHandler(this.kategoriDuzenleButton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Kategoriler_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.kategoriDuzenleButton);
             this.Controls.Add(this.kategoriSilButton);
             this.Controls.Add(this.lblKategoriAd);
@@ -166,11 +172,12 @@
             this.Controls.Add(this.kategorilerDGW);
             this.Controls.Add(this.kategoriEkleButton);
             this.Controls.Add(this.cikisButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Kategoriler_View";
             this.Text = "Kategoriler";
             this.Load += new System.EventHandler(this.Kategoriler_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kategorilerDGW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +192,6 @@
         private System.Windows.Forms.Button kategoriEkleButton;
         private System.Windows.Forms.Button cikisButton;
         private System.Windows.Forms.Button kategoriDuzenleButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

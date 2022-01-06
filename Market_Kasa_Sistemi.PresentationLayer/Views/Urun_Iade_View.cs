@@ -102,13 +102,18 @@ namespace Market_Kasa_Sistemi.Views
             {
                 source.DataSource = uow.SatisRepository.AllSatisByFisId(Convert.ToInt32(fisGirisiTxt.Text));
             }
-
+            if(source.List.Count > 0) { 
             foreach (Satis item in source.DataSource as List<Satis>)
             {
                 toplamTutar += item.ToplamFiyat;
                 kdvliToplamTutar += item.ToplamKdvliFiyat;
             }
             toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
+            }
+            else
+            {
+                MessageBox.Show("Fiş Bulunamadı", "Ürün İade", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void RemoveSatis()
@@ -129,12 +134,18 @@ namespace Market_Kasa_Sistemi.Views
 
         private void fisGetirButton_Click(object sender, EventArgs e)
         {
-            GetSatislar();
+            if (Validation.ValidationControl(errorProvider1, fisGirisiTxt))
+            {
+                GetSatislar();
+            }
         }
 
         private void iadeEtButton_Click(object sender, EventArgs e)
         {
-            RemoveSatis();
+            if (source.List.Count > 0)
+                RemoveSatis();
+            else
+                MessageBox.Show("Fiş Giriniz", "Ürün İade", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cikisButton_Click(object sender, EventArgs e)

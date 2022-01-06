@@ -130,41 +130,48 @@ namespace Market_Kasa_Sistemi.Views
             {
                 currentUrun = uow.UrunRepository.GetItem(Convert.ToInt32(urunGirisiTxt.Text));
             }
-
-            Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
+            if(currentUrun.Id != 0) { 
+                Satis satis = satislar.FirstOrDefault(x => x.UrunBarkod == currentUrun.Id);
                 
-            if (satis == null)
-            {
-                satislar.Add
-                (
-                    new Satis
-                    {
-                        SatisAdet = 1,
-                        Fis = new Fis(),
-                        Urun = currentUrun
-                    }
-                );
+                if (satis == null)
+                {
+                    satislar.Add
+                    (
+                        new Satis
+                        {
+                            SatisAdet = 1,
+                            Fis = new Fis(),
+                            Urun = currentUrun
+                        }
+                    );
+                }
+                else
+                {
+                    satis.SatisAdet += 1;
+                }
+
+                toplamTutar += currentUrun.UrunFiyat;
+                kdvliToplamTutar += currentUrun.KdvliUrunFiyat;
+
+                source.DataSource = satislar;
+                source.ResetBindings(false);
+                toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
             }
             else
             {
-                satis.SatisAdet += 1;
+                MessageBox.Show("Ürün Bulunamadı", "Ürün Satış", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            toplamTutar += currentUrun.UrunFiyat;
-            kdvliToplamTutar += currentUrun.KdvliUrunFiyat;
-
-            source.DataSource = satislar;
-            source.ResetBindings(false);
-            toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
         }
 
         private void SatisCikart()
         {
             Satis currentSatis = source.Current as Satis;
-            toplamTutar -= currentSatis.ToplamFiyat;
-            kdvliToplamTutar -= currentSatis.ToplamKdvliFiyat;
             satislar.Remove(currentSatis);
             source.Remove(currentSatis);
+            toplamTutar -= currentSatis.ToplamFiyat;
+            kdvliToplamTutar -= currentSatis.ToplamKdvliFiyat;
+            toplamTutarLabel.Text = "Toplam tutar: " + toplamTutar.ToString("C2") + "\n KDV'li toplam tutar: " + kdvliToplamTutar.ToString("C2");
+
             source.ResetBindings(false);
         }
 
@@ -203,17 +210,26 @@ namespace Market_Kasa_Sistemi.Views
 
         private void urunEkleButton_Click(object sender, EventArgs e)
         {
-            SatisEkle();
+            if (Validation.ValidationControl(errorProvider1, urunGirisiTxt))
+            {
+                SatisEkle();
+            }
         }
 
         private void satisYapButton_Click(object sender, EventArgs e)
         {
-            SatisYap();
+            if (source.List.Count > 0)
+                SatisYap();
+            else
+                MessageBox.Show("Ürün Girişi Yapınız..","Ürün Satış",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void urunCikartButton_Click(object sender, EventArgs e)
         {
-            SatisCikart();
+            if (source.List.Count > 0)
+                SatisCikart();
+            else
+                MessageBox.Show("Satış Giriniz..", "Ürün Satış", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

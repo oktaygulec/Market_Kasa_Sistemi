@@ -22,5 +22,19 @@ namespace Market_Kasa_Sistemi.Utils
                 return true;
             }
         }
+
+        public static bool ValidateAllControls(ErrorProvider provider,Control[] controls)
+        {
+            int controlCount = controls.Length;
+            int trueValidates = 0;
+            foreach (Control control in controls)
+            {
+                if(ValidationControl(provider, control))
+                {
+                    trueValidates++;
+                }
+            }
+            return (controlCount == trueValidates)?true:false;
+        }
     }
 }

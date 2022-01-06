@@ -151,12 +151,20 @@ namespace Market_Kasa_Sistemi.Views
 
         private void kullaniciEkleButton_Click(object sender, EventArgs e)
         {
-            AddNewKullanici();
+            Control[] controls = new Control[] { kullaniciAdiTxt,kullaniciSifreTxt };
+            if (Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                AddNewKullanici();
+            }
         }
 
         private void kullaniciDuzenleButton_Click(object sender, EventArgs e)
         {
-            UpdateKullanici();
+            Control[] controls = new Control[] { kullaniciAdiTxt, kullaniciSifreTxt };
+            if (Validation.ValidateAllControls(errorProvider1, controls))
+            {
+                UpdateKullanici();
+            }
         }
 
         private void kullaniciSilButton_Click(object sender, EventArgs e)

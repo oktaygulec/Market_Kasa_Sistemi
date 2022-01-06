@@ -131,7 +131,10 @@ namespace Market_Kasa_Sistemi.Views
 
         private void kategoriEkleButton_Click(object sender, EventArgs e)
         {
-            AddNewKategori();
+            if (Validation.ValidationControl(errorProvider1, kategoriAdiTxt))
+            {
+                AddNewKategori();
+            }
         }
 
         private void kategoriSilButton_Click(object sender, EventArgs e)
@@ -146,7 +149,10 @@ namespace Market_Kasa_Sistemi.Views
 
         private void kategoriDuzenleButton_Click(object sender, EventArgs e)
         {
-            UpdateKategori();
+            if (Validation.ValidationControl(errorProvider1, kategoriAdiTxt))
+            {
+                UpdateKategori();
+            }
         }
 
         private void kategorilerDGW_CellClick(object sender, DataGridViewCellEventArgs e)
