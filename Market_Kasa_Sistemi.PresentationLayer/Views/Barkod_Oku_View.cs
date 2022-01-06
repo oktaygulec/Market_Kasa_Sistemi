@@ -89,20 +89,23 @@ namespace Market_Kasa_Sistemi.Views
 
         private void urunGetirButton_Click(object sender, EventArgs e)
         {
-            Urun urun;
+            if (Validation.ValidationControl(errorProvider1, barkodGirisiTxt))
+            {
+                Urun urun;
 
-            using (UnitOfWork uow = new UnitOfWork())
-            {
-                urun = uow.UrunRepository.GetItem(Convert.ToInt32(barkodGirisiTxt.Text));
-            }
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    urun = uow.UrunRepository.GetItem(Convert.ToInt32(barkodGirisiTxt.Text));
+                }
 
-            if(urun.Id != 0)
-            {
-                MessageBox.Show(urun.UrunAd + " - Fiyat: " + urun.UrunFiyat, "Ürün Getir", MessageBoxButtons.OK);
-            }
-            else
-            {
-                MessageBox.Show("Ürün bulunamadı.", "Ürün Getir", MessageBoxButtons.OK);
+                if (urun.Id != 0)
+                {
+                    MessageBox.Show(urun.UrunAd + " - Fiyat: " + urun.UrunFiyat, "Ürün Getir", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Ürün bulunamadı.", "Ürün Getir", MessageBoxButtons.OK);
+                }
             }
         }
 

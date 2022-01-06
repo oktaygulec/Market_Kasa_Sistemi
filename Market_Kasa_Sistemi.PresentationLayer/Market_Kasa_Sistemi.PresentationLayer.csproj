@@ -73,6 +73,7 @@
     <Compile Include="Utils\FormSettings.cs" />
     <Compile Include="Utils\ResponsiveFontSize.cs" />
     <Compile Include="Utils\TableLayoutMaker.cs" />
+    <Compile Include="Utils\Validation.cs" />
     <Compile Include="Views\Ana_Menu_Kasiyer_View.cs">
       <SubType>Form</SubType>
     </Compile>
