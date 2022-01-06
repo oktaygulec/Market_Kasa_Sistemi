@@ -55,7 +55,7 @@
             this.kullaniciSifreTxt.Location = new System.Drawing.Point(130, 204);
             this.kullaniciSifreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciSifreTxt.Name = "kullaniciSifreTxt";
-            this.kullaniciSifreTxt.PasswordChar = '●';
+            this.kullaniciSifreTxt.PasswordChar = '*';
             this.kullaniciSifreTxt.Size = new System.Drawing.Size(322, 26);
             this.kullaniciSifreTxt.TabIndex = 2;
             this.kullaniciSifreTxt.Text = "Şifre";
